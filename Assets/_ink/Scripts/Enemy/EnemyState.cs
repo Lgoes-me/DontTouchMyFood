@@ -1,23 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyState : MonoBehaviour
 {
-    
-    public void OnStateEnter()
+    [HideInInspector]
+    public Vector3 destination;
+
+    [HideInInspector]
+    public EnemyController enemy;
+
+    public string stateName;
+
+    [Range(0,1)]
+    public float speed;
+
+    public virtual void OnStateEnter()
     {
 
     }
 
-    public void DoAction()
+    public virtual void OnStateUpdate()
     {
 
     }
 
-    public void OnStateExit()
+    public virtual void OnStateExit()
     {
 
     }
-
 }

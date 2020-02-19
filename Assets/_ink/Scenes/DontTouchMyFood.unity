@@ -626,8 +626,10 @@ GameObject:
   - component: {fileID: 1324964897}
   - component: {fileID: 1324964896}
   - component: {fileID: 1324964900}
-  - component: {fileID: 1324964895}
   - component: {fileID: 1324964899}
+  - component: {fileID: 1324964895}
+  - component: {fileID: 1324964902}
+  - component: {fileID: 1324964901}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -739,8 +741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188956343c22b0c429a823a62713e994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: {fileID: 0}
-  states: []
+  state: {fileID: 1324964902}
+  movement: {fileID: 1324964895}
 --- !u!50 &1324964900
 Rigidbody2D:
   serializedVersion: 4
@@ -762,6 +764,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1324964901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324964894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170862284b1784646b830dc76f36add7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 0}
+  stateName: Dragging
+  speed: 0.75
+  zDepth: 10
+  mainCamera: {fileID: 963194227}
+--- !u!114 &1324964902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324964894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 0}
+  stateName: Coming
+  speed: 0.009
+  plateTransform: {fileID: 525959624}
 --- !u!1 &1456917275
 GameObject:
   m_ObjectHideFlags: 0
