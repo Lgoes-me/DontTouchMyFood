@@ -644,7 +644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1324964894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef490b897568b54aad325406cbde37b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d199128f036b2641a52a7f25678ac40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &1324964896
@@ -736,9 +736,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1324964894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d199128f036b2641a52a7f25678ac40, type: 3}
+  m_Script: {fileID: 11500000, guid: 188956343c22b0c429a823a62713e994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  states: []
 --- !u!50 &1324964900
 Rigidbody2D:
   serializedVersion: 4
