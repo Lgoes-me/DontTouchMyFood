@@ -7,14 +7,16 @@ public class EnemyState : MonoBehaviour
 
     [HideInInspector]
     public EnemyController enemy;
-
-    public string stateName;
     
+    public string stateName;
+
     public float speed;
+
+    protected bool _isStateActive = false;
 
     public virtual void OnStateEnter()
     {
-
+        _isStateActive = true;
     }
 
     public virtual void OnStateUpdate()
@@ -24,6 +26,6 @@ public class EnemyState : MonoBehaviour
 
     public virtual void OnStateExit()
     {
-
+        _isStateActive = false;
     }
 }

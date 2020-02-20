@@ -11,12 +11,11 @@ public class ComingState : EnemyState
 
     private void OnMouseEnter()
     {
-        enemy.SetState("Dragging");
+        if (_isStateActive) enemy.SetState("Dragging");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.name);
-        if(collision.transform.CompareTag("plate")) enemy.SetState("Waiting");
+        if(_isStateActive && collision.transform.CompareTag("plate") ) enemy.SetState("Waiting");
     }
 }

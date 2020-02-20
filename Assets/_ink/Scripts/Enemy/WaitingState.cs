@@ -15,6 +15,6 @@ public class WaitingState : EnemyState
     {
         yield return new WaitForSeconds(waitTime);
 
-        enemy.SetState("Leaving");
+        if (_isStateActive) enemy.SetState("Leaving");
     }
 }

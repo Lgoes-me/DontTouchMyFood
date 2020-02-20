@@ -19,6 +19,8 @@ public class EnemyController : MonoBehaviour
             state.enemy = this;
             _stateDict.Add(state.stateName, state);
         }
+
+        state.OnStateEnter();
     }
 
     private void Update()
