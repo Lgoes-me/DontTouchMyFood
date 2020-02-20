@@ -9,8 +9,7 @@ public class EnemyState : MonoBehaviour
     public EnemyController enemy;
 
     public string stateName;
-
-    [Range(0,1)]
+    
     public float speed;
 
     public virtual void OnStateEnter()

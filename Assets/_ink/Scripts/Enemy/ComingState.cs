@@ -13,4 +13,10 @@ public class ComingState : EnemyState
     {
         enemy.SetState("Dragging");
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.transform.name);
+        if(collision.transform.CompareTag("plate")) enemy.SetState("Waiting");
+    }
 }

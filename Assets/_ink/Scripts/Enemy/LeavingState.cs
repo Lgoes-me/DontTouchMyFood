@@ -6,6 +6,6 @@ public class LeavingState : EnemyState
 
     public override void OnStateUpdate()
     {
-        destination = plateTransform.position;
+        destination = 10 * transform.position + (plateTransform.position - transform.position).normalized;
     }
 }

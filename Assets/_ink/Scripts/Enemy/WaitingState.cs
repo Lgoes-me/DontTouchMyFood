@@ -1,18 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class WaitingState : MonoBehaviour
+public class WaitingState : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    public float waitTime;
+
+    public override void OnStateEnter()
     {
-        
+        base.OnStateEnter();
+        StartCoroutine(ReturnAfterCollision());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator ReturnAfterCollision()
     {
-        
+        yield return new WaitForSeconds(waitTime);
+
+        enemy.SetState("Leaving");
     }
 }
