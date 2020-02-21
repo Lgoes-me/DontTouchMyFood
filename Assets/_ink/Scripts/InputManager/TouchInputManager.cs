@@ -1,22 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class TouchInputManager : MonoBehaviour
+public class TouchInputManager : MonoBehaviour , IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
-
-    Vector3 touchPosWorld;
-    
-    private TouchPhase _touchPhase = TouchPhase.Ended;
-
-    private Camera _camera;
-
     private GameObject _touchedObject;
     private TouchInputReceiver _touchInputReceiver;
 
-    private void Awake()
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        _camera = Camera.main;
+        throw new System.NotImplementedException();
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 
     void Update()
