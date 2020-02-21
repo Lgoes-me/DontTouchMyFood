@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public TouchInputReceiver touchInputReceiver;
+
     public EnemyState state;
     public MovementControl movement;
 
     private EnemyState[] _states;
     private Dictionary<string,EnemyState> _stateDict;
+
 
     private void Awake()
     {
@@ -26,6 +29,7 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         state.OnStateUpdate();
+        state.OnStateTouch(touchInputReceiver.isTouched);
         movement.Move(state.destination, state.speed);
     }
 

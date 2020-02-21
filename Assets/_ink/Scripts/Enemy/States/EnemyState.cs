@@ -19,6 +19,11 @@ public class EnemyState : MonoBehaviour
         _isStateActive = true;
     }
 
+    public virtual void OnStateTouch(bool touch)
+    {
+
+    }
+
     public virtual void OnStateUpdate()
     {
 

@@ -2,11 +2,15 @@
 
 public class ButtonInputController : MonoBehaviour
 {
+
+
     public float pontuation;
     public float pontuactionVariation;
 
-    private void OnMouseOver()
+    public TouchInputReceiver touchInputReceiver;
+    
+    private void Update()
     {
-        pontuation += pontuactionVariation;
+        if(touchInputReceiver.isTouched) pontuation += pontuactionVariation;
     }
 }
