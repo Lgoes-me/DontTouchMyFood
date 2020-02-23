@@ -8,6 +8,7 @@ public class WaitingState : EnemyState
     public override void OnStateEnter()
     {
         base.OnStateEnter();
+
         StartCoroutine(ReturnAfterCollision());
     }
 
@@ -15,6 +16,6 @@ public class WaitingState : EnemyState
     {
         yield return new WaitForSeconds(waitTime);
 
-        if (_isStateActive) enemy.SetState("Leaving");
+        enemy.SetState("Leaving");
     }
 }

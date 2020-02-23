@@ -7,36 +7,35 @@ public class DraggingState : EnemyState
     public Camera mainCamera;
 
     public float waitTime;
-    private bool _isTouching;
+    private bool _touched;
 
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        //StartCoroutine(ReturnAfterTouch());
     }
 
-    public override void OnStateTouch(bool touch)
+    public override void OnStateTouch()
     {
-        base.OnStateTouch(touch);
+        base.OnStateTouch();
+   
+        _touched = true;
 
-        _isTouching = touch;
+        StartCoroutine(ReturnAfterTouch());
     }
 
     public override void OnStateUpdate()
     {
-        if (_isTouching)
+        if (_touched)
         {
             destination = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zDepth);
             destination = mainCamera.ScreenToWorldPoint(destination);
         }
     }
-
-    /*
+    
     private IEnumerator ReturnAfterTouch()
     {
         yield return new WaitForSeconds(waitTime);
 
-        if (_isStateActive) enemy.SetState("Leaving");
+        enemy.SetState("Leaving");
     }
-    */
 }

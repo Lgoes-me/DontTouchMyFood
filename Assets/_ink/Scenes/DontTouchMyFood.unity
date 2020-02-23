@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 525959625}
-  progress: {fileID: 0}
+  progress: {fileID: 1456917279}
   levelPontuation: 100
 --- !u!4 &104625875
 Transform:
@@ -203,36 +203,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106759205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &232109222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 232109223}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &232109223
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232109222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -322,7 +292,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &525959625
 MonoBehaviour:
@@ -664,7 +634,7 @@ RectTransform:
   m_Children:
   - {fileID: 1456917276}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -750,9 +720,12 @@ GameObject:
   - component: {fileID: 1324964896}
   - component: {fileID: 1324964900}
   - component: {fileID: 1324964905}
-  - component: {fileID: 1324964899}
   - component: {fileID: 1324964895}
+  - component: {fileID: 1324964899}
+  - component: {fileID: 1324964904}
+  - component: {fileID: 1324964903}
   - component: {fileID: 1324964901}
+  - component: {fileID: 1324964902}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -865,8 +838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchInputReceiver: {fileID: 1324964905}
-  state: {fileID: 1324964901}
   movement: {fileID: 1324964895}
+  state: {fileID: 1324964904}
 --- !u!50 &1324964900
 Rigidbody2D:
   serializedVersion: 4
@@ -897,17 +870,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 1324964894}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b379966b49f0fcd488be8000dc17cb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 0}
+  stateName: Waiting
+  speed: 0
+  waitTime: 4
+--- !u!114 &1324964902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324964894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e9ad9b2860c0b46a18f7ade2160d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 0}
+  stateName: Leaving
+  speed: 0.002
+  plateTransform: {fileID: 525959624}
+--- !u!114 &1324964903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324964894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170862284b1784646b830dc76f36add7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {x: 0, y: 0, z: 0}
   enemy: {fileID: 0}
-  stateName: Dragging
-  isMoving: 0
-  speed: 1
-  zDepth: 10
+  stateName: Draging
+  speed: 0.85
+  zDepth: -10
   mainCamera: {fileID: 963194227}
-  waitTime: 0.15
+  waitTime: 2
+--- !u!114 &1324964904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324964894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  enemy: {fileID: 0}
+  stateName: Coming
+  speed: 0.001
+  plateTransform: {fileID: 525959624}
 --- !u!114 &1324964905
 MonoBehaviour:
   m_ObjectHideFlags: 0

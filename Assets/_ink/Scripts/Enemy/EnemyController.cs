@@ -4,9 +4,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public TouchInputReceiver touchInputReceiver;
+    public MovementControl movement;
 
     public EnemyState state;
-    public MovementControl movement;
 
     private EnemyState[] _states;
     private Dictionary<string,EnemyState> _stateDict;
@@ -26,17 +26,28 @@ public class EnemyController : MonoBehaviour
         state.OnStateEnter();
     }
 
-    private void Update()
-    {
-        state.OnStateUpdate();
-        state.OnStateTouch(touchInputReceiver.isTouched);
-        movement.Move(state.destination, state.speed);
-    }
-
     public void SetState(string stateName)
     {
         state.OnStateExit();
         this.state = _stateDict[stateName];
         state.OnStateEnter();
     }
+
+    private void Update()
+    {
+        state.OnStateUpdate();
+
+        if (touchInputReceiver.isTouched)
+        {
+            state.OnStateTouch();
+        }
+
+        //movement.Move(state.destination, state.speed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        state.OnStateCollision(collision);
+    }
+
 }

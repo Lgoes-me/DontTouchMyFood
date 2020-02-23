@@ -9,15 +9,17 @@ public class ComingState : EnemyState
         destination = plateTransform.position;
     }
 
-    public override void OnStateTouch(bool touch)
+    public override void OnStateTouch()
     {
-        base.OnStateTouch(touch);
+        base.OnStateTouch();
 
-        if (_isStateActive) enemy.SetState("Dragging");
+        enemy.SetState("Dragging");
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    public override void OnStateCollision(Collision2D collision)
     {
-        if(_isStateActive && collision.transform.CompareTag("plate") ) enemy.SetState("Waiting");
+        base.OnStateCollision(collision);
+
+        if (collision.transform.CompareTag("plate")) enemy.SetState("Waiting");
     }
 }

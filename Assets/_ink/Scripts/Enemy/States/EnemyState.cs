@@ -9,18 +9,14 @@ public class EnemyState : MonoBehaviour
     public EnemyController enemy;
     
     public string stateName;
-
-    public bool isMoving;
     public float speed;
-
-    protected bool _isStateActive = false;
 
     public virtual void OnStateEnter()
     {
-        _isStateActive = true;
+
     }
 
-    public virtual void OnStateTouch(bool touch)
+    public virtual void OnStateTouch()
     {
 
     }
@@ -30,8 +26,13 @@ public class EnemyState : MonoBehaviour
 
     }
 
+    public virtual void OnStateCollision(Collision2D collision)
+    {
+
+    }
+
     public virtual void OnStateExit()
     {
-        _isStateActive = false;
+
     }
 }
