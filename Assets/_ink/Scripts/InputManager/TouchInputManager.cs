@@ -1,63 +1,38 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TouchInputManager : MonoBehaviour , IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class TouchInputManager : MonoBehaviour
 {
     private GameObject _touchedObject;
+
     private TouchInputReceiver _touchInputReceiver;
 
-    public void OnBeginDrag(PointerEventData eventData)
+    private Camera _camera;
+
+    private void Awake()
     {
-        throw new System.NotImplementedException();
+        _camera = Camera.main;
     }
 
-    public void OnDrag(PointerEventData eventData)
+    private void Update()
     {
-        throw new System.NotImplementedException();
-    }
+        Vector3 touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
-    }
+        Vector2 touchPosWorld2D = new Vector2(touchPosWorld.x, touchPosWorld.y);
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
-    }
+        RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, _camera.transform.forward);
 
-    void Update()
-    {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == _touchPhase)
+        if (hitInformation.collider != null)
         {
-            touchPosWorld = _camera.ScreenToWorldPoint(Input.GetTouch(0).position);
+            GameObject newTouchedObject = hitInformation.transform.gameObject;
 
-            Vector2 touchPosWorld2D = new Vector2(touchPosWorld.x, touchPosWorld.y);
-            
-            RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, _camera.transform.forward);
-
-            if (hitInformation.collider != null)
+            if (newTouchedObject != _touchedObject)
             {
-                GameObject newTouchedObject = hitInformation.transform.gameObject;
-                   
-                if(_touchedObject != null && _touchedObject != newTouchedObject)
-                {
-                    _touchedObject = newTouchedObject;
-                    if(_touchedObject.GetComponent<TouchInputReceiver>())
-                    {
-                        _touchInputReceiver = _touchedObject.GetComponent<TouchInputReceiver>();
-                    }
-                }
+                _touchedObject = newTouchedObject;
 
-                if(_touchInputReceiver != null)
+                if (_touchedObject.GetComponent<TouchInputReceiver>())
                 {
-                    _touchInputReceiver.Touch(true);
-                }
-            }else
-            {
-                if (_touchInputReceiver != null)
-                {
-                    _touchInputReceiver.Touch(false);
+                    _touchInputReceiver = _touchedObject.GetComponent<TouchInputReceiver>();
                 }
             }
         }
@@ -66,6 +41,26 @@ public class TouchInputManager : MonoBehaviour , IBeginDragHandler, IDragHandler
             if (_touchInputReceiver != null)
             {
                 _touchInputReceiver.Touch(false);
+                _touchInputReceiver = null;
+                _touchedObject = null;
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (_touchInputReceiver != null)
+            {
+                _touchInputReceiver.Touch(true);
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (_touchInputReceiver != null)
+            {
+                _touchInputReceiver.Touch(false);
+                _touchInputReceiver = null;
+                _touchedObject = null;
             }
         }
     }

@@ -10,6 +10,7 @@ public class EnemyState : MonoBehaviour
     
     public string stateName;
 
+    public bool isMoving;
     public float speed;
 
     protected bool _isStateActive = false;

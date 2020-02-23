@@ -12,7 +12,7 @@ public class DraggingState : EnemyState
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        StartCoroutine(ReturnAfterTouch());
+        //StartCoroutine(ReturnAfterTouch());
     }
 
     public override void OnStateTouch(bool touch)
@@ -31,10 +31,12 @@ public class DraggingState : EnemyState
         }
     }
 
+    /*
     private IEnumerator ReturnAfterTouch()
     {
         yield return new WaitForSeconds(waitTime);
 
         if (_isStateActive) enemy.SetState("Leaving");
     }
+    */
 }
