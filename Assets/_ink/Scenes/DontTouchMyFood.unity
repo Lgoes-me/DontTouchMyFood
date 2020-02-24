@@ -819,7 +819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324964894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 7.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -857,9 +857,9 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1324964901
 MonoBehaviour:
@@ -877,7 +877,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   stateName: Waiting
   speed: 0
-  waitTime: 4
+  waitTime: 2
 --- !u!114 &1324964902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,11 +909,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {x: 0, y: 0, z: 0}
   enemy: {fileID: 0}
-  stateName: Draging
+  stateName: Dragging
   speed: 0.85
   zDepth: -10
   mainCamera: {fileID: 963194227}
-  waitTime: 2
+  waitTime: 0.6
 --- !u!114 &1324964904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +929,7 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   enemy: {fileID: 0}
   stateName: Coming
-  speed: 0.001
+  speed: 0.02
   plateTransform: {fileID: 525959624}
 --- !u!114 &1324964905
 MonoBehaviour:

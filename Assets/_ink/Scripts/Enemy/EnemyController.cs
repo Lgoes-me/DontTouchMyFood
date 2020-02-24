@@ -36,18 +36,23 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         state.OnStateUpdate();
+    }
 
+    private void LateUpdate()
+    {
         if (touchInputReceiver.isTouched)
         {
             state.OnStateTouch();
         }
 
-        //movement.Move(state.destination, state.speed);
+        if(state.destination != null)
+        {
+            movement.Move(state.destination, state.speed);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         state.OnStateCollision(collision);
     }
-
 }

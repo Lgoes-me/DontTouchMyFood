@@ -11,6 +11,7 @@ public class MovementControl : MonoBehaviour
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _position = transform.position;
     }
 
     private void FixedUpdate()
@@ -20,11 +21,12 @@ public class MovementControl : MonoBehaviour
 
     private void Update()
     {
-        _position = Vector3.Lerp(transform.position, transform.position + _direction, _speed);
+        _position = Vector3.Lerp(transform.position, _direction, _speed);
     }
 
     public void Move(Vector3 direction, float speed)
     {
+        Debug.Log(direction + "," + speed);
         _direction = direction;
         _speed = speed;
     }
