@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
-public class EnemyState : MonoBehaviour
+public class PawState : MonoBehaviour
 {
-    [HideInInspector]
-    public Vector3 destination;
+    protected PawController _controller;
+    protected Rigidbody2D _rigidbody2D;
 
-    [HideInInspector]
-    public EnemyController enemy;
-    
-    public string stateName;
-    public float speed;
+    public virtual void Init(PawController controller)
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _controller = controller;
+    }
 
     public virtual void OnStateEnter()
     {

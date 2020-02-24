@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class DraggingState : EnemyState
+public class DraggingState : PawState
 {
     public float zDepth;
     public Camera mainCamera;
 
     public float waitTime;
+    public float speed;
+
     private bool _touched;
 
     public override void OnStateEnter()
@@ -17,7 +19,7 @@ public class DraggingState : EnemyState
     public override void OnStateTouch(bool touch)
     {
         base.OnStateTouch(touch);
-   
+        
         _touched = touch;
 
         StartCoroutine(ReturnAfterTouch());
@@ -27,8 +29,9 @@ public class DraggingState : EnemyState
     {
         if (_touched)
         {
-            destination = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zDepth);
+            Vector3 destination = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zDepth);
             destination = mainCamera.ScreenToWorldPoint(destination);
+            _rigidbody2D.position = Vector3.Lerp(transform.position, destination, speed);
         }
     }
     
@@ -36,6 +39,6 @@ public class DraggingState : EnemyState
     {
         yield return new WaitForSeconds(waitTime);
 
-        enemy.SetState("Leaving");
+        _controller.SetState(GetComponent<LeavingState>());
     }
 }

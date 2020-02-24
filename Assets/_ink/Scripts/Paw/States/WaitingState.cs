@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class WaitingState : EnemyState
+public class WaitingState : PawState
 {
     public float waitTime;
 
@@ -16,6 +16,6 @@ public class WaitingState : EnemyState
     {
         yield return new WaitForSeconds(waitTime);
 
-        enemy.SetState("Leaving");
+        _controller.SetState(GetComponent<LeavingState>());
     }
 }
