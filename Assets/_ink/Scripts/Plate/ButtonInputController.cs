@@ -1,16 +1,15 @@
 ﻿using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class ButtonInputController : MonoBehaviour
 {
+    public BoolVariable touch;
 
+    public IntVariable score;
+    public int scoreVariation;
 
-    public float pontuation;
-    public float pontuactionVariation;
-
-    public TouchInputReceiver touchInputReceiver;
-    
-    private void Update()
+    private void FixedUpdate()
     {
-        if(touchInputReceiver.isTouched) pontuation += pontuactionVariation;
+        if(touch.Value) score.Value += scoreVariation;
     }
 }

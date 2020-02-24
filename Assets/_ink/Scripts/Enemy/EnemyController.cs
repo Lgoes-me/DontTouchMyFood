@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public TouchInputReceiver touchInputReceiver;
+    public InputReceiver touchInputReceiver;
     public MovementControl movement;
 
     public EnemyState state;
@@ -40,12 +40,9 @@ public class EnemyController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (touchInputReceiver.isTouched)
-        {
-            state.OnStateTouch();
-        }
+        //state.OnStateTouch(touchInputReceiver.isTouched);
 
-        if(state.destination != null)
+        if (state.destination != null)
         {
             movement.Move(state.destination, state.speed);
         }

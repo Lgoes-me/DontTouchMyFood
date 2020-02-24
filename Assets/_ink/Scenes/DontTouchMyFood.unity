@@ -121,52 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &104625873
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 104625875}
-  - component: {fileID: 104625874}
-  m_Layer: 0
-  m_Name: InterfaceManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &104625874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104625873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b0f55adeabe3c449936743a0d9d5ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button: {fileID: 525959625}
-  progress: {fileID: 1456917279}
-  levelPontuation: 100
---- !u!4 &104625875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104625873}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106759205
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525959622
 GameObject:
@@ -288,11 +242,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525959622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.651, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0.14, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &525959625
 MonoBehaviour:
@@ -306,9 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae075f64622f1840aaf8be0a412603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontuation: 0
-  pontuactionVariation: 5
-  touchInputReceiver: {fileID: 525959627}
+  touch: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
+  score: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
+  scoreVariation: 1
 --- !u!58 &525959626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -337,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e09a06165f176439774aecca179697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouched: 0
+  isBeingTouched: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
 --- !u!1 &600225199
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +303,7 @@ GameObject:
   - component: {fileID: 600225201}
   - component: {fileID: 600225200}
   m_Layer: 0
-  m_Name: Global Light 2D
+  m_Name: Global Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -493,7 +447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -634,7 +588,7 @@ RectTransform:
   m_Children:
   - {fileID: 1456917276}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -705,7 +659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324964894
 GameObject:
@@ -820,7 +774,7 @@ Transform:
   m_GameObject: {fileID: 1324964894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -943,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e09a06165f176439774aecca179697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouched: 0
+  isBeingTouched: {fileID: 0}
 --- !u!1 &1456917275
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +911,7 @@ GameObject:
   - component: {fileID: 1456917277}
   - component: {fileID: 1456917279}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Progress Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,14 +926,14 @@ RectTransform:
   m_GameObject: {fileID: 1456917275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1225860494}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22}
+  m_AnchoredPosition: {x: 0, y: -54}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456917277
@@ -995,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.29304102, g: 0.8301887, b: 0.043075833, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1031,4 +985,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268700c173794e4294996f993034d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eatenPercentage: 0
+  maxScore: {fileID: 11400000, guid: 2df8c669c4e5c384ebd4f8ba68c9a139, type: 2}
+  currentScore: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}

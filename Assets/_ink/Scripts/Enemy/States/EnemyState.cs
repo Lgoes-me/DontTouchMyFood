@@ -16,7 +16,7 @@ public class EnemyState : MonoBehaviour
 
     }
 
-    public virtual void OnStateTouch()
+    public virtual void OnStateTouch(bool touch)
     {
 
     }

@@ -14,11 +14,11 @@ public class DraggingState : EnemyState
         base.OnStateEnter();
     }
 
-    public override void OnStateTouch()
+    public override void OnStateTouch(bool touch)
     {
-        base.OnStateTouch();
+        base.OnStateTouch(touch);
    
-        _touched = true;
+        _touched = touch;
 
         StartCoroutine(ReturnAfterTouch());
     }

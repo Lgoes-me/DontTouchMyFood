@@ -26,7 +26,6 @@ public class MovementControl : MonoBehaviour
 
     public void Move(Vector3 direction, float speed)
     {
-        Debug.Log(direction + "," + speed);
         _direction = direction;
         _speed = speed;
     }

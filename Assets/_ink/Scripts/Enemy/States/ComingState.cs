@@ -9,9 +9,9 @@ public class ComingState : EnemyState
         destination = plateTransform.position;
     }
 
-    public override void OnStateTouch()
+    public override void OnStateTouch(bool touch)
     {
-        base.OnStateTouch();
+        base.OnStateTouch(touch);
 
         enemy.SetState("Dragging");
     }

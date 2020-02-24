@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using ScriptableObjectArchitecture;
 
 public class ProgressBarController : MonoBehaviour
 {
-    public float eatenPercentage;
+    public IntVariable maxScore, currentScore;
+
     private Image image;
 
     private void Start()
@@ -13,6 +15,6 @@ public class ProgressBarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        image.fillAmount = eatenPercentage / 100f;
+        image.fillAmount = (float)currentScore / maxScore;
     }
 }
