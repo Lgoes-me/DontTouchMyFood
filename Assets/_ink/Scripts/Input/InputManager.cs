@@ -5,7 +5,7 @@ public class InputManager : MonoBehaviour
 {
     private GameObject _touchedObject;
 
-    private InputReceiver _touchInputReceiver;
+    private IReceiver _touchInputReceiver;
 
     private Camera _camera;
 
@@ -30,9 +30,9 @@ public class InputManager : MonoBehaviour
             {
                 _touchedObject = newTouchedObject;
 
-                if (_touchedObject.GetComponent<InputReceiver>())
+                if (_touchedObject.GetComponent<IReceiver>() != null)
                 {
-                    _touchInputReceiver = _touchedObject.GetComponent<InputReceiver>();
+                    _touchInputReceiver = _touchedObject.GetComponent<IReceiver>();
                 }
             }
         }

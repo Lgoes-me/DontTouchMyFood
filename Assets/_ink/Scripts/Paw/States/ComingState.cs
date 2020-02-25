@@ -14,7 +14,11 @@ public class ComingState : PawState
     {
         base.OnStateTouch(touch);
 
-        if(touch) _controller.SetState( this.GetComponent<DraggingState>());
+        if (touch)
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+            _controller.SetState(this.GetComponent<DraggingState>());
+        }
     }
 
     public override void OnStateCollision(Collision2D collision)
