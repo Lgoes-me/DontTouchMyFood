@@ -795,4 +795,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4101514700657561316, guid: b7c84c4b89dfef84383efa5a04997561, type: 3}
   plate: {fileID: 525959622}
-  waitTime: 2
+  minTime: 0.75
+  maxTime: 3
+  distance: 7

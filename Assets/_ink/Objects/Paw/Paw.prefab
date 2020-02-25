@@ -194,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plateTransform: {fileID: 0}
   speed: 5
+  waitTime: 2
 --- !u!114 &4101514700657561308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,5 +209,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zDepth: -10
   mainCamera: {fileID: 0}
-  waitTime: 0.45
+  waitTime: 0.3
   speed: 0.95

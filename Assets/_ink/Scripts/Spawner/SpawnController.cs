@@ -7,7 +7,9 @@ public class SpawnController : MonoBehaviour
 {
     public GameObject prefab;
     public GameObject plate;
-    public float waitTime;
+    public float minTime;
+    public float maxTime;
+    public float distance;
 
     private Camera _camera;
 
@@ -19,8 +21,15 @@ public class SpawnController : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(waitTime);
+        float time = Random.Range(minTime, maxTime);
+        yield return new WaitForSeconds(time);
         GameObject paw = Instantiate(prefab);
+
+        Vector3 spawpoint = distance * Vector3.up;
+        float ramdomAngle = Random.Range(0, 360);
+        spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint ;
+
+        paw.transform.position = plate.transform.position + spawpoint;
 
         BoolVariable boolVar = (BoolVariable) ScriptableObject.CreateInstance("BoolVariable");
 
