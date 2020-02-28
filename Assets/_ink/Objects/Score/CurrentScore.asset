@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
-  _value: 0
+  _value: 50
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

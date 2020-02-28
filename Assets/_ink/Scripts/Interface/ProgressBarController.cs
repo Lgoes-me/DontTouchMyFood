@@ -4,9 +4,7 @@ using ScriptableObjectArchitecture;
 
 public class ProgressBarController : MonoBehaviour
 {
-    //public IntVariable maxScore, currentScore;
     public FloatVariable fillPercent;
-
     private Image image;
 
     private void Start()
@@ -16,7 +14,6 @@ public class ProgressBarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //image.fillAmount = (float)currentScore.Value / maxScore.Value;
         image.fillAmount = fillPercent.Value;
     }
 }

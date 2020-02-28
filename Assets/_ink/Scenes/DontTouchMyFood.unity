@@ -418,7 +418,6 @@ GameObject:
   - component: {fileID: 793536031}
   - component: {fileID: 793536033}
   - component: {fileID: 793536032}
-  - component: {fileID: 793536034}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -563,19 +562,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793536030}
   m_CullTransparentMesh: 0
---- !u!114 &793536034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793536030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3758ff8a0abc50248b7d0dbf2139ea8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 11400000, guid: 80071f2acbcdd6245bf1a19ccc59e125, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +871,6 @@ GameObject:
   - component: {fileID: 1456917276}
   - component: {fileID: 1456917278}
   - component: {fileID: 1456917277}
-  - component: {fileID: 1456917279}
   m_Layer: 5
   m_Name: Progress Bar
   m_TagString: Untagged
@@ -949,19 +934,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456917275}
   m_CullTransparentMesh: 0
---- !u!114 &1456917279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456917275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268700c173794e4294996f993034d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fillPercent: {fileID: 0}
 --- !u!1 &1962439033
 GameObject:
   m_ObjectHideFlags: 0
