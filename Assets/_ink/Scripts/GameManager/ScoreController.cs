@@ -3,15 +3,10 @@ using ScriptableObjectArchitecture;
 
 public class ScoreController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public IntVariable gameScore, feedingScore, feedingScoreGoal;
 
-    // Update is called once per frame
-    void Update()
+    public void AddScore(int value)
     {
-        
+        gameScore.Value = value;
     }
 }

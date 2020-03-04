@@ -174,7 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 114071574}
   - component: {fileID: 114071576}
-  - component: {fileID: 114071575}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -196,21 +195,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114071575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114071573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c361996bfc0fe054298936f43e85ea75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: {fileID: 11400000, guid: 2df8c669c4e5c384ebd4f8ba68c9a139, type: 2}
-  current: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
-  percentage: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
 --- !u!114 &114071576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8b9961751ff7a4180778dda47c709a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScore: {fileID: 11400000, guid: b3f7725e607b3ed499d328c492f1e4de, type: 2}
+  feedingScore: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
+  feedingScoreGoal: {fileID: 11400000, guid: 2df8c669c4e5c384ebd4f8ba68c9a139, type: 2}
 --- !u!1 &247635790
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +322,7 @@ GameObject:
   - component: {fileID: 525959626}
   - component: {fileID: 525959627}
   - component: {fileID: 525959625}
+  - component: {fileID: 525959628}
   m_Layer: 0
   m_Name: Plate
   m_TagString: plate
@@ -450,6 +438,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingTouched: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
+--- !u!114 &525959628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525959622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0208ef0fcc499ed4c8fbc5e31444cc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
 --- !u!1 &535209800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,12 +1190,23 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: c508e390d415bd6498447e1035da1a17,
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: b8735f9d4cc2dc0468a60225c9e290bb,
     type: 2}
-  _event: {fileID: 11400000, guid: c508e390d415bd6498447e1035da1a17, type: 2}
+  _event: {fileID: 11400000, guid: b8735f9d4cc2dc0468a60225c9e290bb, type: 2}
   _response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114071576}
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1322995090
 Transform:
   m_ObjectHideFlags: 0
@@ -1219,6 +1231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456917276}
   - component: {fileID: 1456917278}
+  - component: {fileID: 1456917280}
   - component: {fileID: 1456917279}
   - component: {fileID: 1456917277}
   m_Layer: 5
@@ -1297,6 +1310,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillPercent: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+--- !u!114 &1456917280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456917275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c361996bfc0fe054298936f43e85ea75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: {fileID: 11400000, guid: 2df8c669c4e5c384ebd4f8ba68c9a139, type: 2}
+  current: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
+  percentage: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
 --- !u!1 &1787034870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4101514700657561316, guid: b7c84c4b89dfef84383efa5a04997561, type: 3}
-  plate: {fileID: 525959622}
+  platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   minTime: 0.75
   maxTime: 3
   distance: 7

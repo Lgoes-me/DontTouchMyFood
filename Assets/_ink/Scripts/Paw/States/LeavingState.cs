@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class LeavingState : PawState
 {
-    public Transform plateTransform;
+    public Vector3Variable platePosition;
     public float speed;
     public float waitTime;
 
@@ -15,7 +16,7 @@ public class LeavingState : PawState
 
     public override void OnStateUpdate()
     {
-        _rigidbody2D.velocity = speed * (transform.position - plateTransform.position).normalized;
+        _rigidbody2D.velocity = speed * (transform.position - platePosition.Value).normalized;
     }
 
     private IEnumerator RemoveFromGame()

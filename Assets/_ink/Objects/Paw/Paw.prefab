@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plateTransform: {fileID: 0}
+  platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   speed: 2
 --- !u!114 &4101514700657561317
 MonoBehaviour:
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e9ad9b2860c0b46a18f7ade2160d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plateTransform: {fileID: 0}
+  platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   speed: 5
   waitTime: 2
 --- !u!114 &4101514700657561308

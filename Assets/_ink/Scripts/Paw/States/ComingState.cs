@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class ComingState : PawState
 {
-    public Transform plateTransform;
+    public Vector3Variable platePosition;
     public float speed;
 
     public override void OnStateUpdate()
     {
-        _rigidbody2D.velocity = - speed * (transform.position - plateTransform.position).normalized ;
+        _rigidbody2D.velocity = - speed * (transform.position - platePosition.Value).normalized ;
     }
 
     public override void OnStateTouch(bool touch)
