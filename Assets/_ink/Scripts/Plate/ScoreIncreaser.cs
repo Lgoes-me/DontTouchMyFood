@@ -3,7 +3,7 @@ using ScriptableObjectArchitecture;
 
 public class ScoreIncreaser : MonoBehaviour
 {
-    //public ScoreController scoreController;
+    public ScoreController scoreController;
     public BoolVariable shouldIncrease;
 
     public IntVariable intValue;
@@ -16,7 +16,7 @@ public class ScoreIncreaser : MonoBehaviour
         if (shouldIncrease.Value)
         {
             intValue.Value += variation;
-            //scoreController.AddScore(variation);
+            scoreController.AddScore(variation);
         }
     }
 }

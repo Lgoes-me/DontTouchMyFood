@@ -7,6 +7,6 @@ public class ScoreController : MonoBehaviour
 
     public void AddScore(int value)
     {
-        gameScore.Value = value;
+        gameScore.Value += value;
     }
 }

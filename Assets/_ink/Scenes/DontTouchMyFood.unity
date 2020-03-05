@@ -406,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae075f64622f1840aaf8be0a412603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreController: {fileID: 114071576}
   shouldIncrease: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
   intValue: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
   variation: 1
@@ -494,6 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5b165d906d74a479997ee8aff76ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScore: {fileID: 11400000, guid: b3f7725e607b3ed499d328c492f1e4de, type: 2}
+  gameScoreValue: 0
   foodScore: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
   foodScoreValue: 0
   initialTimer: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b, type: 2}
@@ -1182,13 +1185,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322995088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 69133796c46a8cb4bb0c3ea404f4376e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
   _showDebugFields: 0
-  _enableGizmoDebugging: 1
+  _enableGizmoDebugging: 0
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
   _previouslyRegisteredEvent: {fileID: 11400000, guid: b8735f9d4cc2dc0468a60225c9e290bb,
     type: 2}
@@ -1198,7 +1201,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114071576}
         m_MethodName: AddScore
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1507,7 +1510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7e98000ecc52148bf5cf6f816abfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intValue: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
+  intValue: {fileID: 11400000, guid: b3f7725e607b3ed499d328c492f1e4de, type: 2}
   stringValue: {fileID: 11400000, guid: 5bc14cdd6085b44438e8e50cd9a633c4, type: 2}
   formatting: 
 --- !u!1 &1962439033

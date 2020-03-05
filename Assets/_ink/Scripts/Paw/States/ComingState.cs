@@ -5,6 +5,8 @@ public class ComingState : PawState
 {
     public Vector3Variable platePosition;
     public float speed;
+    public IntGameEvent scoreEvent;
+    public int positiveScore, negativeScore;
 
     public override void OnStateUpdate()
     {
@@ -18,6 +20,7 @@ public class ComingState : PawState
         if (touch)
         {
             _rigidbody2D.velocity = Vector2.zero;
+            scoreEvent.Raise(positiveScore);
             _controller.SetState(this.GetComponent<DraggingState>());
         }
     }
@@ -26,6 +29,10 @@ public class ComingState : PawState
     {
         base.OnStateCollision(collision);
 
-        if (collision.transform.CompareTag("plate")) _controller.SetState(this.GetComponent<WaitingState>());
+        if (collision.transform.CompareTag("plate"))
+        {
+            scoreEvent.Raise(negativeScore);
+            _controller.SetState(this.GetComponent<WaitingState>());
+        }
     }
 }
