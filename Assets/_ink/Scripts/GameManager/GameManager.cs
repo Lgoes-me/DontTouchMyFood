@@ -8,11 +8,7 @@ public class GameManager : MonoBehaviour
 
     public IntVariable foodScore;
     public int foodScoreValue;
-
-    public FloatVariable initialTimer;
-    public float initialTimeValue;
-
-
+   
     public GameEvent gameStartedEvent;
 
     private void Awake()
@@ -24,7 +20,6 @@ public class GameManager : MonoBehaviour
     {
         gameScore.Value = gameScoreValue;
         foodScore.Value = foodScoreValue;
-        initialTimer.Value = initialTimeValue;
 
         gameStartedEvent.Raise();
     }

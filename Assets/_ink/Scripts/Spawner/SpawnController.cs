@@ -15,8 +15,12 @@ public class SpawnController : MonoBehaviour
 
     private void Awake()
     {
-        StartCoroutine(Spawn());
         _camera = Camera.main;
+    }
+
+    public void InitSpawn()
+    {
+        StartCoroutine(Spawn());
     }
 
     private IEnumerator Spawn()

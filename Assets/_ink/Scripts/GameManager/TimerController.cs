@@ -14,4 +14,14 @@ public class TimerController : MonoBehaviour
             timer.Value -= Time.deltaTime;
         }
     }
+
+    public void TimerControl(bool shouldBeRunning)
+    {
+        isTimerRunning.Value = shouldBeRunning;
+    }
+
+    public void SetTimerValue(float timerValue)
+    {
+        timer.Value = timerValue;
+    }
 }
