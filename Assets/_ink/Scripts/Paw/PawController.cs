@@ -32,7 +32,6 @@ public class PawController : MonoBehaviour
     private void Update()
     {
         state.OnStateTouch(touch.Value);
-
         state.OnStateUpdate();
     }
     

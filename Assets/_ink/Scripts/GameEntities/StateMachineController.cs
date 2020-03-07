@@ -1,28 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using ScriptableObjectArchitecture;
 
-public class StateMachineController<T> : MonoBehaviour, IStateMachine<T>
-    where T : BaseState<>
+public class StateMachineController: MonoBehaviour
 {
-    public IState state;
+    public BoolVariable touch;
 
-    private IState[] _states;
+    public BaseState state;
+    private BaseState[] _states;
 
     public virtual void Init()
     {
-        _states = GetComponents<IState>();
+        _states = GetComponents<BaseState>();
 
-        foreach (IState pawState in _states)
+        foreach (BaseState _state in _states)
         {
-            pawState.Init(this);
+            _state.Init(this);
         }
 
         state.OnStateEnter();
     }
 
-    public virtual void SetState(IState newState)
+    public virtual void SetState(BaseState newState)
     {
+        state.OnStateExit();
+        this.state = newState;
+        state.OnStateEnter();
+    }
 
+    private void Update()
+    {
+        state.OnStateInputReceived(touch.Value);
+        state.OnStateUpdate();
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        state.OnStateCollision(collision);
     }
 }

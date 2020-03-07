@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 
-public class BaseState <T> : MonoBehaviour, IState
-    where T : StateMachineController
+public class BaseState: MonoBehaviour
 {
-    protected T _controller;
+    protected StateMachineController _controller;
+    protected Rigidbody2D _rigidbody2D;
 
-    protected virtual void Init(T controller)
+    public virtual void Init(StateMachineController controller)
     {
         _controller = controller;
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public virtual void OnStateEnter()
@@ -21,6 +22,16 @@ public class BaseState <T> : MonoBehaviour, IState
     }
 
     public virtual void OnStateUpdate()
+    {
+
+    }
+
+    public virtual void OnStateInputReceived(bool input)
+    {
+
+    }
+
+    public virtual void OnStateCollision(Collision2D collision)
     {
 
     }
