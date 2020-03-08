@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Ink.DontTouchMyFood.Entity;
 
-public class DraggingState : PawState
+public class DraggingState : EntityState
 {
     public float zDepth;
     public Camera mainCamera;
@@ -16,9 +17,9 @@ public class DraggingState : PawState
         base.OnStateEnter();
     }
 
-    public override void OnStateTouch(bool touch)
+    public override void OnStateInputReceived(bool touch)
     {
-        base.OnStateTouch(touch);
+        base.OnStateInputReceived(touch);
         
         _touched = touch;
 

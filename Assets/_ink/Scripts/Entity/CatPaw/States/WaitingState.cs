@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Ink.DontTouchMyFood.Entity;
 
-public class WaitingState : PawState
+public class WaitingState : EntityState
 {
     public float waitTime;
 

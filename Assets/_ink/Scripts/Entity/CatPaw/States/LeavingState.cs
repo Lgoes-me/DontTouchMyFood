@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using Ink.DontTouchMyFood.Entity;
 
-public class LeavingState : PawState
+public class LeavingState : EntityState
 {
     public Vector3Variable platePosition;
     public float speed;

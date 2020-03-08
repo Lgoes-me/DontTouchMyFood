@@ -3,9 +3,11 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
+    private float zDepth = -10;
+
     private GameObject _touchedObject;
 
-    private IReceiver _touchInputReceiver;
+    private ScriptableInputReceiver _touchInputReceiver;
 
     private Camera _camera;
 
@@ -30,9 +32,9 @@ public class InputManager : MonoBehaviour
             {
                 _touchedObject = newTouchedObject;
 
-                if (_touchedObject.GetComponent<IReceiver>() != null)
+                if (_touchedObject.GetComponent<ScriptableInputReceiver>() != null)
                 {
-                    _touchInputReceiver = _touchedObject.GetComponent<IReceiver>();
+                    _touchInputReceiver = _touchedObject.GetComponent<ScriptableInputReceiver>();
                 }
             }
         }

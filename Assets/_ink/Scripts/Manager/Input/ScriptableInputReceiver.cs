@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class InputReceiver : MonoBehaviour, IReceiver
+public class ScriptableInputReceiver : MonoBehaviour
 {
     public BoolVariable isBeingTouched;
 

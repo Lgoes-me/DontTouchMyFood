@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using Ink.DontTouchMyFood.Entity;
 
 public class SpawnController : MonoBehaviour
 {
@@ -37,8 +38,8 @@ public class SpawnController : MonoBehaviour
 
         BoolVariable boolVar = (BoolVariable) ScriptableObject.CreateInstance("BoolVariable");
 
-        paw.GetComponent<InputReceiver>().isBeingTouched = boolVar;
-        paw.GetComponent<PawController>().touch = boolVar;
+        paw.GetComponent<ScriptableInputReceiver>().isBeingTouched = boolVar;
+        paw.GetComponent<EntityController>().touch = boolVar;
 
         paw.GetComponent<DraggingState>().mainCamera = _camera;
 

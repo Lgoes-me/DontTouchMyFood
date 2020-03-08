@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
+using Ink.DontTouchMyFood.Entity;
 
-public class ComingState : PawState
+public class ComingState : EntityState
 {
     public Vector3Variable platePosition;
     public float speed;
@@ -12,10 +13,10 @@ public class ComingState : PawState
     {
         _rigidbody2D.velocity = - speed * (transform.position - platePosition.Value).normalized ;
     }
-
-    public override void OnStateTouch(bool touch)
+    
+    public override void OnStateInputReceived(bool touch)
     {
-        base.OnStateTouch(touch);
+        base.OnStateInputReceived(touch);
 
         if (touch)
         {

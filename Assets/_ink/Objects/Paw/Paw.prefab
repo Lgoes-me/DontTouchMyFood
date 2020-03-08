@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4101514700657561306}
   - component: {fileID: 4101514700657561310}
   - component: {fileID: 4101514700657561299}
-  - component: {fileID: 4101514700657561305}
+  - component: {fileID: 3742786208140679491}
   - component: {fileID: 4101514700657561298}
   - component: {fileID: 4101514700657561317}
   - component: {fileID: 4101514700657561311}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingTouched: {fileID: 11400000, guid: c48a8a85cf2f9294090e1015294fb226, type: 2}
---- !u!114 &4101514700657561305
+--- !u!114 &3742786208140679491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4101514700657561316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188956343c22b0c429a823a62713e994, type: 3}
+  m_Script: {fileID: 11500000, guid: fc73731cb51d64848a1f5f633c602350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   touch: {fileID: 11400000, guid: c48a8a85cf2f9294090e1015294fb226, type: 2}
