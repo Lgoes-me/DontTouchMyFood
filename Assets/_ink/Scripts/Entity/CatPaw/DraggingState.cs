@@ -1,21 +1,16 @@
 ﻿using System.Collections;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 using Ink.DontTouchMyFood.Entity;
 
 public class DraggingState : EntityState
 {
-    public float zDepth;
-    public Camera mainCamera;
+    public Vector3Variable inputPosition;
 
     public float waitTime;
     public float speed;
 
     private bool _touched;
-
-    public override void OnStateEnter()
-    {
-        base.OnStateEnter();
-    }
 
     public override void OnStateInputReceived(bool touch)
     {
@@ -30,9 +25,7 @@ public class DraggingState : EntityState
     {
         if (_touched)
         {
-            Vector3 destination = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zDepth);
-            destination = mainCamera.ScreenToWorldPoint(destination);
-            _rigidbody2D.position = Vector3.Lerp(transform.position, destination, speed);
+            _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value, speed);
         }
     }
     

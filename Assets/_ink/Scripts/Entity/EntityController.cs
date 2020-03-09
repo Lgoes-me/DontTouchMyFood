@@ -10,7 +10,7 @@ namespace Ink.DontTouchMyFood.Entity
         public EntityState state;
         private EntityState[] _states;
 
-        public virtual void Init()
+        public void Init()
         {
             _states = GetComponents<EntityState>();
 
@@ -22,16 +22,20 @@ namespace Ink.DontTouchMyFood.Entity
             state.OnStateEnter();
         }
 
-        public virtual void SetState(EntityState newState)
+        public void SetState(EntityState newState)
         {
             state.OnStateExit();
             this.state = newState;
             state.OnStateEnter();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             state.OnStateInputReceived(touch.Value);
+        }
+
+        private void Update()
+        {
             state.OnStateUpdate();
         }
 

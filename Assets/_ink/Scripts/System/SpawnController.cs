@@ -41,7 +41,7 @@ public class SpawnController : MonoBehaviour
         paw.GetComponent<ScriptableInputReceiver>().isBeingTouched = boolVar;
         paw.GetComponent<EntityController>().touch = boolVar;
 
-        paw.GetComponent<DraggingState>().mainCamera = _camera;
+        paw.GetComponent<EntityController>().Init();
 
         StartCoroutine(Spawn());
     }

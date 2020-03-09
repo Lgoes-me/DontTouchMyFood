@@ -210,7 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170862284b1784646b830dc76f36add7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zDepth: -10
-  mainCamera: {fileID: 0}
+  inputPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
   waitTime: 0.3
   speed: 0.95

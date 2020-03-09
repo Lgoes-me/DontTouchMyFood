@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using ScriptableObjectArchitecture;
 
 public class InputManager : MonoBehaviour
 {
-    private float zDepth = -10;
+    [SerializeField]
+    private float zDepth;
+
+    public Vector3Variable inputPosition;
+    private Camera _camera;
 
     private GameObject _touchedObject;
-
     private ScriptableInputReceiver _touchInputReceiver;
-
-    private Camera _camera;
 
     private void Awake()
     {
@@ -20,7 +22,8 @@ public class InputManager : MonoBehaviour
     {
         Vector3 touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector2 touchPosWorld2D = new Vector2(touchPosWorld.x, touchPosWorld.y);
+        Vector3 touchPosWorld2D = new Vector3(touchPosWorld.x, touchPosWorld.y, zDepth);
+        inputPosition.Value = touchPosWorld;
 
         RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, _camera.transform.forward);
 

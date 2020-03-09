@@ -9,8 +9,6 @@ public class ScoreIncreaser : MonoBehaviour
     public IntVariable intValue;
     public int variation;
 
-
-
     private void FixedUpdate()
     {
         if (shouldIncrease.Value)

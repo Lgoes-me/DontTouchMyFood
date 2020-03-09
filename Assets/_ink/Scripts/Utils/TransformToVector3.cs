@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class PositionController : MonoBehaviour
+public class TransformToVector3 : MonoBehaviour
 {
     public Vector3Variable position;
 

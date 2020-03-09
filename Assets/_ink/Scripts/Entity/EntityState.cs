@@ -7,7 +7,7 @@ namespace Ink.DontTouchMyFood.Entity
         protected EntityController _controller;
         protected Rigidbody2D _rigidbody2D;
 
-        public virtual void Init(EntityController controller)
+        public void Init(EntityController controller)
         {
             _controller = controller;
             _rigidbody2D = GetComponent<Rigidbody2D>();
