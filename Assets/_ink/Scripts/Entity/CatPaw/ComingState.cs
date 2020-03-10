@@ -14,11 +14,11 @@ public class ComingState : EntityState
         _rigidbody2D.velocity = - speed * (transform.position - platePosition.Value).normalized ;
     }
     
-    public override void OnStateInputReceived(bool touch)
+    public override void OnStateInputReceived(bool input)
     {
-        base.OnStateInputReceived(touch);
+        base.OnStateInputReceived(input);
 
-        if (touch)
+        if (input)
         {
             _rigidbody2D.velocity = Vector2.zero;
             scoreEvent.Raise(positiveScore);
