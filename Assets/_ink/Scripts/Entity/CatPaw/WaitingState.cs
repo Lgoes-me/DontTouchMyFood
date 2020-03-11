@@ -1,22 +1,24 @@
 ﻿using System.Collections;
 using UnityEngine;
-using Ink.DontTouchMyFood.Entity;
 
-public class WaitingState : EntityState
+namespace Ink.DontTouchMyFood.Entity
 {
-    public float waitTime;
-
-    public override void OnStateEnter()
+    public class WaitingState : EntityState
     {
-        base.OnStateEnter();
+        public float waitTime;
 
-        StartCoroutine(ReturnAfterCollision());
-    }
+        public override void OnStateEnter()
+        {
+            base.OnStateEnter();
 
-    private IEnumerator ReturnAfterCollision()
-    {
-        yield return new WaitForSeconds(waitTime);
+            StartCoroutine(ReturnAfterCollision());
+        }
 
-        _controller.SetState(GetComponent<LeavingState>());
+        private IEnumerator ReturnAfterCollision()
+        {
+            yield return new WaitForSeconds(waitTime);
+
+            _controller.SetState(GetComponent<LeavingState>());
+        }
     }
 }

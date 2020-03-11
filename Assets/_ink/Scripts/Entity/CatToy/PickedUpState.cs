@@ -23,9 +23,9 @@ public class PickedUpState : EntityState
         }
     }
 
-    public override void OnStateCollision(Collision2D collision)
+    public override void OnStateTrigger(Collider2D collision)
     {
-        base.OnStateCollision(collision);
+        base.OnStateTrigger(collision);
 
         if (collision.transform.CompareTag("paw"))
         {

@@ -12,15 +12,15 @@ GameObject:
   - component: {fileID: 1641375943174681886}
   - component: {fileID: 1641375943174682338}
   - component: {fileID: 1641375943174681885}
+  - component: {fileID: 4844699166140531172}
   - component: {fileID: 1641375943174681884}
-  - component: {fileID: 1680313919429898552}
   - component: {fileID: 24858328754756912}
   - component: {fileID: 5477741410396736067}
   - component: {fileID: 208800998871069382}
   - component: {fileID: 6479788289546780647}
   m_Layer: 0
   m_Name: Toy
-  m_TagString: Untagged
+  m_TagString: toy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641375943174681881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -126,6 +126,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &4844699166140531172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641375943174681881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a33c73a2070d4a4eb8218ffe760db77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1641375943174681884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,19 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e09a06165f176439774aecca179697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBeingTouched: {fileID: 11400000, guid: af1824d44d2547b48963132c7ac68aa5, type: 2}
---- !u!114 &1680313919429898552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641375943174681881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d01dca639525e41bf848a6fe24dd24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isBeingTouched: {fileID: 0}
 --- !u!114 &24858328754756912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73731cb51d64848a1f5f633c602350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touch: {fileID: 11400000, guid: af1824d44d2547b48963132c7ac68aa5, type: 2}
+  touch: {fileID: 0}
   state: {fileID: 5477741410396736067}
 --- !u!114 &5477741410396736067
 MonoBehaviour:

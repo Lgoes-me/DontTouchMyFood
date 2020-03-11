@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
-using Ink.DontTouchMyFood.Entity;
-
 public class SpawnController : MonoBehaviour
 {
     public GameObject prefab;
@@ -35,14 +33,6 @@ public class SpawnController : MonoBehaviour
         spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint ;
 
         paw.transform.position = platePosition.Value + spawpoint;
-
-        BoolVariable boolVar = (BoolVariable) ScriptableObject.CreateInstance("BoolVariable");
-
-        paw.GetComponent<ScriptableInputReceiver>().isBeingTouched = boolVar;
-        paw.GetComponent<EntityController>().touch = boolVar;
-
-        paw.GetComponent<EntityController>().Init();
-
         StartCoroutine(Spawn());
     }
 }

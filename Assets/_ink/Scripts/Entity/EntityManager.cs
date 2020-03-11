@@ -1,18 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using ScriptableObjectArchitecture;
 
-public class EntityManager : MonoBehaviour
+namespace Ink.DontTouchMyFood.Entity
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EntityManager : MonoBehaviour
     {
-        
-    }
+        private void Awake()
+        {
+            Init();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected virtual void Init()
+        {
+            BoolVariable boolVar = (BoolVariable)ScriptableObject.CreateInstance("BoolVariable");
+
+            GetComponent<ScriptableInputReceiver>().isBeingTouched = boolVar;
+            GetComponent<EntityController>().touch = boolVar;
+
+            GetComponent<EntityController>().Init();
+        }
     }
 }

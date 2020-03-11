@@ -37,5 +37,10 @@ namespace Ink.DontTouchMyFood.Entity
         {
 
         }
+
+        public virtual void OnStateTrigger(Collider2D collision)
+        {
+
+        }
     }
 }
