@@ -12,7 +12,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         public override void OnStateUpdate()
         {
-            _rigidbody2D.velocity = -speed * (transform.position - platePosition.Value).normalized;
+            _rigidbody2D.velocity = speed * transform.up;
         }
 
         public override void OnStateInputReceived(bool input)
@@ -32,18 +32,6 @@ namespace Ink.DontTouchMyFood.Entity
             base.OnStateCollision(collision);
 
             if (collision.transform.CompareTag("plate"))
-            {
-                _rigidbody2D.velocity = Vector2.zero;
-                scoreEvent.Raise(negativeScore);
-                _controller.SetState(this.GetComponent<WaitingState>());
-            }
-        }
-
-        public override void OnStateTrigger(Collider2D collision)
-        {
-            base.OnStateTrigger(collision);
-
-            if (collision.transform.CompareTag("toy"))
             {
                 _rigidbody2D.velocity = Vector2.zero;
                 scoreEvent.Raise(negativeScore);

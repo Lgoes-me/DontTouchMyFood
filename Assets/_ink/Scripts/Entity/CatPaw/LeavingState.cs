@@ -18,7 +18,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         public override void OnStateUpdate()
         {
-            _rigidbody2D.velocity = speed * (transform.position - platePosition.Value).normalized;
+            _rigidbody2D.velocity = - speed * transform.up;
         }
 
         private IEnumerator RemoveFromGame()
