@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class TransformToVector3 : MonoBehaviour
+namespace Ink.DontTouchMyFood.Utils
 {
-    public Vector3Variable position;
-
-    void Update()
+    public class TransformToVector3 : MonoBehaviour
     {
-        position.Value = transform.position;
+        public Vector3Variable position;
+
+        void Update()
+        {
+            position.Value = transform.position;
+        }
     }
 }

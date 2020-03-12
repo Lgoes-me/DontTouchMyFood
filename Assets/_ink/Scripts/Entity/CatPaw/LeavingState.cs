@@ -6,7 +6,6 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public class LeavingState : EntityState
     {
-        public Vector3Variable platePosition;
         public float speed;
         public float waitTime;
 

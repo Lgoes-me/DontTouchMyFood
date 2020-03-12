@@ -5,7 +5,6 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public class ComingState : EntityState
     {
-        public Vector3Variable platePosition;
         public float speed;
         public IntGameEvent scoreEvent;
         public int positiveScore, negativeScore;
