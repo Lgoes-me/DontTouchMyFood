@@ -2,70 +2,73 @@
 using UnityEngine.EventSystems;
 using ScriptableObjectArchitecture;
 
-public class InputManager : MonoBehaviour
+namespace Ink.DontTouchMyFood.System.Input
 {
-    [SerializeField]
-    private float zDepth;
-
-    public Vector3Variable inputPosition;
-    private Camera _camera;
-
-    private GameObject _touchedObject;
-    private ScriptableInputReceiver _touchInputReceiver;
-
-    private void Awake()
+    public class InputManager : MonoBehaviour
     {
-        _camera = Camera.main;
-    }
+        [SerializeField]
+        private float zDepth;
 
-    private void Update()
-    {
-        Vector3 touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
+        public Vector3Variable inputPosition;
+        private Camera _camera;
 
-        Vector3 touchPosWorld2D = new Vector3(touchPosWorld.x, touchPosWorld.y, zDepth);
-        inputPosition.Value = touchPosWorld;
+        private GameObject _touchedObject;
+        private InputReceiver _touchInputReceiver;
 
-        RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, _camera.transform.forward);
-
-        if (hitInformation.collider != null)
+        private void Awake()
         {
-            GameObject newTouchedObject = hitInformation.transform.gameObject;
+            _camera = Camera.main;
+        }
 
-            if (newTouchedObject != _touchedObject)
+        private void Update()
+        {
+            Vector3 touchPosWorld = _camera.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
+
+            Vector3 touchPosWorld2D = new Vector3(touchPosWorld.x, touchPosWorld.y, zDepth);
+            inputPosition.Value = touchPosWorld;
+
+            RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, _camera.transform.forward);
+
+            if (hitInformation.collider != null)
             {
-                _touchedObject = newTouchedObject;
+                GameObject newTouchedObject = hitInformation.transform.gameObject;
 
-                if (_touchedObject.GetComponent<ScriptableInputReceiver>() != null)
+                if (newTouchedObject != _touchedObject)
                 {
-                    _touchInputReceiver = _touchedObject.GetComponent<ScriptableInputReceiver>();
+                    _touchedObject = newTouchedObject;
+
+                    if (_touchedObject.GetComponent<InputReceiver>() != null)
+                    {
+                        _touchInputReceiver = _touchedObject.GetComponent<InputReceiver>();
+                    }
                 }
             }
-        }
-        else
-        {
-            if (_touchInputReceiver != null)
+            else
             {
-                _touchInputReceiver.Touch(false);
-                _touchInputReceiver = null;
-                _touchedObject = null;
+                if (_touchInputReceiver != null)
+                {
+                    _touchInputReceiver.Touch(false);
+                    _touchInputReceiver = null;
+                    _touchedObject = null;
+                }
             }
-        }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (_touchInputReceiver != null)
+            if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                _touchInputReceiver.Touch(true);
+                if (_touchInputReceiver != null)
+                {
+                    _touchInputReceiver.Touch(true);
+                }
             }
-        }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (_touchInputReceiver != null)
+            if (UnityEngine.Input.GetMouseButtonUp(0))
             {
-                _touchInputReceiver.Touch(false);
-                _touchInputReceiver = null;
-                _touchedObject = null;
+                if (_touchInputReceiver != null)
+                {
+                    _touchInputReceiver.Touch(false);
+                    _touchInputReceiver = null;
+                    _touchedObject = null;
+                }
             }
         }
     }

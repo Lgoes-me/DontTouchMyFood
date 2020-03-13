@@ -318,8 +318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameScore: {fileID: 11400000, guid: b3f7725e607b3ed499d328c492f1e4de, type: 2}
-  feedingScore: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
-  feedingScoreGoal: {fileID: 11400000, guid: 2df8c669c4e5c384ebd4f8ba68c9a139, type: 2}
 --- !u!1 &247635790
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247635791}
   - component: {fileID: 247635792}
+  - component: {fileID: 247635793}
   m_Layer: 0
   m_Name: TimerManager
   m_TagString: Untagged
@@ -365,6 +364,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b, type: 2}
   isTimerRunning: {fileID: 11400000, guid: 6cb49fadd0a4ce04eb9a311882989b92, type: 2}
+--- !u!114 &247635793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247635790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae4896861743ef4fbe1a3be44067462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolValue: {fileID: 11400000, guid: 6cb49fadd0a4ce04eb9a311882989b92, type: 2}
 --- !u!1 &366044730
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,8 +428,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 247635792}
-        m_MethodName: TimerControl
+      - m_Target: {fileID: 247635793}
+        m_MethodName: SetBooleanValue
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -835,7 +847,7 @@ GameObject:
   - component: {fileID: 877834807}
   - component: {fileID: 877834808}
   m_Layer: 0
-  m_Name: AdvertisingManager
+  m_Name: AdvertiseController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

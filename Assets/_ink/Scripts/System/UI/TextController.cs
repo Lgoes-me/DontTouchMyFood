@@ -2,7 +2,7 @@
 using TMPro;
 using ScriptableObjectArchitecture;
 
-namespace Ink.DontTouchMyFood.Utils
+namespace Ink.DontTouchMyFood.System.UI
 {
     public class TextController : MonoBehaviour
     {

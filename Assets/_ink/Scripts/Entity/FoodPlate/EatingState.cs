@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 using Ink.DontTouchMyFood.Entity;
+using Ink.DontTouchMyFood.System.Score;
 
 public class EatingState : EntityState
 {

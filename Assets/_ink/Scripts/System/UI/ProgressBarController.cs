@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using ScriptableObjectArchitecture;
 
-namespace Ink.DontTouchMyFood.UI
+namespace Ink.DontTouchMyFood.System.UI
 {
     public class ProgressBarController : MonoBehaviour
     {

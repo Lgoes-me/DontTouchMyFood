@@ -2,9 +2,9 @@
 using UnityEngine.Advertisements;
 
 
-namespace Ink.DontTouchMyFood.Advertising
+namespace Ink.DontTouchMyFood.System.Advertise
 {
-    public class AdvertisingController : MonoBehaviour
+    public class AdvertiseController : MonoBehaviour
     {
         public string myGameIdIOS = "3490464";
         public string myGameIdAndroid = "3490465";

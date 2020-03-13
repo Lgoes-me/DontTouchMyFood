@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
+
 public class SpawnController : MonoBehaviour
 {
     public GameObject prefab;
