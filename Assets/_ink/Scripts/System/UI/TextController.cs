@@ -16,7 +16,9 @@ namespace Ink.DontTouchMyFood.System.UI
 
         void FixedUpdate()
         {
-            _textMesh.text = text.Value;
+            string value = text.Value;
+
+            if (_textMesh.text != value) _textMesh.text = value;
         }
     }
 }

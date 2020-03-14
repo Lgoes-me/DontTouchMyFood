@@ -7,9 +7,20 @@ namespace Ink.DontTouchMyFood.Utils
     {
         public Vector3Variable position;
 
-        void Update()
+        private void Start()
         {
-            position.Value = transform.position;
+            Vector3 value = transform.position;
+
+            if(position.Value != value) position.Value = value;
+        }
+
+        private void FixedUpdate()
+        {
+            /*
+            Vector3 value = transform.position;
+
+            if (position.Value != value) position.Value = value;
+            */
         }
     }
 }

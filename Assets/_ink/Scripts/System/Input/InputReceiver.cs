@@ -9,7 +9,9 @@ namespace Ink.DontTouchMyFood.System.Input
 
         public void Touch(bool isTouching)
         {
-            isBeingTouched.Value = isTouching;
+            bool value = isBeingTouched.Value;
+
+            if (value != isTouching) isBeingTouched.Value = isTouching;
         }
     }
 }

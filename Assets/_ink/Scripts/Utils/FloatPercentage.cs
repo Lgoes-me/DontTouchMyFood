@@ -10,7 +10,9 @@ namespace Ink.DontTouchMyFood.Utils
 
         private void FixedUpdate()
         {
-            percentage.Value = current.Value / max.Value;
+            float value = current.Value / max.Value;
+
+            if(percentage.Value != value) percentage.Value = value;
         }
     }
 }

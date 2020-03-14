@@ -12,7 +12,9 @@ namespace Ink.DontTouchMyFood.Utils
 
         private void FixedUpdate()
         {
-            stringValue.Value = floatValue.Value.ToString(formatting);
+            string value = floatValue.Value.ToString(formatting);
+
+            if (stringValue.Value != value) stringValue.Value = value;
         }
     }
 }
