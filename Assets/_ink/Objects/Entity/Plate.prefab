@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e09a06165f176439774aecca179697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBeingTouched: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
+  isBeingTouched: {fileID: 0}
 --- !u!114 &4259989275289229883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73731cb51d64848a1f5f633c602350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touch: {fileID: 11400000, guid: d8207fb2edc2a804b9bd5ab7e7127d3c, type: 2}
+  touch: {fileID: 0}
   state: {fileID: 4259989275289229882}
 --- !u!114 &4259989275289229882
 MonoBehaviour:

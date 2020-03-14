@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2474e5d1f7070d64da66908d8dabfce4, type: 3}
-  m_Name: ScoreText
+  m_Name: TimerText
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
-  _value: 
+  _value: 48,34
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

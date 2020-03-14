@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using ScriptableObjectArchitecture;
 
 namespace Ink.DontTouchMyFood.Entity
@@ -8,7 +10,7 @@ namespace Ink.DontTouchMyFood.Entity
         public float speed;
         public IntGameEvent scoreEvent;
         public int positiveScore, negativeScore;
-
+        
         public override void OnStateUpdate()
         {
             _rigidbody2D.velocity = speed * transform.up;
@@ -36,6 +38,18 @@ namespace Ink.DontTouchMyFood.Entity
                 scoreEvent.Raise(negativeScore);
                 _controller.SetState(this.GetComponent<WaitingState>());
             }
+        }
+
+        private void OnBecameVisible()
+        {
+            speed = speed/2;
+            StartCoroutine(WaitToAcelerate());
+        }
+
+        private IEnumerator WaitToAcelerate()
+        {
+            yield return new WaitForSeconds(1.5f);
+            speed = speed * 3;
         }
     }
 }

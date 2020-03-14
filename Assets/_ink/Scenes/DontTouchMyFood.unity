@@ -474,7 +474,6 @@ GameObject:
   m_Component:
   - component: {fileID: 535209801}
   - component: {fileID: 535209802}
-  - component: {fileID: 535209803}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -513,18 +512,6 @@ MonoBehaviour:
   foodScore: {fileID: 11400000, guid: 64a2ec242502e284cbfda364ea95c6e5, type: 2}
   foodScoreValue: 0
   gameStartedEvent: {fileID: 11400000, guid: 7f3504d714455c14188b83c770324437, type: 2}
---- !u!114 &535209803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535209800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb5a8ffe9cba9644b37d14258f04679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &600225199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,11 +1518,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259989275289229874, guid: 1aa108e72dab691489096740fff29553,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4259989275289229882, guid: 1aa108e72dab691489096740fff29553,
         type: 3}
