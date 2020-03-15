@@ -18,7 +18,7 @@ namespace Ink.DontTouchMyFood.System.UI
         {
             float value = fillPercent.Value;
 
-            if (image.fillAmount != value) image.fillAmount = value;
+            if (image.fillAmount != value) image.fillAmount = 1 - value;
         }
     }
 }

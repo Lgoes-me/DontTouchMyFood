@@ -7,6 +7,7 @@ namespace Ink.DontTouchMyFood.Entity
     public class DraggingState : EntityState
     {
         public Vector3Variable inputPosition;
+        private Vector3 offset;
 
         public float waitTime;
         public float speed;
@@ -18,7 +19,7 @@ namespace Ink.DontTouchMyFood.Entity
             base.OnStateInputReceived(touch);
 
             _touched = touch;
-
+            offset = inputPosition.Value - transform.position;
             StartCoroutine(ReturnAfterTouch());
         }
 
@@ -26,7 +27,7 @@ namespace Ink.DontTouchMyFood.Entity
         {
             if (_touched)
             {
-                _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value, speed);
+                _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value - offset, speed);
             }
         }
 
