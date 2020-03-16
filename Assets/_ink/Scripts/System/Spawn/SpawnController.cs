@@ -30,7 +30,7 @@ public class SpawnController : MonoBehaviour
         GameObject paw = Instantiate(prefab);
 
         Vector3 spawpoint = distance * Vector3.up;
-        float ramdomAngle = Random.Range(-90, 90);
+        float ramdomAngle = Random.Range(-125, 125);
         spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint ;
 
         paw.transform.position = platePosition.Value + spawpoint;
