@@ -10,6 +10,7 @@ namespace Ink.DontTouchMyFood.Entity
         public float speed;
         public IntGameEvent scoreEvent;
         public int positiveScore, negativeScore;
+        private string _collisionTag = "plate";
         
         public override void OnStateUpdate()
         {
@@ -32,7 +33,7 @@ namespace Ink.DontTouchMyFood.Entity
         {
             base.OnStateCollision(collision);
 
-            if (collision.transform.CompareTag("plate"))
+            if (collision.transform.CompareTag(_collisionTag))
             {
                 _rigidbody2D.velocity = Vector2.zero;
                 scoreEvent.Raise(negativeScore);
