@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 using Ink.DontTouchMyFood.Entity;
-using Ink.DontTouchMyFood.System.Score;
 
 public class EatingState : EntityState
 {
-    public ScoreController scoreController;
-
     public IntVariable feedingScore;
     public int variation;
 
@@ -17,7 +14,6 @@ public class EatingState : EntityState
         if(touch)
         {
             feedingScore.Value += variation;
-            scoreController.AddScore(variation);
         }
     }
 }

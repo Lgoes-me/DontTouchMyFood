@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
-using Ink.DontTouchMyFood.System.Input;
+using Ink.DontTouchMyFood.System.Touch;
 
 namespace Ink.DontTouchMyFood.Entity
 {
@@ -15,7 +15,7 @@ namespace Ink.DontTouchMyFood.Entity
         {
             BoolVariable boolVar = (BoolVariable)ScriptableObject.CreateInstance("BoolVariable");
 
-            GetComponent<InputReceiver>().isBeingTouched = boolVar;
+            GetComponent<TouchReceiver>().isBeingTouched = boolVar;
             GetComponent<EntityController>().touch = boolVar;
 
             GetComponent<EntityController>().Init();

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-namespace Ink.DontTouchMyFood.System.Input
+namespace Ink.DontTouchMyFood.System.Touch
 {
-    public class InputReceiver : MonoBehaviour
+    public class TouchReceiver : MonoBehaviour
     {
         public BoolVariable isBeingTouched;
 
