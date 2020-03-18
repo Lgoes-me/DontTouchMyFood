@@ -8,8 +8,8 @@ namespace Ink.DontTouchMyFood.Entity
     public class ComingState : EntityState
     {
         public float speed;
-        public IntGameEvent scoreEvent;
-        public int positiveScore, negativeScore;
+        public FloatGameEvent timerEvent;
+        public float lostTime;
         private string _collisionTag = "plate";
         
         public override void OnStateUpdate()
@@ -24,7 +24,6 @@ namespace Ink.DontTouchMyFood.Entity
             if (input)
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                scoreEvent.Raise(positiveScore);
                 _controller.SetState(this.GetComponent<DraggingState>());
             }
         }
@@ -36,7 +35,7 @@ namespace Ink.DontTouchMyFood.Entity
             if (collision.transform.CompareTag(_collisionTag))
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                scoreEvent.Raise(negativeScore);
+                timerEvent.Raise(lostTime);
                 _controller.SetState(this.GetComponent<WaitingState>());
             }
         }

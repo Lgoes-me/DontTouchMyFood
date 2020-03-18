@@ -3,12 +3,9 @@ using ScriptableObjectArchitecture;
 
 public class GameManager : MonoBehaviour
 {
-    public IntVariable gameScore;
-    public int gameScoreValue;
-
     public IntVariable foodScore;
-    public int foodScoreValue;
-   
+    public FloatVariable currentTimer;
+
     public GameEvent gameStartedEvent;
 
     private void Awake()
@@ -18,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-        gameScore.Value = gameScoreValue;
-        foodScore.Value = foodScoreValue;
+        foodScore.Value = 0;
+        currentTimer.Value = 0;
 
         gameStartedEvent.Raise();
     }

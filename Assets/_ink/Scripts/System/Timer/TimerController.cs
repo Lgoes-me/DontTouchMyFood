@@ -5,20 +5,20 @@ namespace Ink.DontTouchMyFood.System.Timer
 {
     public class TimerController : MonoBehaviour
     {
-        public FloatVariable timer;
+        public FloatVariable currentTimer, timer;
         public BoolVariable isTimerRunning;
 
         void FixedUpdate()
         {
-            if (isTimerRunning.Value && timer.Value > 0)
+            if (isTimerRunning.Value && currentTimer.Value < timer.Value)
             {
-                timer.Value -= Time.deltaTime;
+                currentTimer.Value += Time.deltaTime;
             }
         }
-
-        public void SetTimerValue(float timerValue)
+        
+        public void ReduceTimer(float lostTime)
         {
-            timer.Value = timerValue;
+            currentTimer.Value += lostTime;
         }
     }
 }

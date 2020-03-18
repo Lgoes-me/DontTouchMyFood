@@ -181,9 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  scoreEvent: {fileID: 11400000, guid: b8735f9d4cc2dc0468a60225c9e290bb, type: 2}
-  positiveScore: 10
-  negativeScore: -10
+  timerEvent: {fileID: 11400000, guid: 70ecaa4a9e54b53418c04a4499ad4ff1, type: 2}
+  lostTime: 5
 --- !u!114 &4101514700657561308
 MonoBehaviour:
   m_ObjectHideFlags: 0
