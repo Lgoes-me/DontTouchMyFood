@@ -5,10 +5,10 @@ namespace Ink.DontTouchMyFood.System
 {
     public class GameStartController : MonoBehaviour
     {
-        public IntVariable finalScore;
+        public FloatVariable totalScore;
         public FloatVariable totalTimer;
 
-        public int finalScoreValue;
+        public float totalScoreValue;
         public float totalTimerValue;
 
         public GameEvent gameStartedEvent;
@@ -20,7 +20,7 @@ namespace Ink.DontTouchMyFood.System
 
         void InitGame()
         {
-            finalScore.Value = finalScoreValue;
+            totalScore.Value = totalScoreValue;
             totalTimer.Value = totalTimerValue;
 
             gameStartedEvent.Raise();

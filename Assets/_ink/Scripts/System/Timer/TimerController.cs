@@ -38,7 +38,10 @@ namespace Ink.DontTouchMyFood.System.Timer
 
         public void ReduceTimer(float lostTime)
         {
-            currentTimer.Value += lostTime;
+            if (isTimerRunning.Value)
+            {
+                currentTimer.Value += lostTime;
+            }
         }
     }
 }

@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &6878321414551872835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566377028010593419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991db49b997a4a7468fe8227de56cf06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b, type: 2}
-  current: {fileID: 11400000, guid: bd30df7705fdab44ca5c138ae5ecc9b2, type: 2}
-  percentage: {fileID: 11400000, guid: df6f8c45a5ceb8f4fba473bb4211dceb, type: 2}
 --- !u!1001 &7329584775717094900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,14 +147,26 @@ PrefabInstance:
     - target: {fileID: 7091980166464391551, guid: a872ac2519cd7674280f4211eea4ee26,
         type: 3}
       propertyPath: m_Name
-      value: Timer Bar  Variant
+      value: 'Timer Bar '
       objectReference: {fileID: 0}
+    - target: {fileID: 8516298762709801520, guid: a872ac2519cd7674280f4211eea4ee26,
+        type: 3}
+      propertyPath: max
+      value: 
+      objectReference: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b,
+        type: 2}
+    - target: {fileID: 8516298762709801520, guid: a872ac2519cd7674280f4211eea4ee26,
+        type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 11400000, guid: bd30df7705fdab44ca5c138ae5ecc9b2,
+        type: 2}
+    - target: {fileID: 8516298762709801520, guid: a872ac2519cd7674280f4211eea4ee26,
+        type: 3}
+      propertyPath: percentage
+      value: 
+      objectReference: {fileID: 11400000, guid: df6f8c45a5ceb8f4fba473bb4211dceb,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 7091980166464391492, guid: a872ac2519cd7674280f4211eea4ee26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a872ac2519cd7674280f4211eea4ee26, type: 3}
---- !u!1 &566377028010593419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7091980166464391551, guid: a872ac2519cd7674280f4211eea4ee26,
-    type: 3}
-  m_PrefabInstance: {fileID: 7329584775717094900}
-  m_PrefabAsset: {fileID: 0}

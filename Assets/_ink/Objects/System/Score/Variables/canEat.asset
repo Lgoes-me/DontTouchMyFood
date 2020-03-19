@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9377ffeb64ba30478a995a8ffc78ae8, type: 3}
-  m_Name: CurrentScore
+  m_Script: {fileID: 11500000, guid: 168ff32065cd13747a95ae8c9d2a0232, type: 3}
+  m_Name: canEat
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
