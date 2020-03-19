@@ -5,16 +5,16 @@ namespace Ink.DontTouchMyFood.System
 {
     public class GameEndController : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        public void GameEnd(bool didWin)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            if (didWin)
+            {
+                Debug.Log("ganhou");
+            }
+            else
+            {
+                Debug.Log("perdeu");
+            }
         }
     }
 }

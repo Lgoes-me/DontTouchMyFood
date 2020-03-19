@@ -19,7 +19,7 @@ namespace Ink.DontTouchMyFood.Entity
             base.OnStateInputReceived(touch);
 
             _touched = touch;
-            offset = inputPosition.Value - transform.position;
+            offset = inputPosition.Value - transform.localPosition;
             StartCoroutine(ReturnAfterTouch());
         }
 
@@ -27,7 +27,7 @@ namespace Ink.DontTouchMyFood.Entity
         {
             if (_touched)
             {
-                _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value - offset, speed);
+                _rigidbody2D.position = Vector3.Lerp(transform.position, new Vector3(inputPosition.Value.x - offset.x, inputPosition.Value.y - offset.y, inputPosition.Value.z), speed);
             }
         }
 

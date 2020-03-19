@@ -8,10 +8,11 @@ namespace Ink.DontTouchMyFood.System.Timer
     {
         public FloatVariable currentTimer, timer;
         public BoolVariable isTimerRunning;
-        public BoolGameEvent endGameEvent;
+
+        public BoolGameEvent gameEndEvent;
 
         private WaitForSeconds _timerWaiter = new WaitForSeconds(0.1F);
-        private WaitForSeconds _margin = new WaitForSeconds(0.5F);
+        private WaitForSeconds _margin = new WaitForSeconds(0.25F);
 
         public void Init()
         {
@@ -31,7 +32,7 @@ namespace Ink.DontTouchMyFood.System.Timer
             if(currentTimer.Value > timer.Value)
             {
                 yield return _margin;
-                Debug.Log("Time is up");
+                gameEndEvent.Raise(false);
             }
         }
 

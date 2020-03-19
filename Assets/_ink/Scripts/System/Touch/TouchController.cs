@@ -13,6 +13,7 @@ namespace Ink.DontTouchMyFood.System.Touch
 
         private GameObject _touchedObject;
         private TouchReceiver _touchInputReceiver;
+        private Vector3 _touchPosWorld;
 
         private void Awake()
         {
@@ -24,12 +25,7 @@ namespace Ink.DontTouchMyFood.System.Touch
         {
             if (Input.GetMouseButton(0))
             {
-                Vector3 touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
-                touchPosWorld.z = _zDepth;
-
-                inputPosition.Value = touchPosWorld;
-
-                RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld, _camera.transform.forward, 15f, _mask);
+                RaycastHit2D hitInformation = Physics2D.Raycast(_touchPosWorld, _camera.transform.forward, 15f, _mask);
 
                 if (hitInformation.collider != null)
                 {
@@ -66,6 +62,13 @@ namespace Ink.DontTouchMyFood.System.Touch
                     _touchedObject = null;
                 }
             }
+        }
+
+        private void Update()
+        {
+            _touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
+            _touchPosWorld.z = _zDepth;
+            inputPosition.Value = _touchPosWorld;
         }
     }
 }

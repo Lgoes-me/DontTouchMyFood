@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
-  _value: {x: 1.7716534, y: 0.67716515, z: -10}
+  _value: {x: 0, y: 0, z: -10}
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
