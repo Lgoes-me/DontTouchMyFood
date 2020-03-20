@@ -7,14 +7,24 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public class ComingState : EntityState
     {
-        public float speed;
+        public float minSpeed;
+        public float maxSpeed;
+        
         public FloatGameEvent timerEvent;
         public float lostTime;
+
+        private float _speed;
         private string _collisionTag = "plate";
-        
+
+        public override void OnStateEnter()
+        {
+            base.OnStateEnter();
+            _speed = minSpeed;
+        }
+
         public override void OnStateUpdate()
         {
-            _rigidbody2D.velocity = speed * transform.up;
+            _rigidbody2D.velocity = _speed * transform.up;
         }
 
         public override void OnStateInputReceived(bool input)
@@ -42,14 +52,13 @@ namespace Ink.DontTouchMyFood.Entity
 
         private void OnBecameVisible()
         {
-            speed = speed/2;
             StartCoroutine(WaitToAcelerate());
         }
 
         private IEnumerator WaitToAcelerate()
         {
             yield return new WaitForSeconds(1.5f);
-            speed = speed * 3;
+            _speed = maxSpeed;
         }
     }
 }

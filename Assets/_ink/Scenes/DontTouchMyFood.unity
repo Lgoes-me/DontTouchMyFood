@@ -368,6 +368,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b59a27a6e6466df46b2df5718939d178, type: 2}
+        m_MethodName: set_Value
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &535209803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +531,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: d205c8d99561bbf4aac64281e9352da1, type: 2}
+        m_MethodName: set_Value
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b59a27a6e6466df46b2df5718939d178, type: 2}
         m_MethodName: set_Value
         m_Mode: 6
         m_Arguments:
@@ -1076,10 +1098,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4101514700657561316, guid: b7c84c4b89dfef84383efa5a04997561, type: 3}
+  poolSize: 6
+  canSpawn: {fileID: 11400000, guid: b59a27a6e6466df46b2df5718939d178, type: 2}
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   minTime: 0.75
   maxTime: 3
-  distance: 7
+  distance: 8
 --- !u!1001 &2069089614
 PrefabInstance:
   m_ObjectHideFlags: 0

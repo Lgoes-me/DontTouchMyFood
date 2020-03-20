@@ -6,7 +6,7 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public class EntityManager : MonoBehaviour
     {
-        private void Awake()
+        private void OnEnable()
         {
             Init();
         }

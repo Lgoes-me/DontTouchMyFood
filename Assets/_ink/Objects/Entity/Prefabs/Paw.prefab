@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
+  entityController: {fileID: 3742786208140679491}
 --- !u!114 &4101514700657561299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  minSpeed: 2
+  maxSpeed: 4
   timerEvent: {fileID: 11400000, guid: 70ecaa4a9e54b53418c04a4499ad4ff1, type: 2}
   lostTime: 5
 --- !u!114 &4101514700657561308

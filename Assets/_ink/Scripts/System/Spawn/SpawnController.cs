@@ -3,37 +3,80 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class SpawnController : MonoBehaviour
+namespace Ink.DontTouchMyFood.System.Spawn
 {
-    public GameObject prefab;
-    public Vector3Variable platePosition;
-    public float minTime;
-    public float maxTime;
-    public float distance;
-
-    private Camera _camera;
-
-    private void Awake()
+    public class SpawnController : MonoBehaviour
     {
-        _camera = Camera.main;
-    }
+        public GameObject prefab;
+        public int poolSize;
+        private List<GameObject> _prefabPool;
 
-    public void InitSpawn()
-    {
-        StartCoroutine(Spawn());
-    }
+        public BoolVariable canSpawn;
 
-    private IEnumerator Spawn()
-    {
-        float time = Random.Range(minTime, maxTime);
-        yield return new WaitForSeconds(time);
-        GameObject paw = Instantiate(prefab);
+        public Vector3Variable platePosition;
+        public float minTime;
+        public float maxTime;
+        public float distance;
 
-        Vector3 spawpoint = distance * Vector3.up;
-        float ramdomAngle = Random.Range(-125, 125);
-        spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint ;
+        private Camera _camera;
 
-        paw.transform.position = platePosition.Value + spawpoint;
-        StartCoroutine(Spawn());
+        private void Awake()
+        {
+            _camera = Camera.main;
+
+            _prefabPool = new List<GameObject>();
+
+            for (int i = 0; i < poolSize; i++)
+            {
+                GameObject paw = Instantiate(prefab);
+                paw.SetActive(false);
+                _prefabPool.Add(paw);
+            }
+        }
+
+        public void InitSpawn()
+        {
+            StartCoroutine(Spawn());
+        }
+
+        private GameObject RetrieveObject()
+        {
+            for (int i = 0; i < _prefabPool.Count; i++)
+            {
+                if (!_prefabPool[i].activeInHierarchy)
+                {
+                    return _prefabPool[i];
+                }
+            }
+
+            return null;
+        }
+
+        private IEnumerator Spawn()
+        {
+            float time = Random.Range(minTime, maxTime);
+
+            yield return new WaitForSeconds(time);
+
+            if (canSpawn)
+            {
+                GameObject paw = RetrieveObject();
+
+                if (paw != null)
+                {
+                    Vector3 spawpoint = distance * Vector3.up;
+                    float ramdomAngle = Random.Range(-125, 125);
+                    spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
+
+                    paw.transform.position = platePosition.Value + spawpoint;
+                    paw.SetActive(true);
+                }
+                else
+                {
+                    Debug.Log("Pool limit reached");
+                }
+            }
+            StartCoroutine(Spawn());
+        }
     }
 }

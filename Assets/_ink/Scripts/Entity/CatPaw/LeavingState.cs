@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using ScriptableObjectArchitecture;
 
 namespace Ink.DontTouchMyFood.Entity
 {
@@ -23,8 +22,8 @@ namespace Ink.DontTouchMyFood.Entity
         private IEnumerator RemoveFromGame()
         {
             yield return new WaitForSeconds(waitTime);
-
-            Destroy(this.gameObject);
+            Debug.Log("teste");
+            gameObject.SetActive(false);
         }
     }
 }
