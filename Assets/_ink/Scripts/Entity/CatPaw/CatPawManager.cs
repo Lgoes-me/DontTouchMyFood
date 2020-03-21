@@ -10,10 +10,13 @@ namespace Ink.DontTouchMyFood.Entity
 
         protected override void Init()
         {
-            entityController.SetState(GetComponent<ComingState>());
             base.Init();
         }
 
+        private void OnEnable()
+        {
+            entityController.SetState(GetComponent<ComingState>());
+        }
 
         private void Update()
         {
