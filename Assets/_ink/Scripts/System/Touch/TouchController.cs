@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-namespace Ink.DontTouchMyFood.System.Touch
+namespace Ink.DontTouchMyFood.System.GameInput
 {
     public class TouchController : MonoBehaviour
     {
@@ -23,6 +23,7 @@ namespace Ink.DontTouchMyFood.System.Touch
 
         private void FixedUpdate()
         {
+
             if (Input.GetMouseButton(0))
             {
                 RaycastHit2D hitInformation = Physics2D.Raycast(_touchPosWorld, _camera.transform.forward, 15f, _mask);

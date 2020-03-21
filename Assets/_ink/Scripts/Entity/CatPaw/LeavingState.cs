@@ -22,7 +22,6 @@ namespace Ink.DontTouchMyFood.Entity
         private IEnumerator RemoveFromGame()
         {
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("teste");
             gameObject.SetActive(false);
         }
     }

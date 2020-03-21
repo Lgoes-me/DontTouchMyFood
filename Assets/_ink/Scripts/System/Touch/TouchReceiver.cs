@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
 
-namespace Ink.DontTouchMyFood.System.Touch
+namespace Ink.DontTouchMyFood.System.GameInput
 {
     public class TouchReceiver : MonoBehaviour
     {

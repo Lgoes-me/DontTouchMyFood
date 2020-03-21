@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
-using Ink.DontTouchMyFood.System.Touch;
+using Ink.DontTouchMyFood.System.GameInput;
 
 namespace Ink.DontTouchMyFood.Entity
 {

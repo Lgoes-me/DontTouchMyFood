@@ -7,6 +7,7 @@ namespace Ink.DontTouchMyFood.System.UI
     public class ProgressBarController : MonoBehaviour
     {
         public FloatVariable fillPercent;
+        public bool invertido;
         private Image image;
 
         private void Start()
@@ -18,7 +19,7 @@ namespace Ink.DontTouchMyFood.System.UI
         {
             float value = fillPercent.Value;
 
-            if (image.fillAmount != value) image.fillAmount = 1 - value;
+            if (image.fillAmount != value) image.fillAmount = invertido ? 1 - value : value;
         }
     }
 }

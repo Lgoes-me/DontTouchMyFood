@@ -12,12 +12,11 @@ namespace Ink.DontTouchMyFood.System.Advertise
         public bool adStarted;
         private bool testMode = true;
 
-        void Start()
+        public void Init()
         {
 #if UNITY_IOS
-         Advertisement.Initialize(myGameIdIOS, testMode);
+            Advertisement.Initialize(myGameIdIOS, testMode);
 #else
-            //#else if UNITY_ANDROID
             Advertisement.Initialize(myGameIdAndroid, testMode);
 #endif
         }
