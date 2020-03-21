@@ -21,8 +21,11 @@ namespace Ink.DontTouchMyFood.System.GameInput
             _mask = LayerMask.GetMask("Paw", "Plate");
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
+            _touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
+            _touchPosWorld.z = _zDepth;
+            inputPosition.Value = _touchPosWorld;
 
             if (Input.GetMouseButton(0))
             {
@@ -54,7 +57,8 @@ namespace Ink.DontTouchMyFood.System.GameInput
                     }
                 }
             }
-            else
+
+            if (Input.GetMouseButtonUp(0))
             {
                 if (_touchInputReceiver != null)
                 {
@@ -63,13 +67,6 @@ namespace Ink.DontTouchMyFood.System.GameInput
                     _touchedObject = null;
                 }
             }
-        }
-
-        private void Update()
-        {
-            _touchPosWorld = _camera.ScreenToWorldPoint(Input.mousePosition);
-            _touchPosWorld.z = _zDepth;
-            inputPosition.Value = _touchPosWorld;
         }
     }
 }

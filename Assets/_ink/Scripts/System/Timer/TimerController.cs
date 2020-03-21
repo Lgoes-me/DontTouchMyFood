@@ -12,7 +12,7 @@ namespace Ink.DontTouchMyFood.System.Timer
         public BoolGameEvent gameEndEvent;
 
         private WaitForSeconds _timerWaiter = new WaitForSeconds(0.1F);
-        private WaitForSeconds _margin = new WaitForSeconds(0.25F);
+        private WaitForSeconds _margin = new WaitForSeconds(0.5F);
 
         public void Init()
         {

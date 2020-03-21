@@ -12,7 +12,6 @@ namespace Ink.DontTouchMyFood.Entity
         public BoolVariable _canEat;
 
         private WaitForSeconds _timerWaiter = new WaitForSeconds(0.1F);
-    
 
         public override void OnStateInputReceived(bool touch)
         {
@@ -22,7 +21,7 @@ namespace Ink.DontTouchMyFood.Entity
             {
                 currentScore.Value += variation * Time.deltaTime;
             }
-            if(_canEat.Value && currentScore.Value > goalScore.Value)
+            if (_canEat.Value && currentScore.Value > goalScore.Value)
             {
                 _canEat.Value = false;
                 gameEndEvent.Raise(true);

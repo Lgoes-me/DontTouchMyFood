@@ -28,7 +28,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         }
 
-        public virtual void OnStateInputReceived(bool input)
+        public virtual void OnStateInputReceived(bool touch)
         {
 
         }

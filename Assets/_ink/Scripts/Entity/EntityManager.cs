@@ -13,7 +13,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         protected virtual void Init()
         {
-            BoolVariable boolVar = (BoolVariable)ScriptableObject.CreateInstance("BoolVariable");
+            BoolVariable boolVar = (BoolVariable) ScriptableObject.CreateInstance("BoolVariable");
 
             GetComponent<TouchReceiver>().isBeingTouched = boolVar;
             GetComponent<EntityController>().touch = boolVar;
