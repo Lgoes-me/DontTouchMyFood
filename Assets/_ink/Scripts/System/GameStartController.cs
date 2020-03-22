@@ -21,6 +21,8 @@ namespace Ink.DontTouchMyFood.System
             totalTimer.Value = totalTimerValue;
             currentScore.Value = 0;
             currentTimer.Value = 0;
+
+            InitGame();
         }
 
         public void InitGame()

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_ink/Scenes/_StartScene.unity
+    guid: db91acfa9cd2af5498a5ec949f2806f6
+  - enabled: 1
     path: Assets/_ink/Scenes/DontTouchMyFood.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
