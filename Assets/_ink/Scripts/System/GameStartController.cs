@@ -7,22 +7,24 @@ namespace Ink.DontTouchMyFood.System
     {
         public FloatVariable totalScore;
         public FloatVariable totalTimer;
+        public FloatVariable currentScore;
+        public FloatVariable currentTimer;
 
         public float totalScoreValue;
         public float totalTimerValue;
 
         public GameEvent gameStartedEvent;
 
-        private void Awake()
-        {
-            InitGame();
-        }
-
-        void InitGame()
+        public void Awake()
         {
             totalScore.Value = totalScoreValue;
             totalTimer.Value = totalTimerValue;
+            currentScore.Value = 0;
+            currentTimer.Value = 0;
+        }
 
+        public void InitGame()
+        {
             gameStartedEvent.Raise();
         }
     }
