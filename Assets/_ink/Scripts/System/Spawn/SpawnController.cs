@@ -18,12 +18,8 @@ namespace Ink.DontTouchMyFood.System.Spawn
         public float maxTime;
         public float distance;
 
-        private Camera _camera;
-
         private void Awake()
         {
-            _camera = Camera.main;
-
             _prefabPool = new List<GameObject>();
 
             for (int i = 0; i < poolSize; i++)
