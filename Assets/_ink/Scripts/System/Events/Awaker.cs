@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class Initializer : MonoBehaviour
+public class Awaker : MonoBehaviour
 {
     public UnityEvent initializerEvent;
 

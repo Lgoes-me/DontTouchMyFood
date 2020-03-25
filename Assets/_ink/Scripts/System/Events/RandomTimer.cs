@@ -2,21 +2,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Timer : MonoBehaviour
+public class RandomTimer : MonoBehaviour
 {
-    public float timer = 5f;
+    public float minTime, maxTime;
 
     public bool runOnEnable = false;
     public bool loop = true;
 
     public UnityEvent timerEvent;
-
-    private WaitForSeconds _waitForSeconds;
-
-    private void Awake()
-    {
-        _waitForSeconds = new WaitForSeconds(timer);
-    }
 
     public void InitTimer()
     {
@@ -35,7 +28,9 @@ public class Timer : MonoBehaviour
 
     private IEnumerator RunEvent()
     {
-        yield return _waitForSeconds;
+        float time = Random.Range(minTime, maxTime);
+
+        yield return new WaitForSeconds(time);
 
         ExecuteEvent();
 
