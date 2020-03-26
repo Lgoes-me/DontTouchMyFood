@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69f030780d31e4d478a58a2bea93ccb3, type: 3}
-  m_Name: SpawnController
+  m_Name: PawSpawner
   m_EditorClassIdentifier: 
   spawnPrefab: {fileID: 0}
   poolSize: 0
