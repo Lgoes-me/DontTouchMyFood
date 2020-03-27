@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Ink.DontTouchMyFood.Animation;
+using ScriptableObjectArchitecture;
+using UnityEngine;
 
 namespace Ink.DontTouchMyFood.Entity
 {
@@ -7,6 +9,8 @@ namespace Ink.DontTouchMyFood.Entity
         protected override void Init()
         {
             base.Init();
+            BoolVariable boolVar = GetComponent<EntityController>().touch;
+            GetComponent<AnimationBool>().param = boolVar;
         }
     }
 }
