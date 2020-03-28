@@ -1,28 +1,25 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Timer : MonoBehaviour
+public class RandomTimerActionController : MonoBehaviour
 {
-    public float timer = 5f;
+    public float minTime, maxTime;
 
     public bool runOnEnable = false;
     public bool loop = true;
 
-    public UnityEvent timerEvent;
+    public SO_Controller controller;
 
-    private WaitForSeconds _waitForSeconds;
-
-    private void Awake()
+    public void Awake()
     {
-        _waitForSeconds = new WaitForSeconds(timer);
+        controller.Init();
     }
 
     public void StartTimer()
     {
         if (runOnEnable)
         {
-            ExecuteEvent();
+            ExecuteAction();
         }
 
         StartCoroutine(RunEvent());
@@ -35,15 +32,17 @@ public class Timer : MonoBehaviour
 
     private IEnumerator RunEvent()
     {
-        yield return _waitForSeconds;
+        float time = Random.Range(minTime, maxTime);
 
-        ExecuteEvent();
+        yield return new WaitForSeconds(time);
+
+        ExecuteAction();
 
         if (loop) StartCoroutine(RunEvent());
     }
 
-    private void ExecuteEvent()
+    private void ExecuteAction()
     {
-        timerEvent.Invoke();
+        controller.DoControllerAction();
     }
 }

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f030780d31e4d478a58a2bea93ccb3, type: 3}
   m_Name: PawSpawner
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 0}
-  poolSize: 0
-  canSpawn: {fileID: 0}
-  centerPosition: {fileID: 0}
-  distanceFromCenter: 0
+  spawnPrefab: {fileID: 4101514700657561316, guid: b7c84c4b89dfef84383efa5a04997561,
+    type: 3}
+  poolSize: 6
+  canSpawn: {fileID: 11400000, guid: b59a27a6e6466df46b2df5718939d178, type: 2}
+  centerPosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
+  distanceFromCenter: 8

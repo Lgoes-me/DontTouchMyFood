@@ -14,7 +14,7 @@ namespace Ink.DontTouchMyFood.System.Timer
         private WaitForSeconds _timerWaiter = new WaitForSeconds(0.1F);
         private WaitForSeconds _margin = new WaitForSeconds(0.5F);
 
-        public void Init()
+        public void StartTimer()
         {
             StartCoroutine(Timer());
         }

@@ -5,7 +5,7 @@ using ScriptableObjectArchitecture;
 namespace Ink.DontTouchMyFood.System.Spawn
 {
     [CreateAssetMenu(fileName = "SpawnController", menuName = "Managers/Spawn", order = 1)]
-    public class SO_SpawnController : ScriptableObject
+    public class SO_SpawnController : SO_Controller
     {
         public GameObject spawnPrefab;
         public int poolSize;
@@ -16,8 +16,10 @@ namespace Ink.DontTouchMyFood.System.Spawn
         public Vector3Variable centerPosition;
         public float distanceFromCenter;
 
-        public void Init()
+        public override void Init()
         {
+            base.Init();
+
             _prefabPool = new List<GameObject>();
 
             for (int i = 0; i < poolSize; i++)
@@ -28,8 +30,10 @@ namespace Ink.DontTouchMyFood.System.Spawn
             }
         }
         
-        public void Spawn()
+        public override void DoControllerAction()
         {
+            base.DoControllerAction();
+
             if (canSpawn)
             {
                 GameObject spawn = RetrieveObject();

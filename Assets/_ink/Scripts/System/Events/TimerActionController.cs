@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Timer : MonoBehaviour
+public class TimerActionController : MonoBehaviour
 {
     public float timer = 5f;
 
     public bool runOnEnable = false;
     public bool loop = true;
 
-    public UnityEvent timerEvent;
+    public SO_Controller controller;
 
     private WaitForSeconds _waitForSeconds;
 
@@ -22,7 +21,7 @@ public class Timer : MonoBehaviour
     {
         if (runOnEnable)
         {
-            ExecuteEvent();
+            ExecuteAction();
         }
 
         StartCoroutine(RunEvent());
@@ -37,13 +36,13 @@ public class Timer : MonoBehaviour
     {
         yield return _waitForSeconds;
 
-        ExecuteEvent();
+        ExecuteAction();
 
         if (loop) StartCoroutine(RunEvent());
     }
 
-    private void ExecuteEvent()
+    private void ExecuteAction()
     {
-        timerEvent.Invoke();
+        controller.DoControllerAction();
     }
 }

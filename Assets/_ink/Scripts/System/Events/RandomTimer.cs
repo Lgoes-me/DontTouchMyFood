@@ -11,7 +11,7 @@ public class RandomTimer : MonoBehaviour
 
     public UnityEvent timerEvent;
 
-    public void InitTimer()
+    public void StartTimer()
     {
         if (runOnEnable)
         {
