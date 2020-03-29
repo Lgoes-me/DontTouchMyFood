@@ -201,51 +201,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &106759205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 106759207}
-  - component: {fileID: 106759206}
-  m_Layer: 0
-  m_Name: TouchManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &106759206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106759205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec81f11c0ba2d547908c16060d0736f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
---- !u!4 &106759207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106759205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247635790
 GameObject:
@@ -378,9 +334,9 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 7f3504d714455c14188b83c770324437,
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48,
     type: 2}
-  _event: {fileID: 11400000, guid: 7f3504d714455c14188b83c770324437, type: 2}
+  _event: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:
@@ -457,7 +413,7 @@ MonoBehaviour:
   currentTimer: {fileID: 11400000, guid: bd30df7705fdab44ca5c138ae5ecc9b2, type: 2}
   totalScoreValue: 500
   totalTimerValue: 25
-  gameStartedEvent: {fileID: 11400000, guid: 7f3504d714455c14188b83c770324437, type: 2}
+  gameStartedEvent: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
 --- !u!1 &733097925
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +424,6 @@ GameObject:
   m_Component:
   - component: {fileID: 733097927}
   - component: {fileID: 733097926}
-  - component: {fileID: 733097928}
   m_Layer: 0
   m_Name: EndManager
   m_TagString: Untagged
@@ -498,17 +453,6 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 733097928}
-        m_MethodName: GameEnd
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 6cb49fadd0a4ce04eb9a311882989b92, type: 2}
         m_MethodName: set_Value
         m_Mode: 6
@@ -555,21 +499,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &733097928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07bea36f3a8c41e4094b28118d4bba67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adController: {fileID: 877834808}
 --- !u!224 &858317184 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 566377028010593420, guid: a3c602935d32817478ca26804cde82ad,
@@ -669,60 +600,13 @@ RectTransform:
   - {fileID: 2069089615}
   - {fileID: 858317184}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 9, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &877834806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 877834807}
-  - component: {fileID: 877834808}
-  m_Layer: 0
-  m_Name: AdvertiseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &877834807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877834806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &877834808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877834806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b2592c7b4a7e049a3a490c799ebabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myGameIdIOS: 3490464
-  myGameIdAndroid: 3490465
-  myVideoPlacement: video
-  adStarted: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194230
 MonoBehaviour:
@@ -887,37 +771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1318329588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1318329589}
-  m_Layer: 0
-  m_Name: SO_TimerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1318329589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318329588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -0.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1464924141 stripped
 GameObject:
@@ -1177,7 +1031,7 @@ PrefabInstance:
     - target: {fileID: 4259989275289229884, guid: 1aa108e72dab691489096740fff29553,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4259989275289229884, guid: 1aa108e72dab691489096740fff29553,
         type: 3}
