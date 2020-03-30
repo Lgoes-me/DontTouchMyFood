@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230791b0b05b41242a979091bccc8751, type: 3}
   m_Name: ModuleController
   m_EditorClassIdentifier: 
-  levels: []
-  currentLevel:
-    m_Handle: 0
+  levelNames:
+  - Page0
+  - Page1
+  - Page2
+  - Page3
+  currentLevel: 3
