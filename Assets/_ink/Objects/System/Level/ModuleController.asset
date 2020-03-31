@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230791b0b05b41242a979091bccc8751, type: 3}
   m_Name: ModuleController
   m_EditorClassIdentifier: 
-  levelNames:
+  levels:
   - Page0
   - Page1
   - Page2
