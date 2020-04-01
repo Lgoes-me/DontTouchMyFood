@@ -340,7 +340,7 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1577759755}
+      - m_Target: {fileID: 0}
         m_MethodName: StartTimer
         m_Mode: 1
         m_Arguments:
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 1577759754}
   - component: {fileID: 1577759755}
   m_Layer: 0
-  m_Name: SO_SpawnManager
+  m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,14 +833,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577759753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3c489f174b749746bea3cb04fe3728f, type: 3}
+  m_Script: {fileID: 11500000, guid: 70db49255c8dc6243afe1dab23dd586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 4101514700657561316, guid: b7c84c4b89dfef84383efa5a04997561, type: 3}
+  poolSize: 6
+  canSpawn: {fileID: 11400000, guid: b59a27a6e6466df46b2df5718939d178, type: 2}
+  platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   minTime: 0.75
   maxTime: 3
-  runOnEnable: 0
-  loop: 1
-  controller: {fileID: 11400000, guid: aa01b416e16c99445b30e103c7db1a10, type: 2}
+  distance: 6
 --- !u!1001 &2069089614
 PrefabInstance:
   m_ObjectHideFlags: 0
