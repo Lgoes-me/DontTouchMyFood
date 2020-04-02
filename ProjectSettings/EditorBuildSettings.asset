@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ink/Objects/System/Level/BaseScene 2.unity
     guid: 29fcfbc738d4fc44f98a84a48e34f1dd
+  - enabled: 1
+    path: Assets/_ink/Objects/System/Level/BaseScene 3.unity
+    guid: 3e546e9e3825ca54b945a9aa1fff68e2
   m_configObjects: {}

@@ -1,18 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using ScriptableObjectArchitecture;
 
 public class ModuleController : MonoBehaviour
 {
-    public string[] levels;
-    public int currentLevel = 0;
-    
+    public SO_LevelConfiguration config;
     public GameEvent levelStarted;
-    
+
+    private int currentLevel = 0;
+    private string[] levels;
+        
     void Awake()
     {
+        levels = config.levels;
+
         StartCoroutine(LoadLevel());
     }
 
