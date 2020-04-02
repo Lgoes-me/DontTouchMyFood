@@ -424,7 +424,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083555330}
-  - component: {fileID: 1083555329}
   - component: {fileID: 1083555328}
   m_Layer: 0
   m_Name: StartManager
@@ -455,31 +454,7 @@ MonoBehaviour:
   _event: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
   _response:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 9d2314746a6377b44818c47dab64a593, type: 2}
-        m_MethodName: set_Value
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &1083555329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083555327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d28e97da4c5467e4aaf887ea26a88e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelStartedEvent: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
+      m_Calls: []
 --- !u!4 &1083555330
 Transform:
   m_ObjectHideFlags: 0

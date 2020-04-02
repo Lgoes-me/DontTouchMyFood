@@ -8,38 +8,43 @@ public class ModuleController : MonoBehaviour
 {
     public string[] levels;
     public int currentLevel = 0;
-
+    
     public GameEvent levelStarted;
-    public BoolVariable triggerTransition;
     
     void Awake()
     {
-        SceneManager.LoadSceneAsync(levels[currentLevel], LoadSceneMode.Additive);
+        StartCoroutine(LoadLevel());
     }
 
     public void EndLevel(bool didWin)
     {
-        if (didWin) NextLevel();
+        if (didWin)
+        {
+            NextLevel();
+        }
     }
 
     private void NextLevel()
     {
         if (currentLevel < levels.Length - 1)
         {
+            StartCoroutine(UnloadLevel());
             currentLevel += 1;
-            StartCoroutine(LoadNextLevel(currentLevel));
+            StartCoroutine(LoadLevel());
         }
     }
 
-    private IEnumerator LoadNextLevel(int levelIndex)
+    private IEnumerator LoadLevel()
     {
-        AsyncOperation asyncLoadOperation = SceneManager.LoadSceneAsync(levels[levelIndex], LoadSceneMode.Additive);
-        triggerTransition.Value = false;
+        AsyncOperation asyncLoadOperation = SceneManager.LoadSceneAsync(levels[currentLevel], LoadSceneMode.Additive);
         yield return new WaitUntil(() => asyncLoadOperation.isDone);
-
-        AsyncOperation asyncUnloadOperation = SceneManager.UnloadSceneAsync(levels[levelIndex - 1]);
-        yield return new WaitUntil(() => asyncUnloadOperation.isDone);
-
         levelStarted.Raise();
     }
+
+    private IEnumerator UnloadLevel()
+    {
+        AsyncOperation asyncUnloadOperation = SceneManager.UnloadSceneAsync(levels[currentLevel]);
+        yield return new WaitUntil(() => asyncUnloadOperation.isDone);
+    }
+
 }
