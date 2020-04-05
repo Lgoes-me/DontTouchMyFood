@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SceneConfiguration
   m_EditorClassIdentifier: 
   levels:
-  - BaseScene 1
+  - Despertador
   - BaseScene 2
   - BaseScene 3

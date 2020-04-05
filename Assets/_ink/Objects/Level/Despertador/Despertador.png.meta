@@ -4,43 +4,43 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4236610392062295435
-    second: Despertador_0
+    second: Background
   - first:
       213: -1518520172640981562
-    second: Despertador_1
+    second: Clock
   - first:
       213: -2518731853729137083
-    second: Despertador_2
+    second: Button
   - first:
       213: -3114235000544064082
-    second: Despertador_3
+    second: Red Noise 1
   - first:
       213: -4982654975527754368
-    second: Despertador_4
+    second: Red Noise 2
   - first:
       213: 5785144718564308724
-    second: Despertador_5
+    second: Red Noise 3
   - first:
       213: 8897008972667011807
-    second: Despertador_6
+    second: Wake Up 2
   - first:
       213: -94773068039236764
-    second: Despertador_7
+    second: Wake Up 1
   - first:
       213: 3414028143440367371
-    second: Despertador_8
+    second: Noise 3
   - first:
       213: 8634346211623803681
-    second: Despertador_9
+    second: Noise 2
   - first:
       213: -5870905277609834631
-    second: Despertador_10
+    second: Noise 1
   - first:
       213: -4594097374890143074
-    second: Despertador_11
+    second: Cellphone 1
   - first:
       213: 3280324873259713344
-    second: Despertador_12
+    second: Cellphone 2
   - first:
       213: -7321771745364821677
     second: Despertador_13
@@ -182,7 +182,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Despertador_0
+      name: Background
       rect:
         serializedVersion: 2
         x: 12
@@ -190,7 +190,7 @@ TextureImporter:
         width: 604
         height: 998
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_1
+      name: Clock
       rect:
         serializedVersion: 2
         x: 1048
@@ -211,7 +211,7 @@ TextureImporter:
         width: 292
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_2
+      name: Button
       rect:
         serializedVersion: 2
         x: 1024
@@ -232,7 +232,7 @@ TextureImporter:
         width: 112
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_3
+      name: Red Noise 1
       rect:
         serializedVersion: 2
         x: 993
@@ -253,7 +253,7 @@ TextureImporter:
         width: 91
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_4
+      name: Red Noise 2
       rect:
         serializedVersion: 2
         x: 1100
@@ -274,7 +274,7 @@ TextureImporter:
         width: 80
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_5
+      name: Red Noise 3
       rect:
         serializedVersion: 2
         x: 1200
@@ -295,7 +295,7 @@ TextureImporter:
         width: 68
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,15 +308,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_6
+      name: Wake Up 2
       rect:
         serializedVersion: 2
-        x: 978
+        x: 988
         y: 602
         width: 194
         height: 147
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -329,15 +329,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_7
+      name: Wake Up 1
       rect:
         serializedVersion: 2
-        x: 980
-        y: 753
+        x: 990
+        y: 756
         width: 190
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_8
+      name: Noise 3
       rect:
         serializedVersion: 2
         x: 1194
@@ -358,7 +358,7 @@ TextureImporter:
         width: 52
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,7 +371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_9
+      name: Noise 2
       rect:
         serializedVersion: 2
         x: 1105
@@ -379,7 +379,7 @@ TextureImporter:
         width: 62
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -392,7 +392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_10
+      name: Noise 1
       rect:
         serializedVersion: 2
         x: 1000
@@ -400,7 +400,7 @@ TextureImporter:
         width: 71
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -413,7 +413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_11
+      name: Cellphone 1
       rect:
         serializedVersion: 2
         x: 616
@@ -421,7 +421,7 @@ TextureImporter:
         width: 368
         height: 592
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -434,7 +434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Despertador_12
+      name: Cellphone 2
       rect:
         serializedVersion: 2
         x: 626
@@ -442,7 +442,7 @@ TextureImporter:
         width: 366
         height: 578
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

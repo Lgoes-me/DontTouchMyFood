@@ -582,5 +582,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 34b92d2e9933f654aac01de21652f378, type: 2}
-  currentLevel: 0
   levelStarted: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
