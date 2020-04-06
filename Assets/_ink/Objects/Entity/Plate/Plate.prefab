@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4259989275289229883}
   - component: {fileID: 4259989275289229882}
   - component: {fileID: 525314973025885932}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Plate
   m_TagString: plate
   m_Icon: {fileID: 0}

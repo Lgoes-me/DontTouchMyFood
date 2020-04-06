@@ -25,6 +25,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         public override void OnStateUpdate()
         {
+            Debug.Log(_touched);
             if (_touched)
             {
                 _rigidbody2D.position = Vector3.Lerp(transform.position, new Vector3(inputPosition.Value.x - offset.x, inputPosition.Value.y - offset.y, inputPosition.Value.z), speed);

@@ -29,7 +29,7 @@ public class DraggingButtonState : EntityState
     {
         if (_touched)
         {
-            _rigidbody2D.position = Vector3.Lerp(transform.position, new Vector3(inputPosition.Value.x - offset.x, inputPosition.Value.y - offset.y, inputPosition.Value.z), speed);
+            _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value, speed);
         }
     }
 

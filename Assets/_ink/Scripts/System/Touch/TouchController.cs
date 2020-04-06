@@ -18,7 +18,7 @@ namespace Ink.DontTouchMyFood.System.GameInput
         private void Awake()
         {
             _camera = Camera.main;
-            _mask = LayerMask.GetMask("Paw", "Plate");
+            _mask = LayerMask.GetMask("Interactable");
         }
 
         private void Update()
@@ -29,12 +29,12 @@ namespace Ink.DontTouchMyFood.System.GameInput
 
             if (Input.GetMouseButton(0))
             {
+
                 RaycastHit2D hitInformation = Physics2D.Raycast(_touchPosWorld, _camera.transform.forward, 15f, _mask);
 
                 if (hitInformation.collider != null)
                 {
                     GameObject newTouchedObject = hitInformation.transform.gameObject;
-
                     if (newTouchedObject != _touchedObject)
                     {
                         _touchedObject = newTouchedObject;

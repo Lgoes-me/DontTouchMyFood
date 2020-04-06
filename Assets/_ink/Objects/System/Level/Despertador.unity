@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 571339694}
   - component: {fileID: 571339695}
   - component: {fileID: 571339696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ Transform:
   m_GameObject: {fileID: 571339687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.08, y: -1.25, z: -0.17}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.75000006, y: 0.74999994, z: 1}
   m_Children:
   - {fileID: 763814717}
   - {fileID: 548887539}
@@ -589,16 +589,16 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571339687}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
   endScene: {fileID: 11400000, guid: 8f7d8e36ec934b74b81c0f37fe46e014, type: 2}
-  waitTime: 2
+  waitTime: 0.3
   speed: 1
 --- !u!1 &763814716
 GameObject:
