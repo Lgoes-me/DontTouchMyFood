@@ -36,7 +36,7 @@ namespace Ink.DontTouchMyFood.Entity
         {
             yield return new WaitForSeconds(waitTime);
 
-            _controller.SetState(GetComponent<LeavingState>());
+            _controller.SetState(GetComponent<LeavingState>().stateName);
         }
     }
 }

@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9377ffeb64ba30478a995a8ffc78ae8, type: 3}
-  m_Name: ScorePercentage
+  m_Script: {fileID: 11500000, guid: e6530488068826644a78ef76c2ee5def, type: 3}
+  m_Name: ManagerConfiguration
   m_EditorClassIdentifier: 
-  DeveloperDescription:
-    _value: 
-  _value: 1
-  _readOnly: 0
-  _raiseWarning: 1
-  _isClamped: 1
-  _minClampedValue: 0
-  _maxClampedValue: 1
+  levels:
+  - Despertador
+  - BaseScene 2
+  - BaseScene 3

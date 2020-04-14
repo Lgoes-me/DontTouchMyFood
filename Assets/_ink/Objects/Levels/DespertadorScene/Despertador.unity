@@ -369,7 +369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548887538
 GameObject:
@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0767eb49938dd7742912d73040f6b089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Idle
 --- !u!114 &571339696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59def7a764072104e951fd19e989338b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Dragging
   inputPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
   endScene: {fileID: 11400000, guid: 8f7d8e36ec934b74b81c0f37fe46e014, type: 2}
   waitTime: 0.3
@@ -850,7 +852,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.8, z: 1}
   m_Children:
-  - {fileID: 987666079}
   - {fileID: 1114178543}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -881,8 +882,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987666078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.49, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalPosition: {x: 0.082499996, y: 0.39200002, z: 0}
+  m_LocalScale: {x: 0.5625, y: 0.6, z: 1}
   m_Children:
   - {fileID: 571339688}
   - {fileID: 8866947}
@@ -890,8 +891,8 @@ Transform:
   - {fileID: 2000757072}
   - {fileID: 2072893107}
   - {fileID: 1871454123}
-  m_Father: {fileID: 793469077}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &987666080
 SpriteRenderer:
@@ -1075,7 +1076,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5772,7 +5773,7 @@ Transform:
   m_LocalScale: {x: 1.3333334, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 793469077}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348373063
 GameObject:
@@ -6119,6 +6120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3610221419020934bb798656ae2d0799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: 
 --- !u!1 &1871454122
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class IdleState : EntityState
         if (input)
         {
             _rigidbody2D.velocity = Vector2.zero;
-            _controller.SetState(this.GetComponent<DraggingButtonState>());
+            _controller.SetState(this.GetComponent<DraggingButtonState>().stateName);
         }
     }
 }

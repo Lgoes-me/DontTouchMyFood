@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using ScriptableObjectArchitecture;
+using System.Collections.Generic;
 
 namespace Ink.DontTouchMyFood.Entity
 {
@@ -8,24 +9,27 @@ namespace Ink.DontTouchMyFood.Entity
         public BoolVariable touch;
 
         public EntityState state;
-        private EntityState[] _states;
+        
+        private Dictionary<string, EntityState> _states;
 
         public void Init()
         {
-            _states = GetComponents<EntityState>();
+            EntityState[] states = GetComponents<EntityState>();
+            _states = new Dictionary<string, EntityState>();
 
-            foreach (EntityState _state in _states)
+            foreach (EntityState state in states)
             {
-                _state.Init(this);
+                _states.Add(state.stateName, state);
+                state.Init(this);
             }
 
             state.OnStateEnter();
         }
 
-        public void SetState(EntityState newState)
+        public void SetState(string stateName)
         {
             state.OnStateExit();
-            this.state = newState;
+            this.state = _states[stateName];
             state.OnStateEnter();
         }
 
@@ -38,7 +42,6 @@ namespace Ink.DontTouchMyFood.Entity
         {
             state.OnStateUpdate();
         }
-
 
         private void OnCollisionEnter2D(Collision2D collision)
         {

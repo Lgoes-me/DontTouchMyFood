@@ -1,28 +1,28 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Ink.DontTouchMyFood.Entity
 {
-    public abstract class EntityState : MonoBehaviour
+    [CreateAssetMenu(fileName = "new State", menuName = "state/SimpleState", order = 1)]
+    public class SO_EntityState : ScriptableObject
     {
         public string stateName;
-
+        public UnityAction stateEnter, StateExit, stateInput, stateCollision;
         protected EntityController _controller;
-        protected Rigidbody2D _rigidbody2D;
 
-        public void Init(EntityController controller)
+        public virtual void Init(EntityController controller)
         {
             _controller = controller;
-            _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         public virtual void OnStateEnter()
         {
-
+            stateEnter.Invoke();
         }
 
         public virtual void OnStateExit()
         {
-
+            StateExit.Invoke();
         }
 
         public virtual void OnStateUpdate()
@@ -32,17 +32,15 @@ namespace Ink.DontTouchMyFood.Entity
 
         public virtual void OnStateInputReceived(bool touch)
         {
-
+            if (touch)
+            {
+                stateInput.Invoke();
+            }
         }
 
         public virtual void OnStateCollision(Collision2D collision)
         {
-
-        }
-
-        public virtual void OnStateTrigger(Collider2D collision)
-        {
-
+            stateCollision.Invoke();
         }
     }
 }
