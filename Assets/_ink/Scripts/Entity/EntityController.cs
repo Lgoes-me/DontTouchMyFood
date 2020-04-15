@@ -7,9 +7,8 @@ namespace Ink.DontTouchMyFood.Entity
     public class EntityController : MonoBehaviour
     {
         public BoolVariable touch;
-
         public EntityState state;
-        
+
         private Dictionary<string, EntityState> _states;
 
         public void Init()

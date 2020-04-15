@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using ScriptableObjectArchitecture;
 
 namespace Ink.DontTouchMyFood.Entity
@@ -8,6 +9,8 @@ namespace Ink.DontTouchMyFood.Entity
     {
         public Vector3Variable inputPosition;
         private Vector3 offset;
+
+        public UnityEvent coroutineEvent;
 
         public float waitTime;
         public float speed;
@@ -20,23 +23,22 @@ namespace Ink.DontTouchMyFood.Entity
 
             _touched = touch;
             offset = inputPosition.Value - transform.localPosition;
-            StartCoroutine(ReturnAfterTouch());
+            StartCoroutine(InputCoroutine());
         }
+
 
         public override void OnStateUpdate()
         {
-            Debug.Log(_touched);
             if (_touched)
             {
-                _rigidbody2D.position = Vector3.Lerp(transform.position, new Vector3(inputPosition.Value.x - offset.x, inputPosition.Value.y - offset.y, inputPosition.Value.z), speed);
+                _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value, speed);
             }
         }
 
-        private IEnumerator ReturnAfterTouch()
+        private IEnumerator InputCoroutine()
         {
             yield return new WaitForSeconds(waitTime);
-
-            _controller.SetState(GetComponent<LeavingState>().stateName);
+            coroutineEvent.Invoke();
         }
     }
 }
