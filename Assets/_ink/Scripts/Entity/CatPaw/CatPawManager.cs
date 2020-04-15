@@ -15,7 +15,7 @@ namespace Ink.DontTouchMyFood.Entity
 
         private void OnEnable()
         {
-            entityController.SetState(GetComponent<ComingState>().stateName);
+            //entityController.SetState(GetComponent<ComingState>().stateName);
         }
 
         private void Update()

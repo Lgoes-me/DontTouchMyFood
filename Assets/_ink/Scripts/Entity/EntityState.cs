@@ -4,8 +4,6 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public abstract class EntityState : MonoBehaviour
     {
-        public string stateName;
-
         protected EntityController _controller;
         protected Rigidbody2D _rigidbody2D;
 

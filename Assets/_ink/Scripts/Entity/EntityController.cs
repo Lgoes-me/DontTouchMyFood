@@ -8,27 +8,23 @@ namespace Ink.DontTouchMyFood.Entity
     {
         public BoolVariable touch;
         public EntityState state;
-
-        private Dictionary<string, EntityState> _states;
-
+        
         public void Init()
         {
             EntityState[] states = GetComponents<EntityState>();
-            _states = new Dictionary<string, EntityState>();
 
             foreach (EntityState state in states)
             {
-                _states.Add(state.stateName, state);
                 state.Init(this);
             }
 
             state.OnStateEnter();
         }
 
-        public void SetState(string stateName)
+        public void SetState(EntityState newState)
         {
             state.OnStateExit();
-            this.state = _states[stateName];
+            this.state = newState;
             state.OnStateEnter();
         }
 

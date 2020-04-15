@@ -653,7 +653,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0767eb49938dd7742912d73040f6b089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateName: Idle
+  inputEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 571339694}
+        m_MethodName: SetState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 571339696}
+          m_ObjectArgumentAssemblyTypeName: Ink.DontTouchMyFood.Entity.EntityState,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571339696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,10 +680,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59def7a764072104e951fd19e989338b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateName: Dragging
   inputPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
-  endScene: {fileID: 11400000, guid: 8f7d8e36ec934b74b81c0f37fe46e014, type: 2}
-  waitTime: 0.3
+  coroutineEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 8f7d8e36ec934b74b81c0f37fe46e014, type: 2}
+        m_MethodName: Raise
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  waitTime: 0.75
   speed: 1
 --- !u!1 &763814716
 GameObject:
@@ -6120,7 +6146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3610221419020934bb798656ae2d0799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateName: 
 --- !u!1 &1871454122
 GameObject:
   m_ObjectHideFlags: 0
