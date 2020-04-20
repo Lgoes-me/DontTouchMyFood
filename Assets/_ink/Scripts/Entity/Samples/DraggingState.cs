@@ -31,7 +31,8 @@ namespace Ink.DontTouchMyFood.Entity
         {
             if (_touched)
             {
-                _rigidbody2D.position = Vector3.Lerp(transform.position, inputPosition.Value, speed);
+                Vector3 position = new Vector3(inputPosition.Value.x, inputPosition.Value.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, position, speed);
             }
         }
 

@@ -15,11 +15,11 @@ public class ParallaxObject : MonoBehaviour
 
     void Update()
     {
-        float xTranslation = -(gyroQuaternion.Value.eulerAngles.x  + acelInput.Value.x) * objectIndex;
-        float yTranslation = -(gyroQuaternion.Value.eulerAngles.y + acelInput.Value.y) * objectIndex;
+        float xTranslation = - (gyroQuaternion.Value.eulerAngles.x  + acelInput.Value.x) * objectIndex;
+        float yTranslation = - (gyroQuaternion.Value.eulerAngles.y + acelInput.Value.y) * objectIndex;
 
         Vector3 translation = new Vector3(xTranslation, yTranslation, 0);
 
-        transform.position = _initialPosition + translation;
+        transform.position = Vector3.Lerp(transform.position, _initialPosition + translation, 30 * Time.deltaTime);
     }
 }
