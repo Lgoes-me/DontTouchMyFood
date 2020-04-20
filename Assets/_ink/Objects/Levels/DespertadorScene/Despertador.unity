@@ -369,7 +369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548887538
 GameObject:
@@ -696,7 +696,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   waitTime: 0.75
-  speed: 1
+  speed: 0.5
 --- !u!1 &763814716
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 793469077}
   - component: {fileID: 793469076}
+  - component: {fileID: 793469078}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -877,11 +878,25 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.8, z: 1}
-  m_Children:
-  - {fileID: 1114178543}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &793469078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793469075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
+  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  objectIndex: 0.5
 --- !u!1 &987666078
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +908,7 @@ GameObject:
   - component: {fileID: 987666079}
   - component: {fileID: 987666080}
   - component: {fileID: 987666081}
+  - component: {fileID: 987666082}
   m_Layer: 0
   m_Name: Celular
   m_TagString: Untagged
@@ -990,6 +1006,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &987666082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987666078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
+  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  objectIndex: 0.3
 --- !u!1 &1083555327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1114178543}
+  - component: {fileID: 1114178544}
   - component: {fileID: 1114178542}
   - component: {fileID: 1114178541}
   m_Layer: 0
@@ -5795,12 +5827,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114178540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.41250002, z: 0}
-  m_LocalScale: {x: 1.3333334, y: 1.25, z: 1}
+  m_LocalPosition: {x: 0.015, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 793469077}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114178544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114178540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
+  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  objectIndex: 0.1
 --- !u!1 &1348373063
 GameObject:
   m_ObjectHideFlags: 0
