@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
   acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
-  objectIndex: 0.25
+  objectIndex: 0.15
 --- !u!1 &548887538
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686213529}
+  - component: {fileID: 686213530}
   m_Layer: 0
   m_Name: Layer1
   m_TagString: Untagged
@@ -775,6 +776,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686213530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686213528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
+  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  objectIndex: 0.075
 --- !u!1 &726365678
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
   acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
-  objectIndex: -0.1
+  objectIndex: 0.05
 --- !u!1 &763814716
 GameObject:
   m_ObjectHideFlags: 0
