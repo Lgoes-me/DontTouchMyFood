@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ManagerConfiguration
   m_EditorClassIdentifier: 
   levels:
+  - MainMenu
   - DontTouchMyFood
