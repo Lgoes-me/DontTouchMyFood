@@ -19,6 +19,8 @@ public class ColorColtroller : MonoBehaviour
     [ContextMenu("ChangeColor")]
     public void ChangeColor()
     {
+        colorIndex = Mathf.Clamp(colorIndex, 0, levelPresetColor.Length);
+
         for (int i = 0; i < gameObjects.Length; i++)
         {
             if (gameObjects[i].TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer))
