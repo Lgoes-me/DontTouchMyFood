@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
     path: Assets/_ink/Entities/DontTouchMyFood/DontTouchMyFood.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -18,15 +15,6 @@ EditorBuildSettings:
     path: Assets/_ink/Entities/_MainMenu/MainMenu.unity
     guid: 4ec0d7c91a9ba71488a5192eed5cec55
   - enabled: 1
-    path: Assets/_ink/Entities/Despertador/Despertador.unity
-    guid: 5da18384d3c08e94c87c763bf2a3810c
-  - enabled: 1
     path: Assets/_ink/Entities/_DontTouchMyFood/DontTouchMyFood.unity
     guid: 3712337bce1b80149a7409a2b82ce75c
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
