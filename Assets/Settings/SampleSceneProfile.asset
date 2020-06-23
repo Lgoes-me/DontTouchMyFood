@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
   active: 1
+  <displayName>k__BackingField: 
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
