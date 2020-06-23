@@ -232,7 +232,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 5994919ef2f18c04b8b7b7c7e318b167, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0.66
   priority: 0
 --- !u!1 &1326034079
 GameObject:
@@ -594,7 +594,7 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1326034083}
         m_MethodName: EndLevel
         m_Mode: 0
         m_Arguments:

@@ -8,9 +8,14 @@ public class SelectRandomChild : MonoBehaviour
 
     private void OnEnable()
     {
+        SelectRandom();
+    }
+
+    public void SelectRandom()
+    {
         int choosenChild = Random.Range(0, childs.Length);
 
-        for(int i = 0; i < childs.Length; i++)
+        for (int i = 0; i < childs.Length; i++)
         {
             childs[i].SetActive(i == choosenChild);
         }
