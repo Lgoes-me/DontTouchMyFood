@@ -330,7 +330,7 @@ MonoBehaviour:
   prefab: {fileID: 8377322038300364818, guid: 75eea8716269088418f33ca6e576de2f, type: 3}
   poolSize: 6
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
-  minTime: 1.5
+  minTime: 2
   maxTime: 3
   distance: 4
 --- !u!4 &629668538
@@ -655,7 +655,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 25
+          m_FloatArgument: 50
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -815,6 +815,17 @@ MonoBehaviour:
       - m_Target: {fileID: 629668537}
         m_MethodName: StopSpawn
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 55ff1be3b61a6b346a5fdda88bc201ae, type: 2}
+        m_MethodName: Raise
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1207,7 +1218,7 @@ PrefabInstance:
     - target: {fileID: 6920513570508938944, guid: 9d625d97b2226f34d932cc41726099a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 6920513570508938944, guid: 9d625d97b2226f34d932cc41726099a3,
         type: 3}
@@ -1253,6 +1264,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920513570508938944, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920513570508938944, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6920513570508938945, guid: 9d625d97b2226f34d932cc41726099a3,
         type: 3}

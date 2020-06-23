@@ -34,6 +34,10 @@ public class ModuleController : MonoBehaviour
             currentLevel += 1;
             StartCoroutine(LoadLevel());
         }
+        else
+        {
+            levelStarted.Raise();
+        }
     }
 
     private IEnumerator LoadLevel()
