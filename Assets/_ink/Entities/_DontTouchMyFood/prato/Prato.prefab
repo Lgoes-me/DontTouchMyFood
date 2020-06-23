@@ -115,6 +115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6920513570503508544}
   - component: {fileID: 6920513570503508547}
+  - component: {fileID: 6920513570550502325}
+  - component: {fileID: 6920513570550502320}
   m_Layer: 0
   m_Name: Variante4
   m_TagString: Untagged
@@ -187,6 +189,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6920513570550502325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570503508545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: d544e532cb24c73458b87eebd9fdd718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6920513570550502320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570503508545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+  paramName: eatenPercentage
 --- !u!1 &6920513570508938945
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,11 +239,10 @@ GameObject:
   - component: {fileID: 6920513570508938969}
   - component: {fileID: 6920513570508938950}
   - component: {fileID: 6920513570508938951}
-  - component: {fileID: 6920513570508938948}
   - component: {fileID: 6920513570508938949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Prato
-  m_TagString: Untagged
+  m_TagString: plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +276,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ab94d34b7e9b1f5499d36e08bc94eb1e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -323,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingTouched: {fileID: 0}
+  touchPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
 --- !u!114 &6920513570508938950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touch: {fileID: 0}
-  state: {fileID: 0}
+  state: {fileID: 6920513570508938951}
 --- !u!114 &6920513570508938951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,20 +389,6 @@ MonoBehaviour:
   variation: 60
   gameEndEvent: {fileID: 11400000, guid: 8f7d8e36ec934b74b81c0f37fe46e014, type: 2}
   _canEat: {fileID: 11400000, guid: d205c8d99561bbf4aac64281e9352da1, type: 2}
---- !u!114 &6920513570508938948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6920513570508938945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
-  paramName: eatenPercentage
 --- !u!114 &6920513570508938949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +582,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6920513570681640214}
   - component: {fileID: 6920513570681640297}
+  - component: {fileID: 6920513570550502326}
+  - component: {fileID: 6920513570550502321}
   m_Layer: 0
   m_Name: Variante3
   m_TagString: Untagged
@@ -633,6 +656,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6920513570550502326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570681640215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 5971874a8d773db4dae9600b769e28b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6920513570550502321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570681640215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+  paramName: eatenPercentage
 --- !u!1 &6920513570734049166
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +699,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6920513570734049153}
   - component: {fileID: 6920513570734049152}
+  - component: {fileID: 6920513570550502328}
+  - component: {fileID: 6920513570550502323}
   m_Layer: 0
   m_Name: Variante1
   m_TagString: Untagged
@@ -715,6 +773,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6920513570550502328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570734049166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 495c6d27c99714448b900172aa6b12ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6920513570550502323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513570734049166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+  paramName: eatenPercentage
 --- !u!1 &6920513570845358779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6920513571670878547}
+  - component: {fileID: 1211647869}
   m_Layer: 0
   m_Name: Comida
   m_TagString: Untagged
@@ -1095,6 +1187,24 @@ Transform:
   m_Father: {fileID: 6920513570543068700}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211647869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513571670878544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543d5d07fd16804d84aafe830a65289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childs:
+  - {fileID: 6920513570734049166}
+  - {fileID: 6920513571974986607}
+  - {fileID: 6920513570681640215}
+  - {fileID: 6920513570503508545}
+  - {fileID: 6920513572369225281}
 --- !u!1 &6920513571974986607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1215,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6920513571974986606}
   - component: {fileID: 6920513571974986593}
+  - component: {fileID: 6920513570550502327}
+  - component: {fileID: 6920513570550502322}
   m_Layer: 0
   m_Name: Variante2
   m_TagString: Untagged
@@ -1177,6 +1289,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6920513570550502327
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513571974986607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 0165a24ca2b279b4896859d71dd431ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6920513570550502322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513571974986607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+  paramName: eatenPercentage
 --- !u!1 &6920513572369225281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1332,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6920513572369225280}
   - component: {fileID: 6920513572369225283}
+  - component: {fileID: 6920513570550502324}
+  - component: {fileID: 6920513570550502319}
   m_Layer: 0
   m_Name: Variante5
   m_TagString: Untagged
@@ -1259,3 +1406,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6920513570550502324
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513572369225281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 57eb046a55a30a64599b8c07c24cccc5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6920513570550502319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920513572369225281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391921fcc216e334e8c83aa0af9a67be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  param: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f, type: 2}
+  paramName: eatenPercentage

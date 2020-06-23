@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5448344695324863823
-    second: itens_0
+    second: Cheia 1
   - first:
       213: 7023266539800903773
-    second: itens_1
+    second: Cheia 2
   - first:
       213: -539044425784355039
-    second: itens_2
+    second: Cheia 3
   - first:
       213: -4247718879009969915
-    second: itens_3
+    second: Cheia 4
   - first:
       213: -5948184086366114632
-    second: itens_4
+    second: Cheia 5
   - first:
       213: -4626438857921887329
-    second: itens_5
+    second: Media 3
   - first:
       213: -8775095344901275364
     second: itens_6
   - first:
       213: -270602033836396587
-    second: itens_7
+    second: Media 5
   - first:
       213: -3037842148014792304
-    second: itens_8
+    second: Media 1
   - first:
       213: -8705396118031094242
     second: itens_9
   - first:
       213: -3543908182536448062
-    second: itens_10
+    second: Media 2
   - first:
       213: -711171333227369068
-    second: itens_11
+    second: Media 4
   - first:
       213: 8896865073827584819
     second: itens_12
@@ -49,13 +49,13 @@ TextureImporter:
     second: itens_14
   - first:
       213: -1254704707194794519
-    second: itens_15
+    second: Vazia 2
   - first:
       213: 5773980216262719440
     second: itens_16
   - first:
       213: -1259357224943543727
-    second: itens_17
+    second: Vazia 1
   - first:
       213: -6607573361280162148
     second: itens_18
@@ -79,13 +79,13 @@ TextureImporter:
     second: itens_24
   - first:
       213: -3845623143293356234
-    second: itens_25
+    second: Vazia 3
   - first:
       213: -9061929262715248854
-    second: itens_26
+    second: Vazia 4
   - first:
       213: -1131446489290433089
-    second: itens_27
+    second: Vazia 5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -183,7 +183,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: itens_0
+      name: Cheia 1
       rect:
         serializedVersion: 2
         x: 74
@@ -191,7 +191,7 @@ TextureImporter:
         width: 428
         height: 379
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,7 +204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_1
+      name: Cheia 2
       rect:
         serializedVersion: 2
         x: 626
@@ -212,7 +212,7 @@ TextureImporter:
         width: 393
         height: 390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,7 +225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_2
+      name: Cheia 3
       rect:
         serializedVersion: 2
         x: 1233
@@ -233,7 +233,7 @@ TextureImporter:
         width: 397
         height: 343
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_3
+      name: Cheia 4
       rect:
         serializedVersion: 2
         x: 1863
@@ -254,7 +254,7 @@ TextureImporter:
         width: 396
         height: 379
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_4
+      name: Cheia 5
       rect:
         serializedVersion: 2
         x: 2508
@@ -275,7 +275,7 @@ TextureImporter:
         width: 409
         height: 369
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_5
+      name: Media 3
       rect:
         serializedVersion: 2
         x: 1157
@@ -296,7 +296,7 @@ TextureImporter:
         width: 501
         height: 431
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,28 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_6
-      rect:
-        serializedVersion: 2
-        x: 2158
-        y: 2512
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c11c9f8b649983680800000000000000
-      internalID: -8775095344901275364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_7
+      name: Media 5
       rect:
         serializedVersion: 2
         x: 2468
@@ -338,7 +317,7 @@ TextureImporter:
         width: 462
         height: 455
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,7 +330,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_8
+      name: Media 1
       rect:
         serializedVersion: 2
         x: 58
@@ -359,7 +338,7 @@ TextureImporter:
         width: 431
         height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,28 +351,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_9
-      rect:
-        serializedVersion: 2
-        x: 471
-        y: 2406
-        width: 34
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1e21b39a58303780800000000000000
-      internalID: -8705396118031094242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_10
+      name: Media 2
       rect:
         serializedVersion: 2
         x: 586
@@ -401,7 +359,7 @@ TextureImporter:
         width: 424
         height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,7 +372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_11
+      name: Media 4
       rect:
         serializedVersion: 2
         x: 1822
@@ -422,7 +380,7 @@ TextureImporter:
         width: 470
         height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,153 +388,6 @@ TextureImporter:
       bones: []
       spriteID: 49daa8cb0796126f0800000000000000
       internalID: -711171333227369068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_12
-      rect:
-        serializedVersion: 2
-        x: 506
-        y: 2381
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33b9214a5a3087b70800000000000000
-      internalID: 8896865073827584819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_13
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 2305
-        width: 29
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10c69a14f0c74e450800000000000000
-      internalID: 6117150598843952129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_14
-      rect:
-        serializedVersion: 2
-        x: 490
-        y: 1930
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae8e295fe644de910800000000000000
-      internalID: 1868224663785761002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_16
-      rect:
-        serializedVersion: 2
-        x: 2929
-        y: 1877
-        width: 16
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d7f8723a6c412050800000000000000
-      internalID: 5773980216262719440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_18
-      rect:
-        serializedVersion: 2
-        x: 2082
-        y: 1637
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c96ef8d490f2d44a0800000000000000
-      internalID: -6607573361280162148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_19
-      rect:
-        serializedVersion: 2
-        x: 2093
-        y: 1624
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 037a0228f8bc03d00800000000000000
-      internalID: 950483338599114544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: itens_20
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 1162
-        width: 276
-        height: 328
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3151a25a433235c60800000000000000
-      internalID: 7805621288179471635
       vertices: []
       indices: 
       edges: []
@@ -590,7 +401,7 @@ TextureImporter:
         width: 2177
         height: 324
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -611,7 +422,7 @@ TextureImporter:
         width: 2087
         height: 276
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -632,7 +443,7 @@ TextureImporter:
         width: 2084
         height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -653,7 +464,7 @@ TextureImporter:
         width: 2054
         height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -666,7 +477,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_17
+      name: Vazia 1
       rect:
         serializedVersion: 2
         x: 57
@@ -674,7 +485,7 @@ TextureImporter:
         width: 438
         height: 421
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -687,7 +498,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_15
+      name: Vazia 2
       rect:
         serializedVersion: 2
         x: 598
@@ -695,7 +506,7 @@ TextureImporter:
         width: 441
         height: 441
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -708,7 +519,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_25
+      name: Vazia 3
       rect:
         serializedVersion: 2
         x: 1163
@@ -716,7 +527,7 @@ TextureImporter:
         width: 474
         height: 434
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -729,7 +540,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_26
+      name: Vazia 4
       rect:
         serializedVersion: 2
         x: 1871
@@ -737,7 +548,7 @@ TextureImporter:
         width: 414
         height: 401
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -750,7 +561,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: itens_27
+      name: Vazia 5
       rect:
         serializedVersion: 2
         x: 2485
@@ -758,7 +569,7 @@ TextureImporter:
         width: 441
         height: 417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

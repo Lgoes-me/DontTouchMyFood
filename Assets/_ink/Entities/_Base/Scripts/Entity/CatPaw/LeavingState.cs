@@ -8,9 +8,17 @@ namespace Ink.DontTouchMyFood.Entity
         public float speed;
         public float waitTime;
 
+        private CapsuleCollider2D _capsuleCollider2D;
+
+        public void Awake()
+        {
+            _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+        }
+
         public override void OnStateEnter()
         {
             base.OnStateEnter();
+            _capsuleCollider2D.isTrigger = true;
             StartCoroutine(RemoveFromGame());
         }
 
@@ -22,6 +30,7 @@ namespace Ink.DontTouchMyFood.Entity
         private IEnumerator RemoveFromGame()
         {
             yield return new WaitForSeconds(waitTime);
+            _capsuleCollider2D.isTrigger = false;
             gameObject.SetActive(false);
         }
     }

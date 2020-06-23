@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
-  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  gyroQuaternion: {fileID: 0}
+  acelInput: {fileID: 0}
   objectIndex: 0.15
 --- !u!1 &548887538
 GameObject:
@@ -788,8 +788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
-  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  gyroQuaternion: {fileID: 0}
+  acelInput: {fileID: 0}
   objectIndex: 0.075
 --- !u!1 &726365678
 GameObject:
@@ -835,8 +835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6790f799a935b4baedef45ea129ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gyroQuaternion: {fileID: 11400000, guid: 96fbfc06a9e58ca4e94b6856ed44e842, type: 2}
-  acelInput: {fileID: 11400000, guid: e827ed4bd75c88d4992579615cb37648, type: 2}
+  gyroQuaternion: {fileID: 0}
+  acelInput: {fileID: 0}
   objectIndex: 0.05
 --- !u!1 &763814716
 GameObject:
@@ -998,7 +998,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 4236610392062295435, guid: fc8368448c565b34399201b86039aed1,
     type: 3}
-  m_Color: {r: 0.83751136, g: 0.7905393, b: 0.8962264, a: 1}
+  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

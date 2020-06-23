@@ -17,7 +17,7 @@ namespace Ink.DontTouchMyFood.Animation
 
         private void Update()
         {
-            _animator.SetFloat(paramName, param.Value);
+            _animator.SetFloat(paramName, 1 - param.Value);
         }
     }
 }

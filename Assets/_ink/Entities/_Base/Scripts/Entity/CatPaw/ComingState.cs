@@ -34,7 +34,7 @@ namespace Ink.DontTouchMyFood.Entity
             if (input)
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                //_controller.SetState(this.GetComponent<DraggingState>().stateName);
+                _controller.SetState(this.GetComponent<WaitingState>());
             }
         }
 
@@ -46,7 +46,7 @@ namespace Ink.DontTouchMyFood.Entity
             {
                 _rigidbody2D.velocity = Vector2.zero;
                 timerEvent.Raise(lostTime);
-                //_controller.SetState(this.GetComponent<WaitingState>().stateName);
+                _controller.SetState(this.GetComponent<WaitingState>());
             }
         }
 

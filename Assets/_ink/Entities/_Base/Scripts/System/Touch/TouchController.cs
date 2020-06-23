@@ -45,13 +45,13 @@ namespace Ink.DontTouchMyFood.System.GameInput
                         }
                     }
 
-                    _touchInputReceiver.Touch(true);
+                    //_touchInputReceiver.Touch(true);
                 }
                 else
                 {
                     if (_touchInputReceiver != null)
                     {
-                        _touchInputReceiver.Touch(false);
+                       // _touchInputReceiver.Touch(false);
                         _touchInputReceiver = null;
                         _touchedObject = null;
                     }
@@ -62,7 +62,7 @@ namespace Ink.DontTouchMyFood.System.GameInput
             {
                 if (_touchInputReceiver != null)
                 {
-                    _touchInputReceiver.Touch(false);
+                   // _touchInputReceiver.Touch(false);
                     _touchInputReceiver = null;
                     _touchedObject = null;
                 }

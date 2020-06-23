@@ -173,6 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8377322038041159265}
+  - component: {fileID: 284552786167918085}
   m_Layer: 0
   m_Name: PataGfx
   m_TagString: Untagged
@@ -198,6 +199,23 @@ Transform:
   m_Father: {fileID: 8377322038300364817}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &284552786167918085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377322038041159266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4543d5d07fd16804d84aafe830a65289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childs:
+  - {fileID: 8377322037821704514}
+  - {fileID: 8377322038288812734}
+  - {fileID: 8377322038108908561}
+  - {fileID: 8377322037394270855}
 --- !u!1 &8377322038108908561
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,16 +391,15 @@ GameObject:
   - component: {fileID: 8377322038300364817}
   - component: {fileID: 8377322038300364824}
   - component: {fileID: 8377322038300364825}
-  - component: {fileID: 8377322038300364826}
   - component: {fileID: 8377322038300364827}
   - component: {fileID: 8377322038300364828}
   - component: {fileID: 8377322038300364829}
   - component: {fileID: 8377322038300364830}
   - component: {fileID: 8377322038300364831}
   - component: {fileID: 8377322038300364816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pata
-  m_TagString: Untagged
+  m_TagString: paw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +433,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4, y: 3.61}
+  m_Size: {x: 0.4, y: 3.3}
   m_Direction: 0
 --- !u!50 &8377322038300364825
 Rigidbody2D:
@@ -439,25 +456,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!95 &8377322038300364826
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377322038300364818}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: caed10f284df89943b9d89c4de336048, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8377322038300364827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
-  entityController: {fileID: 0}
+  entityController: {fileID: 8377322038300364829}
 --- !u!114 &8377322038300364828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingTouched: {fileID: 0}
+  touchPosition: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
 --- !u!114 &8377322038300364829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touch: {fileID: 0}
-  state: {fileID: 0}
+  state: {fileID: 8377322038300364830}
 --- !u!114 &8377322038300364830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,8 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
-  maxSpeed: 4
+  minSpeed: 1
+  maxSpeed: 2.5
   timerEvent: {fileID: 11400000, guid: 70ecaa4a9e54b53418c04a4499ad4ff1, type: 2}
   lostTime: 5
 --- !u!114 &8377322038300364831
@@ -527,10 +526,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b379966b49f0fcd488be8000dc17cb18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 2
+  waitTime: 0.45
   coroutineEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8377322038300364829}
+        m_MethodName: SetState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8377322038300364816}
+          m_ObjectArgumentAssemblyTypeName: Ink.DontTouchMyFood.Entity.EntityState,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8377322038300364816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,5 +554,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e9ad9b2860c0b46a18f7ade2160d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   waitTime: 1

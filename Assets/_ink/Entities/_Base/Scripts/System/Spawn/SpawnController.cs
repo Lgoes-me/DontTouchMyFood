@@ -10,8 +10,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
         public GameObject prefab;
         public int poolSize;
         private List<GameObject> _prefabPool;
-
-        public BoolVariable canSpawn;
+        private bool _shoudSpawn = true;
 
         public Vector3Variable platePosition;
         public float minTime;
@@ -32,7 +31,13 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
         public void InitSpawn()
         {
+            _shoudSpawn = true;
             StartCoroutine(Spawn());
+        }
+
+        public void StopSpawn()
+        {
+            _shoudSpawn = false;
         }
 
         private GameObject RetrieveObject()
@@ -54,7 +59,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
             yield return new WaitForSeconds(time);
 
-            if (canSpawn)
+            if (_shoudSpawn)
             {
                 GameObject paw = RetrieveObject();
 
@@ -71,8 +76,10 @@ namespace Ink.DontTouchMyFood.System.Spawn
                 {
                     Debug.Log("Pool limit reached");
                 }
+
+                StartCoroutine(Spawn());
             }
-            StartCoroutine(Spawn());
         }
+
     }
 }
