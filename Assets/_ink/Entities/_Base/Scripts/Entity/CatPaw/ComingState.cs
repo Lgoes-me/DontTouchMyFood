@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using ScriptableObjectArchitecture;
 
 namespace Ink.DontTouchMyFood.Entity
@@ -10,8 +11,7 @@ namespace Ink.DontTouchMyFood.Entity
         public float minSpeed;
         public float maxSpeed;
         
-        public FloatGameEvent timerEvent;
-        public float lostTime;
+        public UnityEvent colisionEvent;
 
         private float _speed;
         private string _collisionTag = "plate";
@@ -45,8 +45,7 @@ namespace Ink.DontTouchMyFood.Entity
             if (collision.transform.CompareTag(_collisionTag))
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                timerEvent.Raise(lostTime);
-                _controller.SetState(this.GetComponent<WaitingState>());
+                colisionEvent.Invoke();
             }
         }
 
