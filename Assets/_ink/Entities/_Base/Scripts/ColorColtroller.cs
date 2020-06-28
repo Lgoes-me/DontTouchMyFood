@@ -12,7 +12,15 @@ public class ColorColtroller : MonoBehaviour
     [ContextMenu("ChangeToRandomColor")]
     public void ChangeToRandomColor()
     {
-        colorIndex = Random.Range(0, levelPresetColor.Length);
+        int newIndex = Random.Range(0, levelPresetColor.Length);
+
+        if(colorIndex == newIndex)
+        {
+            ChangeToRandomColor();
+            return;
+        }
+        colorIndex = newIndex;
+
         ChangeColor();
     }
 

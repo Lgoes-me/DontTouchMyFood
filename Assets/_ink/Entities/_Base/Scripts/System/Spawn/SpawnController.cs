@@ -10,12 +10,13 @@ namespace Ink.DontTouchMyFood.System.Spawn
         public GameObject prefab;
         public int poolSize;
         private List<GameObject> _prefabPool;
-        private bool _shoudSpawn = true;
 
         public Vector3Variable platePosition;
         public float minTime;
         public float maxTime;
         public float distance;
+
+        private Coroutine _spawnRoutine = null;
 
         private void Awake()
         {
@@ -31,13 +32,15 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
         public void InitSpawn()
         {
-            _shoudSpawn = true;
-            StartCoroutine(Spawn());
+            _spawnRoutine = StartCoroutine(Spawn());
         }
 
         public void StopSpawn()
         {
-            _shoudSpawn = false;
+            if(_spawnRoutine != null)
+            {
+                StopCoroutine(_spawnRoutine);
+            }
         }
 
         private GameObject RetrieveObject()
@@ -59,26 +62,23 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
             yield return new WaitForSeconds(time);
 
-            if (_shoudSpawn)
+            GameObject paw = RetrieveObject();
+
+            if (paw != null)
             {
-                GameObject paw = RetrieveObject();
+                Vector3 spawpoint = distance * Vector3.up;
+                float ramdomAngle = Random.Range(-125, 125);
+                spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
 
-                if (paw != null)
-                {
-                    Vector3 spawpoint = distance * Vector3.up;
-                    float ramdomAngle = Random.Range(-125, 125);
-                    spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
-
-                    paw.transform.position = platePosition.Value + spawpoint;
-                    paw.SetActive(true);
-                }
-                else
-                {
-                    Debug.Log("Pool limit reached");
-                }
-
-                StartCoroutine(Spawn());
+                paw.transform.position = platePosition.Value + spawpoint;
+                paw.SetActive(true);
             }
+            else
+            {
+                Debug.Log("Pool limit reached");
+            }
+
+            _spawnRoutine = StartCoroutine(Spawn());
         }
 
     }

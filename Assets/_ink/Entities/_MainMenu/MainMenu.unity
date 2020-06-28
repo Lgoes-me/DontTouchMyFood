@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A game by ink
+  m_text: 'a game by ink
 
 '
   m_isRightToLeft: 0
