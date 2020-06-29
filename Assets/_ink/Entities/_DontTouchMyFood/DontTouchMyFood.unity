@@ -197,7 +197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &524975897
 GameObject:
@@ -328,10 +328,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8377322038300364818, guid: 75eea8716269088418f33ca6e576de2f, type: 3}
-  poolSize: 6
+  poolSize: 20
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
-  minTime: 2
-  maxTime: 3
+  minTime: {fileID: 11400000, guid: 3165801ebca69ec469227253d79642aa, type: 2}
+  maxTime: {fileID: 11400000, guid: dc245176d03bbeb4eaac188f4bdf8638, type: 2}
   distance: 4
 --- !u!4 &629668538
 Transform:
@@ -345,7 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &734079842
 GameObject:
@@ -421,7 +421,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 6780282757932752871, guid: 343984109d61f5643913f6f30491efa3,
     type: 3}
-  m_Color: {r: 0.6784314, g: 0.6627451, b: 0.54901963, a: 1}
+  m_Color: {r: 0.53511035, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -489,7 +489,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 8561248251601591151, guid: 343984109d61f5643913f6f30491efa3,
     type: 3}
-  m_Color: {r: 0.32156864, g: 0.29803923, b: 0.3529412, a: 1}
+  m_Color: {r: 0.41200948, g: 0.40129942, b: 0.509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -513,7 +513,7 @@ Transform:
   - {fileID: 734079843}
   - {fileID: 524975898}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.5}
 --- !u!1 &1003726538
 GameObject:
@@ -637,28 +637,6 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 73dc8d88827a7ce48939a5f7dad22be5, type: 2}
-        m_MethodName: set_Value
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 500
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b, type: 2}
-        m_MethodName: set_Value
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 50
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: f282d3bd5273e7f408997591e1fdfd61, type: 2}
         m_MethodName: set_Value
         m_Mode: 4
@@ -738,6 +716,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6920513570550502314}
         m_MethodName: SelectRandom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1521458446}
+        m_MethodName: ChangeToRandomDifficulty
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -858,7 +847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1348373066
 MonoBehaviour:
@@ -954,6 +943,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1521458445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521458447}
+  - component: {fileID: 1521458446}
+  m_Layer: 0
+  m_Name: DifficultyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1521458446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521458445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c7382def8e00448994e11367998ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPresetDifficulty:
+  - {fileID: 11400000, guid: dc90b9aad27cede4daa3e97c6a0bca6b, type: 2}
+  - {fileID: 11400000, guid: 8ab00261e7ba35540a24300c007e899b, type: 2}
+  - {fileID: 11400000, guid: b51e3ec8cb6f30542b6faca38dd26654, type: 2}
+  difficultyIndex: 2
+  currentDifficulty: {fileID: 11400000, guid: dc90b9aad27cede4daa3e97c6a0bca6b, type: 2}
+  totalScore: {fileID: 11400000, guid: 73dc8d88827a7ce48939a5f7dad22be5, type: 2}
+  totalTimer: {fileID: 11400000, guid: 59212a3e40a910247bb5ba3f95a73c9b, type: 2}
+  minSpawnTime: {fileID: 11400000, guid: 3165801ebca69ec469227253d79642aa, type: 2}
+  maxSpawnTime: {fileID: 11400000, guid: dc245176d03bbeb4eaac188f4bdf8638, type: 2}
+  minPawnSpeed: {fileID: 11400000, guid: d02a00090ccf22b41bc2ed7a16b85b76, type: 2}
+  maxPawnSpeed: {fileID: 11400000, guid: 9fd2f465d6603384f9159adda94d20b8, type: 2}
+--- !u!4 &1521458447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521458445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720374122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1090,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1720374126
 AudioSource:
@@ -1175,6 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPresetColor:
   - {fileID: 11400000, guid: 8afb69c66e9d6c344951cc8a51186847, type: 2}
+  - {fileID: 11400000, guid: 463a59bb110dd8d4c857e2dd4a6c5f62, type: 2}
   - {fileID: 11400000, guid: 3447a416f5c824a4ab251ae026fba5f4, type: 2}
   - {fileID: 11400000, guid: 9d7dfe4d94416a64a91f480d9c01f32a, type: 2}
   - {fileID: 11400000, guid: 9c0acc0d87f45e24b930145f717c0b6e, type: 2}
@@ -1189,14 +1234,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df4e0bd6952e2944398d21280d8bbc77, type: 2}
   - {fileID: 11400000, guid: 31f6db1116330114ba710ee34172c579, type: 2}
   - {fileID: 11400000, guid: d079f5b6f2379d9409d5f3ebec850d20, type: 2}
-  - {fileID: 11400000, guid: 463a59bb110dd8d4c857e2dd4a6c5f62, type: 2}
   gameObjects:
   - {fileID: 782983005}
   - {fileID: 734079842}
   - {fileID: 9680308}
   - {fileID: 7091980166375349501}
   - {fileID: 566377026202729934}
-  colorIndex: 6
+  colorIndex: 15
 --- !u!4 &2069864427
 Transform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &566377026202729928
 MonoBehaviour:
@@ -1224,7 +1268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60784316, g: 0.5176471, b: 0.5764706, a: 1}
+  m_Color: {r: 0.26138484, g: 0.41509432, b: 0.25258097, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1429,6 +1473,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6920513570543068703, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8352942
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920513570543068703, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8352942
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920513570543068703, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920513570543068703, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6920513570666479996, guid: 9d625d97b2226f34d932cc41726099a3,
         type: 3}
       propertyPath: m_IsActive

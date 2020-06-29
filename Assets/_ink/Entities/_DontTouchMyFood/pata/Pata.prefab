@@ -19946,8 +19946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e06db8ee2c1f140af6e9137025b3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 1.5
-  maxSpeed: 2
+  minSpeed: {fileID: 11400000, guid: d02a00090ccf22b41bc2ed7a16b85b76, type: 2}
+  maxSpeed: {fileID: 11400000, guid: 9fd2f465d6603384f9159adda94d20b8, type: 2}
   colisionEvent:
     m_PersistentCalls:
       m_Calls:

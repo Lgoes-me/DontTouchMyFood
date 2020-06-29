@@ -12,8 +12,8 @@ namespace Ink.DontTouchMyFood.System.Spawn
         private List<GameObject> _prefabPool;
 
         public Vector3Variable platePosition;
-        public float minTime;
-        public float maxTime;
+        public FloatVariable minTime;
+        public FloatVariable maxTime;
         public float distance;
 
         private Coroutine _spawnRoutine = null;
@@ -58,7 +58,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
         private IEnumerator Spawn()
         {
-            float time = Random.Range(minTime, maxTime);
+            float time = Random.Range(minTime.Value, maxTime.Value);
 
             yield return new WaitForSeconds(time);
 

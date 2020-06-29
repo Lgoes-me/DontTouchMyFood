@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEditor;
 
 public class ColorColtroller : MonoBehaviour
 {
@@ -42,4 +42,21 @@ public class ColorColtroller : MonoBehaviour
             }
         }
     }
+    /*
+#if UNITY_EDITOR
+
+    public LevelColor currentColor;
+
+    private void OnValidate()
+    {
+        for (int i = 0; i < levelPresetColor.Length; i++)
+        {
+            levelPresetColor[i].Init(this);
+        }
+
+        currentColor = levelPresetColor[colorIndex];
+        ChangeColor();
+    }
+#endif
+*/
 }

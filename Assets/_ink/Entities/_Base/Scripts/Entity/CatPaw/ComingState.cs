@@ -8,8 +8,8 @@ namespace Ink.DontTouchMyFood.Entity
 {
     public class ComingState : EntityState
     {
-        public float minSpeed;
-        public float maxSpeed;
+        public FloatVariable minSpeed;
+        public FloatVariable maxSpeed;
         
         public UnityEvent colisionEvent;
 
@@ -19,7 +19,7 @@ namespace Ink.DontTouchMyFood.Entity
         public override void OnStateEnter()
         {
             base.OnStateEnter();
-            _speed = minSpeed;
+            _speed = minSpeed.Value;
         }
 
         public override void OnStateUpdate()
@@ -56,8 +56,8 @@ namespace Ink.DontTouchMyFood.Entity
 
         private IEnumerator WaitToAcelerate()
         {
-            yield return new WaitForSeconds(1.5f);
-            _speed = maxSpeed;
+            yield return new WaitForSeconds(0.5f);
+            _speed = Random.Range(minSpeed.Value,maxSpeed.Value);
         }
     }
 }
