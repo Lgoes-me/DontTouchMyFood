@@ -185,7 +185,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409728836
 GameObject:
@@ -314,53 +314,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &877834806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 877834807}
-  - component: {fileID: 877834808}
-  m_Layer: 0
-  m_Name: AdvertiseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &877834807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877834806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &877834808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877834806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b2592c7b4a7e049a3a490c799ebabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myGameIdIOS: 3490464
-  myGameIdAndroid: 3490465
-  myVideoPlacement: video
-  adStarted: 0
 --- !u!1 &900429111
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +503,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1326034082}
   - component: {fileID: 1326034081}
-  - component: {fileID: 1326034083}
   - component: {fileID: 1326034080}
+  - component: {fileID: 1326034083}
+  - component: {fileID: 1326034084}
   m_Layer: 0
   m_Name: EndManager
   m_TagString: Untagged
@@ -571,7 +525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bea36f3a8c41e4094b28118d4bba67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adController: {fileID: 877834808}
+  adController: {fileID: 1326034084}
+  moduleController: {fileID: 1326034083}
 --- !u!114 &1326034081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,8 +549,8 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1326034083}
-        m_MethodName: EndLevel
+      - m_Target: {fileID: 1326034080}
+        m_MethodName: GameEnd
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -618,7 +573,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1326034083
 MonoBehaviour:
@@ -634,6 +589,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 34b92d2e9933f654aac01de21652f378, type: 2}
   levelStarted: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
+--- !u!114 &1326034084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326034079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b2592c7b4a7e049a3a490c799ebabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myGameIdIOS: 3490464
+  myGameIdAndroid: 3490465
+  myVideoPlacement: video
+  adStarted: 0
+  startGame: {fileID: 11400000, guid: 873c2629e79974b4fa6320d87b051f48, type: 2}
 --- !u!1 &1924367119
 GameObject:
   m_ObjectHideFlags: 0

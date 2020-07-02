@@ -17,16 +17,8 @@ public class ModuleController : MonoBehaviour
 
         StartCoroutine(LoadLevel());
     }
-
-    public void EndLevel(bool didWin)
-    {
-        if (didWin)
-        {
-            NextLevel();
-        }
-    }
-
-    private void NextLevel()
+   
+    public void NextLevel()
     {
         if (currentLevel < levels.Length - 1)
         {

@@ -1368,6 +1368,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 734079843}
     m_Modifications:
+    - target: {fileID: 171519484086308690, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257158768943229924, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: minValue
+      value: 0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257158768943229924, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: maxValue
+      value: 0.928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257158768943229924, guid: 9d625d97b2226f34d932cc41726099a3,
+        type: 3}
+      propertyPath: fillPercent
+      value: 
+      objectReference: {fileID: 11400000, guid: f190d2b9484ffc940aca3416a8ab032f,
+        type: 2}
     - target: {fileID: 6920513570503508547, guid: 9d625d97b2226f34d932cc41726099a3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1723,7 +1744,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 171519484086308688, guid: 9d625d97b2226f34d932cc41726099a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d625d97b2226f34d932cc41726099a3, type: 3}
 --- !u!114 &6920513570550502314 stripped
 MonoBehaviour:

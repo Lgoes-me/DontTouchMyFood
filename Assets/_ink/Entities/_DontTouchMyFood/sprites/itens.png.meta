@@ -86,6 +86,51 @@ TextureImporter:
   - first:
       213: -1131446489290433089
     second: Vazia 5
+  - first:
+      213: 8262978046086728328
+    second: itens_0
+  - first:
+      213: -7298069687879204432
+    second: itens_1
+  - first:
+      213: -378289068781435950
+    second: itens_2
+  - first:
+      213: 8195103216500650914
+    second: itens_3
+  - first:
+      213: -6085230469763229263
+    second: itens_4
+  - first:
+      213: -3160573269730178767
+    second: itens_5
+  - first:
+      213: -8032464511820852012
+    second: itens_7
+  - first:
+      213: -7610994932367038504
+    second: itens_8
+  - first:
+      213: -1174051869265004736
+    second: itens_10
+  - first:
+      213: 2017876475113209969
+    second: itens_11
+  - first:
+      213: 1016662277371333836
+    second: itens_15
+  - first:
+      213: -2429704962149469973
+    second: itens_17
+  - first:
+      213: 3899164194000171354
+    second: itens_21
+  - first:
+      213: -5567202192421434722
+    second: itens_22
+  - first:
+      213: -7766190910937436325
+    second: itens_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -186,10 +231,10 @@ TextureImporter:
       name: Cheia 1
       rect:
         serializedVersion: 2
-        x: 74
-        y: 2535
+        x: 84
+        y: 2561
         width: 428
-        height: 379
+        height: 396
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +252,8 @@ TextureImporter:
       name: Cheia 2
       rect:
         serializedVersion: 2
-        x: 626
-        y: 2536
+        x: 636
+        y: 2585
         width: 393
         height: 390
       alignment: 0
@@ -228,8 +273,8 @@ TextureImporter:
       name: Cheia 3
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 2563
+        x: 1246
+        y: 2615
         width: 397
         height: 343
       alignment: 0
@@ -249,8 +294,8 @@ TextureImporter:
       name: Cheia 4
       rect:
         serializedVersion: 2
-        x: 1863
-        y: 2551
+        x: 1879
+        y: 2600
         width: 396
         height: 379
       alignment: 0
@@ -270,8 +315,8 @@ TextureImporter:
       name: Cheia 5
       rect:
         serializedVersion: 2
-        x: 2508
-        y: 2548
+        x: 2518
+        y: 2594
         width: 409
         height: 369
       alignment: 0
@@ -291,8 +336,8 @@ TextureImporter:
       name: Media 3
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 2071
+        x: 1186
+        y: 2110
         width: 501
         height: 431
       alignment: 0
@@ -312,10 +357,10 @@ TextureImporter:
       name: Media 5
       rect:
         serializedVersion: 2
-        x: 2468
-        y: 2061
-        width: 462
-        height: 455
+        x: 2501
+        y: 2127
+        width: 427
+        height: 425
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,8 +378,8 @@ TextureImporter:
       name: Media 1
       rect:
         serializedVersion: 2
-        x: 58
-        y: 2081
+        x: 81
+        y: 2127
         width: 431
         height: 387
       alignment: 0
@@ -354,8 +399,8 @@ TextureImporter:
       name: Media 2
       rect:
         serializedVersion: 2
-        x: 586
-        y: 2081
+        x: 648
+        y: 2127
         width: 424
         height: 400
       alignment: 0
@@ -375,10 +420,10 @@ TextureImporter:
       name: Media 4
       rect:
         serializedVersion: 2
-        x: 1822
-        y: 2061
-        width: 470
-        height: 450
+        x: 1855
+        y: 2117
+        width: 438
+        height: 411
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,8 +441,8 @@ TextureImporter:
       name: itens_21
       rect:
         serializedVersion: 2
-        x: 724
-        y: 1215
+        x: 737
+        y: 1264
         width: 2177
         height: 324
       alignment: 0
@@ -417,10 +462,10 @@ TextureImporter:
       name: itens_22
       rect:
         serializedVersion: 2
-        x: 833
-        y: 802
+        x: 843
+        y: 855
         width: 2087
-        height: 276
+        height: 283
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,10 +483,10 @@ TextureImporter:
       name: itens_23
       rect:
         serializedVersion: 2
-        x: 842
-        y: 447
+        x: 862
+        y: 499
         width: 2084
-        height: 280
+        height: 297
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,8 +504,8 @@ TextureImporter:
       name: itens_24
       rect:
         serializedVersion: 2
-        x: 853
-        y: 83
+        x: 866
+        y: 136
         width: 2054
         height: 292
       alignment: 0
@@ -480,8 +525,8 @@ TextureImporter:
       name: Vazia 1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 1634
+        x: 80
+        y: 1690
         width: 438
         height: 421
       alignment: 0
@@ -501,8 +546,8 @@ TextureImporter:
       name: Vazia 2
       rect:
         serializedVersion: 2
-        x: 598
-        y: 1630
+        x: 634
+        y: 1682
         width: 441
         height: 441
       alignment: 0
@@ -522,8 +567,8 @@ TextureImporter:
       name: Vazia 3
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 1624
+        x: 1195
+        y: 1657
         width: 474
         height: 434
       alignment: 0
@@ -543,8 +588,8 @@ TextureImporter:
       name: Vazia 4
       rect:
         serializedVersion: 2
-        x: 1871
-        y: 1647
+        x: 1885
+        y: 1703
         width: 414
         height: 401
       alignment: 0
@@ -564,12 +609,12 @@ TextureImporter:
       name: Vazia 5
       rect:
         serializedVersion: 2
-        x: 2485
-        y: 1634
+        x: 2482
+        y: 1683
         width: 441
         height: 417
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.51484996, y: 0.57067025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
