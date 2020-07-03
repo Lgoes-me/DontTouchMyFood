@@ -548,18 +548,7 @@ MonoBehaviour:
   _event: {fileID: 11400000, guid: 55ff1be3b61a6b346a5fdda88bc201ae, type: 2}
   _response:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1326034080}
-        m_MethodName: GameEnd
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _debugValue: 0
 --- !u!4 &1326034082
 Transform:
