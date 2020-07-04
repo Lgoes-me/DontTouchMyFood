@@ -1,74 +1,104 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Advertisements;
-using ScriptableObjectArchitecture;
 
 namespace Ink.DontTouchMyFood.System.Advertise
 {
     public class AdvertiseController : MonoBehaviour, IUnityAdsListener
     {
-        public string myGameIdIOS = "3490464";
-        public string myGameIdAndroid = "3490465";
-        public string myVideoPlacement = "video";
-        public bool adStarted;
-        private bool testMode = true;
+#if UNITY_ANDROID
+        private static readonly string storeID = "3490465";
+#elif UNITY_IOS
+        private static readonly string storeID = "3490464";
+#endif
+        private static readonly string videoID = "video";
+        private static readonly string rewardedID = "rewardedVideo";
+        private static readonly string bannerID = "bannerAd";
 
-        public GameEvent startGame;
+        public UnityEvent onVideoEnd;
+        public UnityEvent onRewardedEnd, onRewardedSkipped, onRewardedError;
+        public UnityEvent onBannerEnd;
 
-        private void Start()
+#if UNITY_EDITOR
+        private static bool testMode = true;
+#else
+        private static bool testMode = false;
+#endif
+        private void Awake()
         {
             Advertisement.AddListener(this);
-#if UNITY_IOS
-            Advertisement.Initialize(myGameIdIOS, testMode);
-#else
-            Advertisement.Initialize(myGameIdAndroid, testMode);
-#endif
+            Advertisement.Initialize(storeID, testMode);
         }
 
-
-        public void Init()
+        public void InitVideo()
         {
-            if (Advertisement.isInitialized && Advertisement.IsReady(myVideoPlacement) && !adStarted)
+            if (Advertisement.IsReady(videoID))
             {
-                Advertisement.Show(myVideoPlacement);
-                adStarted = true;
+                Advertisement.Show(videoID);
             }
         }
 
-        public void OnUnityAdsReady(string placementId)
+        public void InitRewarded()
         {
-
+            if (Advertisement.IsReady(rewardedID))
+            {
+                Advertisement.Show(rewardedID);
+            }
         }
 
-        public void OnUnityAdsDidError(string message)
+        public void InitBanner()
         {
-
+            StartCoroutine(ShowBannerWhenReady());
         }
 
-        public void OnUnityAdsDidStart(string placementId)
+        public static void HideBanner()
         {
+            Advertisement.Banner.Hide();
+        }
 
+        private static IEnumerator ShowBannerWhenReady()
+        {
+            while (!Advertisement.IsReady(bannerID))
+                yield return new WaitForSeconds(0.5f);
+
+            Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+            Advertisement.Banner.Show(bannerID);
         }
 
         public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
         {
-            // Define conditional logic for each ad completion status:
-            if (showResult == ShowResult.Finished)
+            if (placementId == rewardedID)
             {
-                Debug.Log("Finished");
+                switch (showResult)
+                {
+                    case ShowResult.Finished:
+                        onRewardedEnd.Invoke();
+                        break;
+                    case ShowResult.Skipped:
+                        onRewardedSkipped.Invoke();
+                        break;
+                    case ShowResult.Failed:
+                        onRewardedError.Invoke();
+                        break;
+                }
             }
-            else if (showResult == ShowResult.Skipped)
+            else if(placementId == videoID)
             {
-                Debug.Log("Skipped");
+                onVideoEnd.Invoke();
             }
-            else if (showResult == ShowResult.Failed)
+            else if (placementId == bannerID)
             {
-                Debug.LogWarning("The ad did not finish due to an error.");
+                onBannerEnd.Invoke();
             }
-
-            adStarted = false;
-            startGame.Raise();
         }
-        
+
+        public void OnUnityAdsReady(string placementId) { }
+
+        public void OnUnityAdsDidError(string message) { }
+
+        public void OnUnityAdsDidStart(string placementId) { }
+
         public void OnDestroy()
         {
             Advertisement.RemoveListener(this);
