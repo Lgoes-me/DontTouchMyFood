@@ -6,6 +6,7 @@ namespace Ink.DontTouchMyFood.System
 {
     public class GameEndController : MonoBehaviour
     {
+        public AdvertiseController adController;
         public ModuleController moduleController;
 
         public void GameEnd(bool didWin)
@@ -13,6 +14,10 @@ namespace Ink.DontTouchMyFood.System
             if (didWin)
             {
                 moduleController.NextLevel();
+            }
+            else
+            {
+               adController.InitVideo();
             }
         }
     }
