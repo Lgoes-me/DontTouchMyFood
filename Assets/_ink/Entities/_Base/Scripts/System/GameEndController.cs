@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using ScriptableObjectArchitecture;
 using Ink.DontTouchMyFood.System.Advertise;
 
 namespace Ink.DontTouchMyFood.System
@@ -9,6 +8,9 @@ namespace Ink.DontTouchMyFood.System
         public AdvertiseController adController;
         public ModuleController moduleController;
 
+        [Range(0, 100)]
+        public int chance;
+
         public void GameEnd(bool didWin)
         {
             if (didWin)
@@ -17,7 +19,10 @@ namespace Ink.DontTouchMyFood.System
             }
             else
             {
-               adController.InitVideo();
+                if(chance >= Random.Range(0, 100))
+                {
+                    adController.InitVideo();
+                }
             }
         }
     }

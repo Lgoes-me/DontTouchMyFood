@@ -434,7 +434,8 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: d5c7ad0beeb4ada478de3211e1bcf9eb,
+    type: 2}
   _event: {fileID: 11400000, guid: d5c7ad0beeb4ada478de3211e1bcf9eb, type: 2}
   _response:
     m_PersistentCalls:
@@ -662,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adController: {fileID: 667331351}
   moduleController: {fileID: 1326034083}
+  chance: 33
 --- !u!114 &1326034081
 MonoBehaviour:
   m_ObjectHideFlags: 0
