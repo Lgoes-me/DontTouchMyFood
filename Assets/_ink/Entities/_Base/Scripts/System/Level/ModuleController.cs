@@ -35,7 +35,9 @@ public class ModuleController : MonoBehaviour
     private IEnumerator LoadLevel()
     {
         AsyncOperation asyncLoadOperation = SceneManager.LoadSceneAsync(levels[currentLevel], LoadSceneMode.Additive);
+        Scene nextScene = SceneManager.GetSceneByName(levels[currentLevel]);
         yield return new WaitUntil(() => asyncLoadOperation.isDone);
+        SceneManager.SetActiveScene(nextScene);
         levelStarted.Raise();
     }
 

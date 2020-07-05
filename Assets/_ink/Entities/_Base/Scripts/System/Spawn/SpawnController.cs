@@ -45,7 +45,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
         private GameObject RetrieveObject()
         {
-            for (int i = 0; i < _prefabPool.Count; i++)
+            for (int i = _prefabPool.Count - 1; i >= 0 ; i--)
             {
                 if (!_prefabPool[i].activeInHierarchy)
                 {
@@ -60,14 +60,12 @@ namespace Ink.DontTouchMyFood.System.Spawn
         {
             float time = Random.Range(minTime.Value, maxTime.Value);
 
-            yield return new WaitForSeconds(time);
-
             GameObject paw = RetrieveObject();
 
             if (paw != null)
             {
                 Vector3 spawpoint = distance * Vector3.up;
-                float ramdomAngle = Random.Range(-125, 125);
+                float ramdomAngle = Random.Range(-110, 110);
                 spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
 
                 paw.transform.position = platePosition.Value + spawpoint;
@@ -77,6 +75,8 @@ namespace Ink.DontTouchMyFood.System.Spawn
             {
                 Debug.Log("Pool limit reached");
             }
+
+            yield return new WaitForSeconds(time);
 
             _spawnRoutine = StartCoroutine(Spawn());
         }

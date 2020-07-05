@@ -10,7 +10,8 @@ namespace Ink.DontTouchMyFood.Entity
     {
         public FloatVariable minSpeed;
         public FloatVariable maxSpeed;
-        
+
+        public UnityEvent cickEvent;
         public UnityEvent colisionEvent;
 
         private float _speed;
@@ -36,7 +37,7 @@ namespace Ink.DontTouchMyFood.Entity
             if (input)
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                _controller.SetState(this.GetComponent<WaitingState>());
+                cickEvent.Invoke();
             }
         }
 

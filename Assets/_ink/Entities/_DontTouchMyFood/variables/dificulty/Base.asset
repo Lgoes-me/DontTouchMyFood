@@ -16,6 +16,6 @@ MonoBehaviour:
   totalScore: 500
   totalTimer: 50
   minSpawnTime: 2
-  maxSpawnTime: 3
-  minPawnSpeed: 1.5
-  maxPawnSpeed: 2
+  maxSpawnTime: 2.5
+  minPawnSpeed: 2
+  maxPawnSpeed: 3

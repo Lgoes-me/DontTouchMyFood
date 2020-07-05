@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ce7190bfda8a4d9ca56a17f8fdd0b, type: 3}
-  m_Name: TimerGameEvent
+  m_Script: {fileID: 11500000, guid: 3e80c1f10c6d98f41a1711d0a49e20a4, type: 3}
+  m_Name: Base 3
   m_EditorClassIdentifier: 
-  DeveloperDescription:
-    _value: 
-  _debugValue: 0
+  difficultyIndex: 0
+  totalScore: 450
+  totalTimer: 25
+  minSpawnTime: 2
+  maxSpawnTime: 2.5
+  minPawnSpeed: 2
+  maxPawnSpeed: 3

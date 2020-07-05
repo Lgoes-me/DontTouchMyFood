@@ -22,5 +22,10 @@ namespace Ink.DontTouchMyFood.Entity
         {
             transform.up = platePosition.Value - transform.position;
         }
+
+        private void OnDisable()
+        {
+            entityController.SetState(GetComponent<ComingState>());
+        }
     }
 }
