@@ -20269,6 +20269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   entityController: {fileID: 8377322038300364829}
+  capsuleCollider: {fileID: 8377322038300364824}
 --- !u!114 &8377322038300364828
 MonoBehaviour:
   m_ObjectHideFlags: 0

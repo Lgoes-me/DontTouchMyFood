@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8377322038300364818, guid: 75eea8716269088418f33ca6e576de2f, type: 3}
-  poolSize: 6
+  poolSize: 10
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   minTime: {fileID: 11400000, guid: 3165801ebca69ec469227253d79642aa, type: 2}
   maxTime: {fileID: 11400000, guid: dc245176d03bbeb4eaac188f4bdf8638, type: 2}
