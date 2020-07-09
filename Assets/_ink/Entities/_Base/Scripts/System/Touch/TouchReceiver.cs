@@ -18,7 +18,10 @@ namespace Ink.DontTouchMyFood.System.GameInput
 
         private void OnEnable()
         {
-            isBeingTouched.Value = false;
+            if(isBeingTouched != null)
+            {
+                isBeingTouched.Value = false;
+            }
         }
 
         public void OnPointerEnter(PointerEventData eventData)

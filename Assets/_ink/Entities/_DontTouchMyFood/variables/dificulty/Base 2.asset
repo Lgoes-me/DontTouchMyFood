@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultyIndex: 0
   totalScore: 355
-  totalTimer: 25
+  totalTimer: 45
   minSpawnTime: 1.25
   maxSpawnTime: 3.5
-  minPawnSpeed: 1.2
-  maxPawnSpeed: 1.8
+  minPawnSpeed: 0.8
+  maxPawnSpeed: 2

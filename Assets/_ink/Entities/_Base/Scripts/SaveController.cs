@@ -8,6 +8,7 @@ public class SaveController : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 30;
         LoadData();
     }
 

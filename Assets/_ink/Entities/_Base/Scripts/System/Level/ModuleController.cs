@@ -28,7 +28,17 @@ public class ModuleController : MonoBehaviour
         }
         else
         {
-            levelStarted.Raise();
+            PreviousLevel();
+        }
+    }
+
+    public void PreviousLevel()
+    {
+        if (currentLevel > 0)
+        {
+            StartCoroutine(UnloadLevel());
+            currentLevel -= 1;
+            StartCoroutine(LoadLevel());
         }
     }
 

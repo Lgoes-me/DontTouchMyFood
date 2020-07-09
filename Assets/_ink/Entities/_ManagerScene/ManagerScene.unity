@@ -360,18 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onVideoEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 55ff1be3b61a6b346a5fdda88bc201ae, type: 2}
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onRewardedEnd:
     m_PersistentCalls:
       m_Calls:
@@ -465,6 +454,8 @@ GameObject:
   - component: {fileID: 900429112}
   - component: {fileID: 900429117}
   - component: {fileID: 900429116}
+  - component: {fileID: 900429120}
+  - component: {fileID: 900429119}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -506,7 +497,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}
+  m_BackGroundColor: {r: 0.9339623, g: 0.9295568, b: 0.9031239, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -568,7 +559,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 900429115}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 261
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -630,6 +621,48 @@ MonoBehaviour:
   blendDistance: 0
   weight: 0.66
   priority: 0
+--- !u!114 &900429119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900429111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b6c841f50664341aab94ebfca8773f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter: {fileID: 4800000, guid: ef0a0ed723ba01248ae3d32f6272ebb5, type: 3}
+  wobbTex: {fileID: 2800000, guid: 8be85bd2bfb6f4047a837ae6d1ba9465, type: 3}
+  wobbScale: 1
+  wobbPower: 0.0015
+  edgeSize: 1
+  edgePower: 2
+  paperDataset:
+  - paperTex: {fileID: 2800000, guid: cb969bf9a5efd694daf116123a09a2d9, type: 3}
+    paperScale: 1
+    paperPower: 0.2
+  - paperTex: {fileID: 2800000, guid: 7dcb018f3a65ef04c97081b8a922088f, type: 3}
+    paperScale: 1
+    paperPower: 0.2
+--- !u!114 &900429120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900429111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5d7dd20afc2a84ea950b20c942b33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter: {fileID: 4800000, guid: f1888f1fec91d4b45820b42c34802943, type: 3}
+  warm: {r: 0.9622642, g: 0.94978195, b: 0.9123354, a: 1}
+  cool: {r: 0.83303666, g: 0.8932989, b: 0.9056604, a: 1}
+  tonePower: 1.1
+  dirLight: {fileID: 900429115}
 --- !u!1 &1326034079
 GameObject:
   m_ObjectHideFlags: 0

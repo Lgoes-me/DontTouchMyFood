@@ -19,7 +19,9 @@ namespace Ink.DontTouchMyFood.System
             }
             else
             {
-                if(chance >= Random.Range(0, 100))
+                moduleController.PreviousLevel();
+
+                if (chance >= Random.Range(0, 100))
                 {
                     adController.InitVideo();
                 }
