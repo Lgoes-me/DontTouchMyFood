@@ -8,6 +8,8 @@ public class ModuleController : MonoBehaviour
     public SO_LevelConfiguration config;
     public GameEvent levelStarted;
 
+    public GameObject canvas;
+
     private int currentLevel = 0;
     private string[] levels;
         
@@ -49,11 +51,13 @@ public class ModuleController : MonoBehaviour
         yield return new WaitUntil(() => asyncLoadOperation.isDone);
         SceneManager.SetActiveScene(nextScene);
         levelStarted.Raise();
+        canvas.SetActive(false);
     }
 
     private IEnumerator UnloadLevel()
     {
         AsyncOperation asyncUnloadOperation = SceneManager.UnloadSceneAsync(levels[currentLevel]);
+        canvas.SetActive(true);
         yield return new WaitUntil(() => asyncUnloadOperation.isDone);
     }
 

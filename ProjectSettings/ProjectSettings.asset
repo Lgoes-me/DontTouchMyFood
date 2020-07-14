@@ -258,15 +258,15 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/ink/DontTouchMyFood/user.keystore
+  AndroidKeyaliasName: ink
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -738,7 +738,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: EASY_MOBILE;EASY_MOBILE_PRO;UNITY_POST_PROCESSING_STACK_V2
     4: EASY_MOBILE;EASY_MOBILE_PRO
-    7: EASY_MOBILE;EASY_MOBILE_PRO;UNITY_POST_PROCESSING_STACK_V2
+    7: UNITY_POST_PROCESSING_STACK_V2
     13: EASY_MOBILE;EASY_MOBILE_PRO;UNITY_POST_PROCESSING_STACK_V2
     14: EASY_MOBILE;EASY_MOBILE_PRO
     19: EASY_MOBILE;EASY_MOBILE_PRO;UNITY_POST_PROCESSING_STACK_V2

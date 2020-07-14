@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 334861339}
   - component: {fileID: 334861338}
   - component: {fileID: 334861337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629668538}
   - component: {fileID: 629668537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ MonoBehaviour:
   platePosition: {fileID: 11400000, guid: 15e654396d0094f47abd88c13d07e2d5, type: 2}
   minTime: {fileID: 11400000, guid: 3165801ebca69ec469227253d79642aa, type: 2}
   maxTime: {fileID: 11400000, guid: dc245176d03bbeb4eaac188f4bdf8638, type: 2}
-  distance: 4
+  distance: 5
 --- !u!4 &629668538
 Transform:
   m_ObjectHideFlags: 0
@@ -1015,7 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083555330}
   - component: {fileID: 1083555328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StartManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1267,7 @@ GameObject:
   - component: {fileID: 1348373065}
   - component: {fileID: 1348373066}
   - component: {fileID: 1348373064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EndManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,8 +1416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -45}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 1500, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1419577251
 MonoBehaviour:
@@ -1494,8 +1494,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1657,7 +1657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521458447}
   - component: {fileID: 1521458446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DifficultyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,6 +1682,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f1e1e9147ecbebf478048cb713c85c0f, type: 2}
   - {fileID: 11400000, guid: 2631ad6600a227840adede716b7bc250, type: 2}
   - {fileID: 11400000, guid: b6d95befbebdcae439e7ce135a9952f4, type: 2}
+  - {fileID: 11400000, guid: a2aae0b9ff00e7443b4b664410247531, type: 2}
+  - {fileID: 11400000, guid: cf5a60ccf2c31134e9097b0eaa25892a, type: 2}
+  - {fileID: 11400000, guid: 28b9323595e2ec8459e2f89fa30fbba4, type: 2}
+  - {fileID: 11400000, guid: ab9ca4b497ed1e7439d1c6f05addc174, type: 2}
+  - {fileID: 11400000, guid: 7791053a3efa1644899e0f188709dd1e, type: 2}
+  - {fileID: 11400000, guid: 2577fa710d5b2fb4b80639dfd5e1c5b6, type: 2}
   - {fileID: 11400000, guid: dc90b9aad27cede4daa3e97c6a0bca6b, type: 2}
   difficultyIndex: 0
   currentDifficulty: {fileID: 11400000, guid: dc90b9aad27cede4daa3e97c6a0bca6b, type: 2}
@@ -1717,7 +1723,7 @@ GameObject:
   - component: {fileID: 1720374124}
   - component: {fileID: 1720374123}
   - component: {fileID: 1720374126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TimerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2274,7 +2280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069864427}
   - component: {fileID: 2069864426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ColorManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
