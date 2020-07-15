@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using ScriptableObjectArchitecture;
 
 public class LevelEndController : MonoBehaviour
 {
     public GameEvent levelStart;
-    public GameObject lostGameCanvas;
+    public UnityEvent lostGameEvent;
 
     public void EndGame(bool didWin)
     {
@@ -14,7 +15,7 @@ public class LevelEndController : MonoBehaviour
         }
         else
         {
-            lostGameCanvas.SetActive(true);
+            lostGameEvent.Invoke();
         }
     }
 }

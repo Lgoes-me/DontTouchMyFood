@@ -11,6 +11,7 @@ namespace Ink.DontTouchMyFood.Entity
         public int variation;
         public BoolGameEvent gameEndEvent;
         public BoolVariable _canEat;
+        public AudioSource audio;
 
         private WaitForSeconds _timerWaiter = new WaitForSeconds(0.1F);
 
@@ -22,7 +23,19 @@ namespace Ink.DontTouchMyFood.Entity
             {
                 currentScore.Value += variation * Time.deltaTime;
                 gameScore.Value += variation * Time.deltaTime /10;
+                if (!audio.isPlaying)
+                {
+                    audio.Play();
+                }
             }
+            else
+            {
+                if (audio.isPlaying)
+                {
+                    audio.Stop();
+                }
+            }
+
             if (_canEat.Value && currentScore.Value > goalScore.Value)
             {
                 _canEat.Value = false;
