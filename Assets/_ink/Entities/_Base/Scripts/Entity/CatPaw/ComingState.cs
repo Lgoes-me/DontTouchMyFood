@@ -10,11 +10,14 @@ namespace Ink.DontTouchMyFood.Entity
     {
         public FloatVariable minSpeed;
         public FloatVariable maxSpeed;
-        
+
+        public UnityEvent cickEvent;
         public UnityEvent colisionEvent;
 
         private float _speed;
         private string _collisionTag = "plate";
+
+        private Coroutine _waitToAcelerate = null;
 
         public override void OnStateEnter()
         {
@@ -34,7 +37,7 @@ namespace Ink.DontTouchMyFood.Entity
             if (input)
             {
                 _rigidbody2D.velocity = Vector2.zero;
-                _controller.SetState(this.GetComponent<WaitingState>());
+                cickEvent.Invoke();
             }
         }
 
@@ -49,9 +52,19 @@ namespace Ink.DontTouchMyFood.Entity
             }
         }
 
+        public override void OnStateExit()
+        {
+            base.OnStateExit();
+
+            if(_waitToAcelerate != null)
+            {
+                StopCoroutine(_waitToAcelerate);
+            }
+        }
+
         private void OnBecameVisible()
         {
-            StartCoroutine(WaitToAcelerate());
+            _waitToAcelerate = StartCoroutine(WaitToAcelerate());
         }
 
         private IEnumerator WaitToAcelerate()

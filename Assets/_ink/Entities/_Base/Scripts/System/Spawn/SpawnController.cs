@@ -16,22 +16,25 @@ namespace Ink.DontTouchMyFood.System.Spawn
         public FloatVariable maxTime;
         public float distance;
 
+        private bool _hasLoaded = false;
+
         private Coroutine _spawnRoutine = null;
-
-        private void Awake()
-        {
-            _prefabPool = new List<GameObject>();
-
-            for (int i = 0; i < poolSize; i++)
-            {
-                GameObject paw = Instantiate(prefab);
-                paw.SetActive(false);
-                _prefabPool.Add(paw);
-            }
-        }
 
         public void InitSpawn()
         {
+            if (!_hasLoaded)
+            {
+                _prefabPool = new List<GameObject>();
+
+                for (int i = 0; i < poolSize; i++)
+                {
+                    GameObject paw = Instantiate(prefab);
+                    paw.SetActive(false);
+                    _prefabPool.Add(paw);
+                }
+                _hasLoaded = true;
+            }
+
             _spawnRoutine = StartCoroutine(Spawn());
         }
 
@@ -45,7 +48,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
 
         private GameObject RetrieveObject()
         {
-            for (int i = 0; i < _prefabPool.Count; i++)
+            for (int i = _prefabPool.Count - 1; i >= 0 ; i--)
             {
                 if (!_prefabPool[i].activeInHierarchy)
                 {
@@ -60,14 +63,12 @@ namespace Ink.DontTouchMyFood.System.Spawn
         {
             float time = Random.Range(minTime.Value, maxTime.Value);
 
-            yield return new WaitForSeconds(time);
-
             GameObject paw = RetrieveObject();
 
             if (paw != null)
             {
                 Vector3 spawpoint = distance * Vector3.up;
-                float ramdomAngle = Random.Range(-125, 125);
+                float ramdomAngle = Random.Range(-55, 55);
                 spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
 
                 paw.transform.position = platePosition.Value + spawpoint;
@@ -77,6 +78,8 @@ namespace Ink.DontTouchMyFood.System.Spawn
             {
                 Debug.Log("Pool limit reached");
             }
+
+            yield return new WaitForSeconds(time);
 
             _spawnRoutine = StartCoroutine(Spawn());
         }

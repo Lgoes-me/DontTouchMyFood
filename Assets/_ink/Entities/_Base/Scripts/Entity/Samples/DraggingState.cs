@@ -15,6 +15,8 @@ namespace Ink.DontTouchMyFood.Entity
         public float waitTime;
         public float speed;
 
+        private Coroutine _inputCoroutine = null;
+        private Vector3 _diference;
         private bool _touched;
 
         public override void OnStateInputReceived(bool touch)
@@ -23,7 +25,7 @@ namespace Ink.DontTouchMyFood.Entity
 
             _touched = touch;
             offset = inputPosition.Value - transform.localPosition;
-            StartCoroutine(InputCoroutine());
+            _inputCoroutine = StartCoroutine(InputCoroutine());
         }
 
 
@@ -32,7 +34,21 @@ namespace Ink.DontTouchMyFood.Entity
             if (_touched)
             {
                 Vector3 position = new Vector3(inputPosition.Value.x, inputPosition.Value.y, transform.position.z);
-                transform.position = Vector3.Lerp(transform.position, position, speed);
+                transform.position = Vector3.Lerp(transform.position, position - _diference, speed);
+            }
+            else
+            {
+                _diference = new Vector3(inputPosition.Value.x - transform.position.x, inputPosition.Value.y - transform.position.y, 0);
+            }
+        }
+
+        public override void OnStateExit()
+        {
+            base.OnStateExit();
+
+            if (_inputCoroutine != null)
+            {
+                StopCoroutine(_inputCoroutine);
             }
         }
 

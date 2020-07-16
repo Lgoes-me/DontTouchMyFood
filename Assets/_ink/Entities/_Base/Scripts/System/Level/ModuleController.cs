@@ -8,6 +8,8 @@ public class ModuleController : MonoBehaviour
     public SO_LevelConfiguration config;
     public GameEvent levelStarted;
 
+    public GameObject canvas;
+
     private int currentLevel = 0;
     private string[] levels;
         
@@ -28,20 +30,34 @@ public class ModuleController : MonoBehaviour
         }
         else
         {
-            levelStarted.Raise();
+            PreviousLevel();
+        }
+    }
+
+    public void PreviousLevel()
+    {
+        if (currentLevel > 0)
+        {
+            StartCoroutine(UnloadLevel());
+            currentLevel -= 1;
+            StartCoroutine(LoadLevel());
         }
     }
 
     private IEnumerator LoadLevel()
     {
         AsyncOperation asyncLoadOperation = SceneManager.LoadSceneAsync(levels[currentLevel], LoadSceneMode.Additive);
+        Scene nextScene = SceneManager.GetSceneByName(levels[currentLevel]);
         yield return new WaitUntil(() => asyncLoadOperation.isDone);
+        SceneManager.SetActiveScene(nextScene);
         levelStarted.Raise();
+        canvas.SetActive(false);
     }
 
     private IEnumerator UnloadLevel()
     {
         AsyncOperation asyncUnloadOperation = SceneManager.UnloadSceneAsync(levels[currentLevel]);
+        canvas.SetActive(true);
         yield return new WaitUntil(() => asyncUnloadOperation.isDone);
     }
 

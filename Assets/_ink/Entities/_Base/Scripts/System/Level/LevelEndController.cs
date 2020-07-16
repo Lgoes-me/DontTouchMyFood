@@ -1,12 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using ScriptableObjectArchitecture;
 
 public class LevelEndController : MonoBehaviour
 {
-    public BoolGameEvent levelEndEvent;
+    public GameEvent levelStart;
+    public UnityEvent lostGameEvent;
 
     public void EndGame(bool didWin)
     {
-        levelEndEvent.Raise(didWin);
+        if (didWin)
+        {
+            levelStart.Raise();
+        }
+        else
+        {
+            lostGameEvent.Invoke();
+        }
     }
 }
