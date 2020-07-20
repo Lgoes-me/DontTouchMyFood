@@ -72,6 +72,7 @@ namespace Ink.DontTouchMyFood.System.Spawn
                 spawpoint = Quaternion.Euler(0, 0, ramdomAngle) * spawpoint;
 
                 paw.transform.position = platePosition.Value + spawpoint;
+                paw.transform.up = platePosition.Value - paw.transform.position;
                 paw.SetActive(true);
             }
             else

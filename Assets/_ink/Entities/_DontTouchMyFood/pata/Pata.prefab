@@ -4877,10 +4877,11 @@ AudioSource:
   m_GameObject: {fileID: 5066450562867571407}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2e5004dbeadb0a14f8db4f0c571e7384, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9810,10 +9811,11 @@ AudioSource:
   m_GameObject: {fileID: 7122056512623183487}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 381bdb8c52a931b44bf4d5c2a31fc3f8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9989,8 +9991,9 @@ AudioSource:
   m_GameObject: {fileID: 8377322037394270855}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 381bdb8c52a931b44bf4d5c2a31fc3f8, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6af8d5c4a1592a149a13c0dd71382da7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -10168,10 +10171,11 @@ AudioSource:
   m_GameObject: {fileID: 8377322037821704514}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0b709a6a815680d4d8287491cea40980, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10403,10 +10407,11 @@ AudioSource:
   m_GameObject: {fileID: 8377322038108908561}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: fa11c90e010fc2c4ab0c8dfa1284b9af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10582,10 +10587,11 @@ AudioSource:
   m_GameObject: {fileID: 8377322038288812734}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2e5004dbeadb0a14f8db4f0c571e7384, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10688,6 +10694,7 @@ GameObject:
   - component: {fileID: 8377322038300364816}
   - component: {fileID: 5241368617715096521}
   - component: {fileID: 3830159504093338732}
+  - component: {fileID: 7523829692081854850}
   m_Layer: 8
   m_Name: Pata
   m_TagString: paw
@@ -10831,7 +10838,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3169144213050214935}
+      - m_Target: {fileID: 7523829692081854850}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -10975,7 +10982,8 @@ AudioSource:
   m_GameObject: {fileID: 8377322038300364818}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5860b6586c237e148b9eb2260bc7fea9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c92b669ee1dde834db7eca6abf42054d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -11062,3 +11070,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7523829692081854850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377322038300364818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103d09897c5530648a30b9f93232bd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
+  particleSystem: {fileID: 3169144213050214935}
