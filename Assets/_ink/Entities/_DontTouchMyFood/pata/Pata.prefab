@@ -10694,6 +10694,7 @@ GameObject:
   - component: {fileID: 8377322038300364816}
   - component: {fileID: 5241368617715096521}
   - component: {fileID: 3830159504093338732}
+  - component: {fileID: 7523829692081854850}
   m_Layer: 8
   m_Name: Pata
   m_TagString: paw
@@ -10837,7 +10838,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3169144213050214935}
+      - m_Target: {fileID: 7523829692081854850}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -11069,3 +11070,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7523829692081854850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377322038300364818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 103d09897c5530648a30b9f93232bd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 11400000, guid: 8356660be1a986749954c4936c7adbac, type: 2}
+  particleSystem: {fileID: 3169144213050214935}
