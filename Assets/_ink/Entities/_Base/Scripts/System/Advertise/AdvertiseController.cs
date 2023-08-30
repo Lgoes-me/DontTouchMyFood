@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Advertisements;
+﻿using UnityEngine;
 
 namespace Ink.DontTouchMyFood.System.Advertise
 {
-    public class AdvertiseController : MonoBehaviour, IUnityAdsListener
+    public class AdvertiseController : MonoBehaviour//, IUnityAdsListener
     {
+        /*
 #if UNITY_ANDROID
         private static readonly string storeID = "3490465";
 #elif UNITY_IOS
@@ -102,6 +100,6 @@ namespace Ink.DontTouchMyFood.System.Advertise
         public void OnDestroy()
         {
             Advertisement.RemoveListener(this);
-        }
+        }*/
     }
 }

@@ -19,12 +19,12 @@ namespace Ink.DontTouchMyFood.System
             }
             else
             {
-                moduleController.PreviousLevel();
+                moduleController.NextLevel();
 
-                if (chance >= Random.Range(0, 100))
+                /*if (chance >= Random.Range(0, 100))
                 {
                     adController.InitVideo();
-                }
+                }*/
             }
         }
     }
